@@ -1,0 +1,131 @@
+{
+  "last_updated": "2026-08-12",
+  "verification_policy": {
+    "highest_priority": "100% Free / No Purchase Necessary",
+    "secondary_priority": "Free with Purchase / BOGO",
+    "tertiary_priority": "Discount / Special Promotion",
+    "required_verification": "Every deal must be verified via an official source (museum policy, transit agency, city government, or brand rules), news release (SFGate, FuncheapSF, SF Chronicle, DoTheBay), or verified community forum post (r/sanfrancisco, r/bayarea, r/freebies, r/SFEvents)."
+  },
+  "official_sources": [
+    {
+      "id": "sfmoma",
+      "name": "SFMOMA Official Policy",
+      "url": "https://www.sfmoma.org/free-days/",
+      "type": "Official Source",
+      "category": "Museums & Arts",
+      "trust_score": 100
+    },
+    {
+      "id": "deyoung_famsf",
+      "name": "de Young & Legion of Honor (FAMSF) Official Policy",
+      "url": "https://www.famsf.org/visit/free-reduced-admission",
+      "type": "Official Source",
+      "category": "Museums & Arts",
+      "trust_score": 100
+    },
+    {
+      "id": "sfpl_discover_go",
+      "name": "SF Public Library - Discover & Go Program",
+      "url": "https://sfpl.org/discover-and-go",
+      "type": "Official Source",
+      "category": "Community & Library",
+      "trust_score": 100
+    },
+    {
+      "id": "sfmta_free_muni",
+      "name": "SFMTA Free Muni Program Official Guide",
+      "url": "https://www.sfmta.com/getting-around/muni/fares/free-muni-all-youth",
+      "type": "Official Source",
+      "category": "Transit & Services",
+      "trust_score": 100
+    },
+    {
+      "id": "sfbotanical",
+      "name": "San Francisco Botanical Garden Official Rules",
+      "url": "https://www.sfbg.org/visit",
+      "type": "Official Source",
+      "category": "Museums & Arts",
+      "trust_score": 100
+    },
+    {
+      "id": "conservatory_flowers",
+      "name": "Conservatory of Flowers Free Admission Policy",
+      "url": "https://conservatoryofflowers.org/visit/",
+      "type": "Official Source",
+      "category": "Museums & Arts",
+      "trust_score": 100
+    }
+  ],
+  "news_and_media_sources": [
+    {
+      "id": "sfgate",
+      "name": "SFGate Local Guides",
+      "url": "https://www.sfgate.com/local/",
+      "type": "News Release",
+      "trust_score": 95
+    },
+    {
+      "id": "funcheapsf",
+      "name": "FuncheapSF - San Francisco Free Events & Freebies Guide",
+      "url": "https://sf.funcheap.com/",
+      "type": "News Release",
+      "trust_score": 90
+    },
+    {
+      "id": "dothebay",
+      "name": "DoTheBay Freebies & Deals Guide",
+      "url": "https://dothebay.com/",
+      "type": "News Release",
+      "trust_score": 90
+    },
+    {
+      "id": "sfchronicle",
+      "name": "San Francisco Chronicle Arts & Entertainment",
+      "url": "https://www.sfchronicle.com/entertainment/",
+      "type": "News Release",
+      "trust_score": 95
+    }
+  ],
+  "community_sources": [
+    {
+      "id": "reddit_sanfrancisco",
+      "name": "r/sanfrancisco Subreddit",
+      "url": "https://www.reddit.com/r/sanfrancisco/",
+      "type": "Community / Reddit",
+      "api_feed": "https://www.reddit.com/r/sanfrancisco/search.json?q=free+OR+freebie+OR+deal&restrict_sr=1&sort=new",
+      "trust_score": 85
+    },
+    {
+      "id": "reddit_bayarea",
+      "name": "r/bayarea Subreddit",
+      "url": "https://www.reddit.com/r/bayarea/",
+      "type": "Community / Reddit",
+      "api_feed": "https://www.reddit.com/r/bayarea/search.json?q=free+OR+freebie+OR+discount&restrict_sr=1&sort=new",
+      "trust_score": 85
+    },
+    {
+      "id": "reddit_asksf",
+      "name": "r/AskSF Subreddit",
+      "url": "https://www.reddit.com/r/AskSF/",
+      "type": "Community / Reddit",
+      "api_feed": "https://www.reddit.com/r/AskSF/search.json?q=free+OR+birthday+OR+deal&restrict_sr=1&sort=new",
+      "trust_score": 85
+    },
+    {
+      "id": "reddit_sfevents",
+      "name": "r/SFEvents Subreddit",
+      "url": "https://www.reddit.com/r/SFEvents/",
+      "type": "Community / Reddit",
+      "api_feed": "https://www.reddit.com/r/SFEvents/search.json?q=free&restrict_sr=1&sort=new",
+      "trust_score": 85
+    },
+    {
+      "id": "reddit_freebies",
+      "name": "r/freebies Subreddit (Bay Area Filter)",
+      "url": "https://www.reddit.com/r/freebies/",
+      "type": "Community / Reddit",
+      "api_feed": "https://www.reddit.com/r/freebies/search.json?q=san+francisco+OR+bay+area&restrict_sr=1&sort=new",
+      "trust_score": 80
+    }
+  ]
+}
