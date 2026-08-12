@@ -1,1 +1,176 @@
-# CouponsDealsSF
+# 🌉 CouponsDealsSF — Verified San Francisco & Bay Area Freebies, Deals & Promotions
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20App-10b981?style=for-the-badge&logo=github)](https://karagemop466-tech.github.io/CouponsDealsSF/)
+[![Verified Deals](https://img.shields.io/badge/Verified%20Deals-50%20Active-059669?style=for-the-badge)](data/deals.json)
+[![100% Free Priority #1](https://img.shields.io/badge/100%25%20Free%20Priority%20%231-92.0%25-10b981?style=for-the-badge)](data/deals.json)
+[![Annual Free Value](https://img.shields.io/badge/Annual%20Free%20Value-%241%2C450%2B-8b5cf6?style=for-the-badge)](data/deals.json)
+[![Audited for 2026](https://img.shields.io/badge/Audited%20For-2026-3b82f6?style=for-the-badge)](data/sources.json)
+
+> **The ultimate verified, open-source database and interactive GitHub Pages web application for discovering, compiling, and organizing freebies, coupons, and promotions redeemable in San Francisco and the Bay Area.**
+
+---
+
+## 🌟 Live Interactive Web Application & Upgrades
+
+Explore all **50 verified deals**, filter by priority and neighborhood, run live deep searches, and export calendar invites on our GitHub Pages web app:
+
+**👉 [https://karagemop466-tech.github.io/CouponsDealsSF/](https://karagemop466-tech.github.io/CouponsDealsSF/)**
+
+### 🚀 Major v2 Upgrades Built Into This Release:
+1. **Interactive View Switcher**:
+   - **🎴 Cards Grid View**: Visual cards with priority badges, savings tags, and one-click actions.
+   - **📋 Compact Table View**: Sortable table for fast scanning across categories, locations, and values.
+   - **🗺️ Neighborhood Explorer View**: Groups all 50 deals into interactive SF neighborhood and regional clusters (*SoMa/Downtown, Golden Gate Park/Richmond, Mission/Castro, Chinatown/North Beach, Oakland/East Bay, San Jose/South Bay*).
+2. **Active Schedule & Eligibility Calendar Engine**:
+   - Quick-filter chips for **⚡ Free Today (Wednesday)** (dynamically matches your local weekday), **📅 Free This Weekend**, **🎂 Birthday Perks ($0 Cost)**, **🪪 Resident ID Required**, and **♾️ Always Free**.
+3. **One-Click `.ICS` Calendar Export & Google Calendar Integration**:
+   - Click **"📅 Add to Calendar"** on any deal modal to generate an instant Google Calendar event or download a pre-formatted `.ics` calendar invite with full redemption instructions and official links.
+4. **Personal "My Saved Freebies Wallet" & Total Value Counter**:
+   - Save your favorite freebies to your browser's local wallet using the **☆ Save** button on any card.
+   - Live banner tracking showing that our 50 compiled deals represent **$1,450+ in Annual 100% Free Value** for San Francisco & Bay Area residents!
+5. **Live Candidate Scraper Feed (`scripts/live_scraper.py`)**:
+   - An automated web & community API aggregator that discovers candidate promotions, scores their priority, deduplicates against `data/deals.json`, and outputs `data/candidates.json` for review.
+
+---
+
+## 🚨 Strict Priority Ranking Framework
+
+CouponsDealsSF organizes every promotion using a strict **Priority Ranking Hierarchy**. Why pay when you can get it for 100% free?
+
+| Priority Tier | Badge | Definition | % in Database | Examples in Database |
+| :--- | :---: | :--- | :---: | :--- |
+| **Priority #1 (Highest Priority)** | ⭐ `100% FREE` | **Absolutely $0 Cost / No Purchase Necessary.** Free museum admission, free transit passes, free groceries, and birthday items with zero purchase requirements. | **92.0% (46 / 50)** | • de Young & Legion of Honor Free Saturdays for Bay Area Residents<br>• SFMTA 100% Free Muni for All Youth (18 & Under)<br>• SFPL Discover & Go Free Museum Passes<br>• ICA SF at The Cube (Always Free)<br>• Archimedes Banya Free Full Day Bath Pass on Birthday |
+| **Priority #2 (Secondary Priority)** | 🎁 `FREE WITH PURCHASE` | **Free Item with Purchase / BOGO.** Buy-One-Get-One-Free deals or complimentary perks with a low-barrier order. | **6.0% (3 / 50)** | • Chipotle Free Guacamole / Chips with $5+ Purchase<br>• Quiznos BOGO Free Birthday Sub<br>• Buffalo Wild Wings 6 Free Birthday Wings with $10 order |
+| **Priority #3 (Tertiary Priority)** | 🏷️ `DISCOUNT / SPECIAL` | **Coupons & Significant Discounts.** Substantial regional savings, happy hour specials, and commuter discounts. | **2.0% (1 / 50)** | • Underdogs Cantina $1 Margaritas & Disco Taco Tuesday (SoMa) |
+
+---
+
+## 🛡️ Verification Methodology & Monitored Sources
+
+Every entry in `data/deals.json` is audited and verified against official authority policies, local press releases, or verified community forum discussions. See `data/sources.json` for our full registry of monitored sources:
+
+1. **Official Sources (`trust_score: 100`)**:
+   - San Francisco Museum of Modern Art (SFMOMA) Policy
+   - Fine Arts Museums of SF (de Young & Legion of Honor) Policy
+   - San Francisco Botanical Garden & Conservatory of Flowers Rules
+   - San Francisco Municipal Transportation Agency (SFMTA) Free Muni Program
+   - SF Public Library (SFPL) Discover & Go and Digital Subscription Services
+   - Asian Art Museum, OMCA, BAMPFA, ICA SF, Randall Museum, Cantor Arts Center, and Museum of Craft and Design Official Free Days
+2. **News & Press Releases (`trust_score: 90–95`)**:
+   - *SFGate*, *San Francisco Chronicle*, *DoTheBay*, *FuncheapSF*
+3. **Community & Reddit Verification (`trust_score: 80–85`)**:
+   - Monitored Subreddits: **r/sanfrancisco**, **r/bayarea**, **r/freebies**, **r/SFEvents**, **r/AskSF**
+
+---
+
+## 💻 Python Deep Search & Verification Suite (`scripts/`)
+
+In addition to the web app, this repository includes a full-featured Python command-line toolkit for deep searching, scraping, adding, and verifying deals:
+
+### 1. Live Candidate Scraper (`scripts/live_scraper.py`)
+Fetches live feeds from community APIs (`r/sanfrancisco`, `r/bayarea`, `r/freebies`, `r/SFEvents`), scores candidate priority (100% free = rank 1), deduplicates against existing deals, and exports `data/candidates.json`:
+```bash
+python3 scripts/live_scraper.py
+```
+
+### 2. Deep Search Engine (`scripts/deep_search.py`)
+Search the local database by keyword, priority, category, neighborhood, or run a live query against Reddit JSON APIs to discover new promotions:
+```bash
+# Search for 100% free museum deals:
+python3 scripts/deep_search.py --query "museum" --only-free
+
+# Filter by SF neighborhood or Bay Area location:
+python3 scripts/deep_search.py --location "Golden Gate Park"
+
+# Export filtered results to JSON or CSV:
+python3 scripts/deep_search.py --only-free --export-json freebies.json --export-csv freebies.csv
+```
+
+### 3. Automated Link & Schema Validator (`scripts/verify_links.py`)
+Audits `data/deals.json` to ensure every deal has valid required fields, URLs, verification proof, and enforces that Priority #1 deals are labeled `"100% Free"`:
+```bash
+python3 scripts/verify_links.py
+```
+
+### 4. Add Deal CLI Utility (`scripts/add_deal.py`)
+Add a new verified deal cleanly and update database analytics:
+```bash
+python3 scripts/add_deal.py --json '{"id":"my-new-freebie", "title":"Free Coffee at XYZ", "priority_rank":1, ...}'
+```
+
+### 5. Stats Generator (`scripts/generate_stats.py`)
+Re-compiles aggregate database metrics (`data/stats.json`) for the web application dashboard:
+```bash
+python3 scripts/generate_stats.py
+```
+
+---
+
+## 🗂️ Database Structure (`data/deals.json`)
+
+All 50 verified deals are stored in a clean JSON array in `data/deals.json`. Each object follows this schema:
+
+```json
+{
+  "id": "ica-sf-the-cube-always-free",
+  "title": "ICA SF (Institute of Contemporary Art) at The Cube - 100% Free Admission",
+  "priority_label": "100% Free",
+  "priority_rank": 1,
+  "category": "Museums & Arts",
+  "location": "SF - SoMa / Downtown",
+  "value": "$20 value",
+  "description": "Located in a stunning 5-story atrium at 345 Montgomery Street in downtown San Francisco ('The Cube'), ICA SF offers 100% free admission to all cutting-edge contemporary art exhibitions.",
+  "redemption_instructions": "1. Visit ICA SF at 345 Montgomery Street...\n2. Open Wednesday through Sunday, 11:00 AM to 5:00 PM...\n3. Enjoy complimentary walk-in entry...",
+  "restrictions": "Closed Mondays and Tuesdays. Always free general admission.",
+  "verification": {
+    "status": "Verified Official Source",
+    "source_name": "ICA SF Official Admission Policy",
+    "verified_date": "2026-08-12",
+    "notes": "Confirmed on icasf.org and SF Standard / Funcheap 2026 arts directory."
+  },
+  "promotion_url": "https://www.icasf.org/visit",
+  "community_url": "https://sf.funcheap.com/city-guide/free-sf-art-museum-opens-historic-downtown-bank-building-cube/",
+  "tags": ["museum", "100-percent-free", "financial-district", "downtown", "contemporary-art", "always-free"],
+  "is_new": true,
+  "schedule_type": "Always Free",
+  "neighborhood_slug": "sf-soma-downtown"
+}
+```
+
+---
+
+## 🌁 SF Neighborhood & Regional Coverage
+
+Our verified database spans San Francisco neighborhoods and regional Bay Area counties:
+- **SF - SoMa / Downtown / Yerba Buena**: SFMOMA, YBCA, MoAD, ICA SF at The Cube, SF Railway Museum, Archimedes Banya, Underdogs Cantina, Treasure Island Ferry, Sephora SF
+- **SF - Golden Gate Park / Richmond**: de Young Museum, SF Botanical Garden, Conservatory of Flowers, Japanese Tea Garden, Balboa Theater, Skatin' Place, SF Opera in the Park, SF Amateur Astronomers
+- **SF - Lincoln Park / Sea Cliff**: Legion of Honor
+- **SF - Mission / Castro**: Randall Museum, Mission Food Hub, TATO Free Tacos, Museum of Craft and Design, GLBT Historical Society
+- **SF - Chinatown / North Beach / Wharf**: Chinatown Night Market, Cable Car Museum, Chinese Historical Society (CHSA), Ghirardelli Square Free Chocolate, Musée Mécanique, SF Camerawork (Fort Mason)
+- **SF - All Neighborhoods**: SFMTA Free Muni for Youth, SFPL Discover & Go, SFPL Free Digital NYT/WSJ Passes, SF Zoo, SF Fire Department Museum, Stern Grove Terminal Sessions at SFO, Bay Wheels Bike Share "Bikes for All"
+- **Oakland / East Bay**: Oakland Museum of California (OMCA), Berkeley BAMPFA
+- **San Jose / South Bay**: Cantor Arts Center (Stanford), Anderson Collection at Stanford
+
+---
+
+## 🤝 How to Contribute
+
+We welcome community pull requests for new verified freebies and deals!
+
+1. Fork this repository and create a new feature branch.
+2. Add your verified deal to `data/deals.json` (or use `python3 scripts/add_deal.py`).
+3. Ensure your deal follows our **Priority Rules**:
+   - Assign `"priority_rank": 1` and `"priority_label": "100% Free"` ONLY if zero purchase is required.
+   - Assign `"priority_rank": 2` for BOGOs or Free-with-Purchase deals.
+4. Run automated verification:
+   ```bash
+   python3 scripts/verify_links.py
+   python3 scripts/generate_stats.py
+   ```
+5. Open a Pull Request!
+
+---
+
+## 📄 License
+
+This repository and data are open source under the MIT License. Built with love for San Francisco & the Bay Area community.
