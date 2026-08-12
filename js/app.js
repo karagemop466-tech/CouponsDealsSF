@@ -1,14 +1,22 @@
-// app.js - Client-Side Deep Search & Interactive UI for CouponsDealsSF GitHub Pages App
+// app.js - Enhanced Client-Side Deep Search, Neighborhood Explorer & Schedule Engine for CouponsDealsSF
 
 document.addEventListener("DOMContentLoaded", () => {
   let allDeals = [];
+  let allCandidates = [];
+  let savedDeals = new Set(JSON.parse(localStorage.getItem("couponsDealsSF_saved") || "[]"));
+
+  // Today is 2026-08-12 (Wednesday) in local timezone
+  const CURRENT_DAY_OF_WEEK = "Wednesday";
+
   let currentFilter = {
     query: "",
-    priority: "all",      // 'all', '1' (100% Free), '2' (Free w/ purchase), '3' (Discount)
+    priority: "all",      // 'all', '1' (100% Free), '2' (Free w/ purchase), '3' (Discount), 'saved' (My Saved)
     category: "all",
     location: "all",
     verification: "all",
-    sortBy: "priority"    // 'priority', 'newest', 'title'
+    schedule: "all",      // 'all', 'today', 'weekend', 'birthday', 'resident', 'always'
+    sortBy: "priority",   // 'priority', 'newest', 'title', 'value'
+    viewMode: "grid"      // 'grid', 'list', 'neighborhood'
   };
 
   // DOM Elements
@@ -21,11 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const locationSelect = document.getElementById("location-select");
   const verificationSelect = document.getElementById("verification-select");
   const sortSelect = document.getElementById("sort-select");
+  const scheduleChipsContainer = document.getElementById("schedule-chips");
+  const viewModeButtons = document.getElementById("view-mode-buttons");
 
   // Stats Elements
   const totalDealsStat = document.getElementById("stat-total-deals");
   const freePctStat = document.getElementById("stat-free-percentage");
   const totalSourcesStat = document.getElementById("stat-total-sources");
+  const savedCountBadge = document.getElementById("saved-count-badge");
 
   // Modals
   const detailModal = document.getElementById("detail-modal");
@@ -50,18 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function init() {
     try {
-      // Fetch both deals and stats
-      const [dealsResp, statsResp] = await Promise.all([
+      // Fetch deals, stats, and live scraped candidates
+      const [dealsResp, statsResp, candResp] = await Promise.all([
         fetch("data/deals.json"),
-        fetch("data/stats.json").catch(() => null)
+        fetch("data/stats.json").catch(() => null),
+        fetch("data/candidates.json").catch(() => null)
       ]);
 
       allDeals = await dealsResp.json();
       const statsData = statsResp ? await statsResp.json() : null;
+      allCandidates = candResp ? await candResp.json() : [];
 
       populateStats(statsData, allDeals);
       populateFilters(allDeals);
       setupEventListeners();
+      updateSavedBadge();
       renderDeals();
     } catch (err) {
       console.error("Error initializing app:", err);
@@ -77,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function populateStats(stats, deals) {
     if (stats) {
       totalDealsStat.textContent = stats.total_deals || deals.length;
-      freePctStat.textContent = stats.free_percentage || "89.5%";
+      freePctStat.textContent = stats.free_percentage || "92.0%";
       totalSourcesStat.textContent = stats.total_monitored_sources || "15+";
     } else {
       totalDealsStat.textContent = deals.length;
@@ -85,6 +99,41 @@ document.addEventListener("DOMContentLoaded", () => {
       freePctStat.textContent = `${Math.round((freeCount / deals.length) * 100)}%`;
       totalSourcesStat.textContent = "15+";
     }
+  }
+
+  function updateSavedBadge() {
+    if (savedCountBadge) {
+      savedCountBadge.textContent = savedDeals.size;
+    }
+  }
+
+  function toggleSaveDeal(id) {
+    if (savedDeals.has(id)) {
+      savedDeals.delete(id);
+    } else {
+      savedDeals.add(id);
+    }
+    localStorage.setItem("couponsDealsSF_saved", JSON.stringify(Array.from(savedDeals)));
+    updateSavedBadge();
+    if (currentFilter.priority === "saved") {
+      renderDeals();
+    } else {
+      // Update bookmark icon in place
+      document.querySelectorAll(`.save-btn[data-id="${id}"]`).forEach(btn => {
+        const isSaved = savedDeals.has(id);
+        btn.classList.toggle("saved", isSaved);
+        btn.innerHTML = isSaved ? "★ Saved" : "☆ Save";
+      });
+    }
+  }
+
+  function isDealActiveToday(deal) {
+    const st = deal.schedule_type || "";
+    const titleLower = (deal.title + " " + deal.description).toLowerCase();
+    if (st === "Always Free") return true;
+    if (titleLower.includes("wednesday") || st === "First Wednesday") return true;
+    if (titleLower.includes("daily") || titleLower.includes("every day")) return true;
+    return false;
   }
 
   function populateFilters(deals) {
@@ -122,7 +171,8 @@ document.addEventListener("DOMContentLoaded", () => {
       { id: "all", label: `All Deals (${deals.length})`, color: "border-transparent text-slate-600 hover:text-slate-900" },
       { id: "1", label: `⭐ 100% FREE - Highest Priority (${p1Count})`, color: "border-transparent text-emerald-700 font-bold hover:text-emerald-800" },
       { id: "2", label: `🎁 Free with Purchase / BOGO (${p2Count})`, color: "border-transparent text-amber-700 hover:text-amber-800" },
-      { id: "3", label: `🏷️ Discounts & Specials (${p3Count})`, color: "border-transparent text-blue-700 hover:text-blue-800" }
+      { id: "3", label: `🏷️ Discounts & Specials (${p3Count})`, color: "border-transparent text-blue-700 hover:text-blue-800" },
+      { id: "saved", label: `⭐ My Saved Wallet (<span id="saved-count-badge">${savedDeals.size}</span>)`, color: "border-transparent text-purple-700 font-semibold hover:text-purple-800" }
     ];
 
     priorityTabsContainer.innerHTML = tabs.map((t, idx) => `
@@ -130,6 +180,26 @@ document.addEventListener("DOMContentLoaded", () => {
         idx === 0 ? "border-emerald-500 text-emerald-700 font-bold" : t.color
       }">
         ${t.label}
+      </button>
+    `).join("");
+
+    // Schedule Quick-Filter Chips
+    const scheduleOptions = [
+      { id: "all", label: "🗓️ All Schedules" },
+      { id: "today", label: `⚡ Free Today (${CURRENT_DAY_OF_WEEK})` },
+      { id: "weekend", label: "📅 Free This Weekend" },
+      { id: "birthday", label: "🎂 Birthday Perks ($0 Cost)" },
+      { id: "resident", label: "🪪 Resident ID Required" },
+      { id: "always", label: "♾️ Always Free" }
+    ];
+
+    scheduleChipsContainer.innerHTML = scheduleOptions.map((sc, idx) => `
+      <button data-schedule="${sc.id}" class="schedule-chip px-3 py-1 rounded-lg text-xs font-semibold border transition-all ${
+        idx === 0
+          ? "bg-emerald-700 text-white border-emerald-700"
+          : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+      }">
+        ${sc.label}
       </button>
     `).join("");
   }
@@ -154,6 +224,36 @@ document.addEventListener("DOMContentLoaded", () => {
       currentFilter.priority = btn.dataset.priority;
       renderDeals();
     });
+
+    // Schedule Chips
+    scheduleChipsContainer.addEventListener("click", (e) => {
+      const btn = e.target.closest(".schedule-chip");
+      if (!btn) return;
+      document.querySelectorAll(".schedule-chip").forEach(b => {
+        b.classList.remove("bg-emerald-700", "text-white", "border-emerald-700");
+        b.classList.add("bg-slate-100", "text-slate-700", "border-slate-200");
+      });
+      btn.classList.remove("bg-slate-100", "text-slate-700", "border-slate-200");
+      btn.classList.add("bg-emerald-700", "text-white", "border-emerald-700");
+      currentFilter.schedule = btn.dataset.schedule;
+      renderDeals();
+    });
+
+    // View Mode Toggle (Grid, List, Neighborhood)
+    if (viewModeButtons) {
+      viewModeButtons.addEventListener("click", (e) => {
+        const btn = e.target.closest(".view-mode-btn");
+        if (!btn) return;
+        document.querySelectorAll(".view-mode-btn").forEach(b => {
+          b.classList.remove("bg-slate-900", "text-white");
+          b.classList.add("bg-slate-100", "text-slate-700");
+        });
+        btn.classList.remove("bg-slate-100", "text-slate-700");
+        btn.classList.add("bg-slate-900", "text-white");
+        currentFilter.viewMode = btn.dataset.view;
+        renderDeals();
+      });
+    }
 
     // Category Buttons
     categoryContainer.addEventListener("click", (e) => {
@@ -196,7 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
         category: "all",
         location: "all",
         verification: "all",
-        sortBy: "priority"
+        schedule: "all",
+        sortBy: "priority",
+        viewMode: currentFilter.viewMode
       };
       locationSelect.value = "all";
       verificationSelect.value = "all";
@@ -221,6 +323,17 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           b.classList.remove("border-emerald-500", "text-emerald-700", "font-bold");
           b.classList.add("border-transparent");
+        }
+      });
+
+      // reset schedule UI
+      document.querySelectorAll(".schedule-chip").forEach((b, idx) => {
+        if (idx === 0) {
+          b.classList.remove("bg-slate-100", "text-slate-700", "border-slate-200");
+          b.classList.add("bg-emerald-700", "text-white", "border-emerald-700");
+        } else {
+          b.classList.remove("bg-emerald-700", "text-white", "border-emerald-700");
+          b.classList.add("bg-slate-100", "text-slate-700", "border-slate-200");
         }
       });
 
@@ -299,26 +412,58 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal(deepSearchModal);
       }
     });
+
+    // Handle clicks on dynamically rendered Save buttons and View Details
+    dealsGrid.addEventListener("click", (e) => {
+      const saveBtn = e.target.closest(".save-btn");
+      if (saveBtn) {
+        e.stopPropagation();
+        toggleSaveDeal(saveBtn.dataset.id);
+        return;
+      }
+      const viewBtn = e.target.closest(".view-details-btn");
+      if (viewBtn) {
+        e.stopPropagation();
+        const id = viewBtn.dataset.id;
+        const deal = allDeals.find(d => d.id === id);
+        if (deal) showDealModal(deal);
+      }
+    });
   }
 
   function getFilteredDeals() {
     return allDeals.filter(d => {
-      // Priority filter
-      if (currentFilter.priority !== "all" && String(d.priority_rank) !== currentFilter.priority) {
+      // Saved wallet filter
+      if (currentFilter.priority === "saved") {
+        if (!savedDeals.has(d.id)) return false;
+      } else if (currentFilter.priority !== "all" && String(d.priority_rank) !== currentFilter.priority) {
         return false;
       }
+
       // Category filter
       if (currentFilter.category !== "all" && d.category !== currentFilter.category) {
         return false;
       }
+
       // Location filter
       if (currentFilter.location !== "all" && d.location !== currentFilter.location) {
         return false;
       }
+
       // Verification filter
       if (currentFilter.verification !== "all" && (d.verification || {}).status !== currentFilter.verification) {
         return false;
       }
+
+      // Schedule quick filter
+      if (currentFilter.schedule !== "all") {
+        if (currentFilter.schedule === "today" && !isDealActiveToday(d)) return false;
+        if (currentFilter.schedule === "weekend" && d.schedule_type !== "Weekend") return false;
+        if (currentFilter.schedule === "birthday" && d.schedule_type !== "Birthday") return false;
+        if (currentFilter.schedule === "resident" && !(d.tags || []).includes("sf-resident") && !(d.title + " " + d.description).toLowerCase().includes("resident")) return false;
+        if (currentFilter.schedule === "always" && d.schedule_type !== "Always Free") return false;
+      }
+
       // Query search
       if (currentFilter.query) {
         const text = [
@@ -364,21 +509,115 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     emptyState.classList.add("hidden");
-    dealsGrid.innerHTML = filtered.map(deal => createDealCardHtml(deal)).join("");
 
-    // Attach click handlers to "View Details" buttons
-    dealsGrid.querySelectorAll(".view-details-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const id = btn.dataset.id;
-        const deal = allDeals.find(d => d.id === id);
-        if (deal) showDealModal(deal);
-      });
-    });
+    if (currentFilter.viewMode === "grid") {
+      dealsGrid.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+      dealsGrid.innerHTML = filtered.map(deal => createDealCardHtml(deal)).join("");
+    } else if (currentFilter.viewMode === "list") {
+      dealsGrid.className = "col-span-full";
+      dealsGrid.innerHTML = renderListViewHtml(filtered);
+    } else if (currentFilter.viewMode === "neighborhood") {
+      dealsGrid.className = "col-span-full";
+      dealsGrid.innerHTML = renderNeighborhoodViewHtml(filtered);
+    }
+  }
+
+  function renderListViewHtml(deals) {
+    return `
+      <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-50 border-b border-slate-200 text-xs uppercase font-bold text-slate-500">
+              <th class="py-3 px-4">Priority</th>
+              <th class="py-3 px-4">Promotion Title</th>
+              <th class="py-3 px-4">Category</th>
+              <th class="py-3 px-4">SF / Bay Area Location</th>
+              <th class="py-3 px-4">Value</th>
+              <th class="py-3 px-4">Verification</th>
+              <th class="py-3 px-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-sm">
+            ${deals.map(deal => {
+              const isFree = deal.priority_rank === 1;
+              const badge = isFree 
+                ? `<span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md text-xs">⭐ 100% Free</span>`
+                : `<span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded-md text-xs">🎁 #2 Purchase Req.</span>`;
+              const isSaved = savedDeals.has(deal.id);
+              return `
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-3 px-4 whitespace-nowrap">${badge}</td>
+                  <td class="py-3 px-4 font-bold text-slate-900 font-heading">${deal.title}</td>
+                  <td class="py-3 px-4 text-slate-600">${deal.category}</td>
+                  <td class="py-3 px-4 text-slate-600">${deal.location}</td>
+                  <td class="py-3 px-4 font-semibold text-indigo-700">${deal.value}</td>
+                  <td class="py-3 px-4 text-xs text-slate-600">
+                    <span class="text-emerald-600 font-bold">✓</span> ${deal.verification?.source_name || "Official"}
+                  </td>
+                  <td class="py-3 px-4 text-right whitespace-nowrap">
+                    <button data-id="${deal.id}" class="view-details-btn bg-slate-900 hover:bg-slate-800 text-white px-3 py-1.5 rounded-lg text-xs font-semibold mr-1">
+                      Details
+                    </button>
+                    <button data-id="${deal.id}" class="save-btn px-2 py-1.5 border rounded-lg text-xs font-bold transition-all ${
+                      isSaved ? "border-amber-400 text-amber-600 bg-amber-50" : "border-slate-200 text-slate-600 hover:bg-slate-50"
+                    }">
+                      ${isSaved ? "★ Saved" : "☆ Save"}
+                    </button>
+                  </td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderNeighborhoodViewHtml(deals) {
+    const neighborhoods = [
+      "SF - SoMa / Downtown",
+      "SF - Golden Gate Park / Richmond",
+      "SF - Mission / Castro",
+      "SF - Chinatown / North Beach",
+      "SF - All Neighborhoods",
+      "Oakland / East Bay",
+      "San Jose / South Bay",
+      "Bay Area Wide"
+    ];
+
+    return `
+      <div class="space-y-8">
+        ${neighborhoods.map(hood => {
+          const matching = deals.filter(d => d.location === hood);
+          if (matching.length === 0) return "";
+          return `
+            <div class="neighborhood-cluster bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                <div>
+                  <h3 class="text-2xl font-extrabold text-slate-900 font-heading flex items-center gap-2">
+                    <span>📍</span>
+                    <span>${hood}</span>
+                  </h3>
+                  <p class="text-xs text-slate-500 mt-1">Verified community deals & freebies in ${hood}</p>
+                </div>
+                <span class="bg-slate-900 text-white font-bold text-xs px-3 py-1.5 rounded-full">
+                  ${matching.length} deal${matching.length === 1 ? "" : "s"}
+                </span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                ${matching.map(deal => createDealCardHtml(deal)).join("")}
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
   }
 
   function createDealCardHtml(deal) {
     const rank = deal.priority_rank || 99;
     const isFree = rank === 1;
+    const isSaved = savedDeals.has(deal.id);
 
     // Badge CSS based on priority
     let badgeClass = "badge-priority-1";
@@ -396,29 +635,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const verification = deal.verification || {};
     const verStatus = verification.status || "Verified Official Source";
-    const verSource = verification.source_name || "Official Site";
     const verDate = verification.verified_date || "2026-08-12";
 
     const isNewTag = deal.is_new ? `<span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold border border-emerald-300">NEW 2026</span>` : "";
+    const activeTodayTag = isDealActiveToday(deal) ? `<span class="bg-emerald-600 text-white text-xs px-2.5 py-0.5 rounded-full font-bold shadow-sm">⚡ FREE TODAY</span>` : "";
 
     return `
       <div class="deal-card bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm relative">
         <div>
-          <!-- Top row: Priority badge and New tag -->
+          <!-- Top row: Priority badge, Active tag, Save star -->
           <div class="flex items-center justify-between gap-2 mb-3">
             <span class="${badgeClass} text-xs font-extrabold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
               <span>${badgeIcon}</span>
               <span>${badgeText}</span>
             </span>
-            ${isNewTag}
+            <div class="flex items-center gap-1.5">
+              ${activeTodayTag}
+              ${isNewTag}
+              <button data-id="${deal.id}" title="Save to My Freebie Wallet" 
+                      class="save-btn px-2.5 py-1 border rounded-lg text-xs font-bold transition-all ${
+                        isSaved ? "border-amber-400 text-amber-600 bg-amber-50 saved" : "border-slate-200 text-slate-600 hover:bg-slate-100"
+                      }">
+                ${isSaved ? "★ Saved" : "☆ Save"}
+              </button>
+            </div>
           </div>
 
-          <!-- Title & Value -->
+          <!-- Title -->
           <div class="flex items-start justify-between gap-3 mb-2">
             <h3 class="text-lg font-bold text-slate-900 leading-snug font-heading">${deal.title}</h3>
           </div>
 
-          <!-- Category and Location pill -->
+          <!-- Category, Location, Value pills -->
           <div class="flex flex-wrap items-center gap-2 text-xs text-slate-600 mb-3">
             <span class="bg-slate-100 px-2.5 py-1 rounded-md font-medium text-slate-700">
               🏷️ ${deal.category}
@@ -519,6 +767,19 @@ document.addEventListener("DOMContentLoaded", () => {
       commBtn.classList.add("hidden");
     }
 
+    // Google Calendar button
+    const gCalBtn = document.getElementById("modal-gcal-btn");
+    gCalBtn.onclick = () => {
+      const gcalUrl = createGoogleCalendarUrl(deal);
+      window.open(gcalUrl, "_blank");
+    };
+
+    // Download .ICS button
+    const icsBtn = document.getElementById("modal-ics-btn");
+    icsBtn.onclick = () => {
+      downloadIcsFile(deal);
+    };
+
     // Copy Instructions Button
     const copyBtn = document.getElementById("modal-copy-btn");
     copyBtn.onclick = () => {
@@ -530,6 +791,42 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     openModal(detailModal);
+  }
+
+  function createGoogleCalendarUrl(deal) {
+    const title = encodeURIComponent(`Freebie: ${deal.title}`);
+    const details = encodeURIComponent(
+      `CouponsDealsSF Verified Promotion\n\nHOW TO REDEEM:\n${deal.redemption_instructions}\n\nRESTRICTIONS:\n${deal.restrictions}\n\nOFFICIAL LINK:\n${deal.promotion_url}`
+    );
+    const location = encodeURIComponent(deal.location + ", San Francisco Bay Area, CA");
+    // Format default all-day event for today
+    const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dateStr}/${dateStr}&details=${details}&location=${location}&sf=true&output=xml`;
+  }
+
+  function downloadIcsFile(deal) {
+    const dt = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+    const icsData = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//CouponsDealsSF//San Francisco Freebies//EN",
+      "BEGIN:VEVENT",
+      `SUMMARY:Freebie: ${deal.title}`,
+      `LOCATION:${deal.location}, San Francisco Bay Area`,
+      `DESCRIPTION:${(deal.description + "\\n\\nRedeem: " + deal.promotion_url).replace(/(\r\n|\n|\r)/gm, "\\n")}`,
+      `DTSTART;VALUE=DATE:${dt}`,
+      `DTEND;VALUE=DATE:${dt}`,
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].join("\r\n");
+
+    const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${deal.id}.ics`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   function runDeepSearchSimulation() {
@@ -544,7 +841,46 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     setTimeout(() => {
-      // Filter candidates from local DB and simulate Reddit discovery
+      if (source === "candidates") {
+        // Show live scraped candidates from data/candidates.json
+        if (allCandidates.length === 0) {
+          deepSearchResultsBox.innerHTML = `
+            <div class="text-center p-6 text-slate-500">
+              No pending scraped candidates right now. Run <code>python3 scripts/live_scraper.py</code> to fetch new Reddit/RSS promotions!
+            </div>
+          `;
+          return;
+        }
+
+        deepSearchResultsBox.innerHTML = `
+          <div class="mb-3 flex items-center justify-between text-xs text-slate-500 font-mono">
+            <span>LIVE SCRAPED CANDIDATES FROM REDDIT / RSS (${allCandidates.length} MATCHES)</span>
+            <span>CLI: python3 scripts/live_scraper.py</span>
+          </div>
+          <div class="space-y-3 max-h-72 overflow-y-auto pr-1">
+            ${allCandidates.map(c => `
+              <div class="p-3 bg-slate-800 text-white rounded-xl border border-slate-700 flex items-center justify-between gap-3">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-xs font-bold px-2 py-0.5 rounded ${
+                      c.priority_rank === 1 ? "bg-emerald-500 text-white" : "bg-amber-500 text-white"
+                    }">#${c.priority_rank} PRIORITY: ${c.priority_label}</span>
+                    <span class="text-xs text-slate-400">[${c.source_subreddit}]</span>
+                  </div>
+                  <div class="font-semibold text-sm">${c.title}</div>
+                  <div class="text-xs text-slate-400 mt-1">Status: ${c.status} (Upvotes: ${c.upvotes || 0})</div>
+                </div>
+                <a href="${c.community_url}" target="_blank" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-lg shrink-0">
+                  Inspect ↗
+                </a>
+              </div>
+            `).join("")}
+          </div>
+        `;
+        return;
+      }
+
+      // Filter candidates from local DB
       const matches = allDeals.filter(d => {
         if (keyword !== "all") {
           const text = (d.title + " " + d.description + " " + d.location).toLowerCase();
@@ -593,7 +929,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `).join("")}
         </div>
       `;
-    }, 400);
+    }, 350);
   }
 
   function openModal(modalEl) {

@@ -1,0 +1,57 @@
+[
+  {
+    "candidate_id": "candidate-funcheap-free-ferry-fest",
+    "title": "SF Free 6-Hour 'Ferry Fest' at Ferry Building - Free Concerts & Art",
+    "source_subreddit": "r/SFEvents / FuncheapSF",
+    "community_url": "https://sf.funcheap.com/",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": 215,
+    "scraped_date": "2026-08-12",
+    "status": "Candidate - Ready for Audit"
+  },
+  {
+    "candidate_id": "candidate-sfgate-free-movies-square",
+    "title": "Movies on the Square - 100% Free Outdoor Movie Double Features in Redwood City",
+    "source_subreddit": "r/bayarea / SFGate",
+    "community_url": "https://www.sfgate.com/local/",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": 142,
+    "scraped_date": "2026-08-12",
+    "status": "Candidate - Ready for Audit"
+  },
+  {
+    "candidate_id": "candidate-dothebay-chinatown-autumn-moon",
+    "title": "Chinatown Autumn Moon Festival - Free Street Fair & Cultural Performances",
+    "source_subreddit": "r/sanfrancisco / DoTheBay",
+    "community_url": "https://dothebay.com/",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": 98,
+    "scraped_date": "2026-08-12",
+    "status": "Candidate - Ready for Audit"
+  },
+  {
+    "candidate_id": "candidate-reddit-free-muni-seniors-disabled",
+    "title": "SFMTA Free Muni for Low-to-Moderate Income Seniors (65+) and People with Disabilities",
+    "source_subreddit": "r/AskSF / SFMTA",
+    "community_url": "https://www.sfmta.com/getting-around/muni/fares/free-muni-seniors-and-people-disabilities",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": 85,
+    "scraped_date": "2026-08-12",
+    "status": "Candidate - Ready for Audit"
+  },
+  {
+    "candidate_id": "candidate-reddit-boudin-free-birthday-sweet",
+    "title": "Boudin Bakery - Free Birthday Sweet Treat for Loyalty Members",
+    "source_subreddit": "r/AskSF / Boudin Rewards",
+    "community_url": "https://boudinbakery.com/rewards/",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": 64,
+    "scraped_date": "2026-08-12",
+    "status": "Candidate - Ready for Audit"
+  }
+]

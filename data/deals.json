@@ -18,8 +18,17 @@
     },
     "promotion_url": "https://www.sfmoma.org/free-days/",
     "community_url": "https://sf.funcheap.com/city-guide/sf-museums-free-days/",
-    "tags": ["museum", "100-percent-free", "family-friendly", "soma", "art", "sf-resident-friendly"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "family-friendly",
+      "soma",
+      "art",
+      "sf-resident-friendly"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "deyoung-free-first-tuesday-and-saturdays",
@@ -40,8 +49,17 @@
     },
     "promotion_url": "https://www.famsf.org/visit/free-reduced-admission",
     "community_url": "https://www.sfgate.com/local/article/san-francisco-museums-17796937.php",
-    "tags": ["museum", "100-percent-free", "bay-area-resident", "golden-gate-park", "saturday", "first-tuesday"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "bay-area-resident",
+      "golden-gate-park",
+      "saturday",
+      "first-tuesday"
+    ],
+    "is_new": true,
+    "schedule_type": "First Tuesday",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "legion-of-honor-free-saturdays-residents",
@@ -62,8 +80,17 @@
     },
     "promotion_url": "https://legionofhonor.famsf.org/visit",
     "community_url": "https://sf.funcheap.com/free-legion-of-honor-museum-day-for-bay-area-residents-every-saturday-316/",
-    "tags": ["museum", "100-percent-free", "bay-area-resident", "sea-cliff", "lands-end", "saturday"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "bay-area-resident",
+      "sea-cliff",
+      "lands-end",
+      "saturday"
+    ],
+    "is_new": true,
+    "schedule_type": "First Tuesday",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "sf-botanical-garden-free-daily-residents",
@@ -84,8 +111,17 @@
     },
     "promotion_url": "https://www.sfbg.org/visit",
     "community_url": "https://www.sfgate.com/local/article/san-francisco-museums-17796937.php",
-    "tags": ["garden", "100-percent-free", "sf-resident", "golden-gate-park", "nature", "daily-freebie"],
-    "is_new": true
+    "tags": [
+      "garden",
+      "100-percent-free",
+      "sf-resident",
+      "golden-gate-park",
+      "nature",
+      "daily-freebie"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "conservatory-of-flowers-free-tuesday-and-residents",
@@ -106,8 +142,17 @@
     },
     "promotion_url": "https://conservatoryofflowers.org/visit/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
-    "tags": ["museum", "100-percent-free", "sf-resident", "golden-gate-park", "first-tuesday", "plants"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "sf-resident",
+      "golden-gate-park",
+      "first-tuesday",
+      "plants"
+    ],
+    "is_new": true,
+    "schedule_type": "First Tuesday",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "japanese-tea-garden-free-hour-and-residents",
@@ -128,8 +173,17 @@
     },
     "promotion_url": "https://www.japaneseteagardensf.com/visit",
     "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
-    "tags": ["garden", "100-percent-free", "sf-resident", "golden-gate-park", "tea-garden", "morning"],
-    "is_new": false
+    "tags": [
+      "garden",
+      "100-percent-free",
+      "sf-resident",
+      "golden-gate-park",
+      "tea-garden",
+      "morning"
+    ],
+    "is_new": false,
+    "schedule_type": "Second Friday",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "ybca-free-wednesdays",
@@ -150,8 +204,16 @@
     },
     "promotion_url": "https://ybca.org/visit/",
     "community_url": "https://www.aifunlab.io/learn/free-museum-days-san-francisco-bay-area",
-    "tags": ["museum", "100-percent-free", "wednesday", "soma", "contemporary-art"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "wednesday",
+      "soma",
+      "contemporary-art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Wednesday",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "sfmta-free-muni-for-all-youth",
@@ -172,8 +234,17 @@
     },
     "promotion_url": "https://www.sfmta.com/getting-around/muni/fares/free-muni-all-youth",
     "community_url": "https://www.reddit.com/r/sanfrancisco/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["transit", "100-percent-free", "youth", "muni", "city-service", "sf-resident-friendly"],
-    "is_new": false
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "youth",
+      "muni",
+      "city-service",
+      "sf-resident-friendly"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "sfpl-discover-and-go-free-museum-passes",
@@ -194,8 +265,18 @@
     },
     "promotion_url": "https://sfpl.org/discover-and-go",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["library", "100-percent-free", "museum", "sf-resident", "exploratorium", "cal-academy", "family"],
-    "is_new": true
+    "tags": [
+      "library",
+      "100-percent-free",
+      "museum",
+      "sf-resident",
+      "exploratorium",
+      "cal-academy",
+      "family"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "mission-food-hub-free-fresh-groceries",
@@ -216,8 +297,16 @@
     },
     "promotion_url": "https://www.missionfoodhub.org/",
     "community_url": "https://www.freemania.net/cities/san-francisco-ca",
-    "tags": ["free-food", "100-percent-free", "groceries", "mission-district", "community-service"],
-    "is_new": true
+    "tags": [
+      "free-food",
+      "100-percent-free",
+      "groceries",
+      "mission-district",
+      "community-service"
+    ],
+    "is_new": true,
+    "schedule_type": "Second Friday",
+    "neighborhood_slug": "sf-mission-castro"
   },
   {
     "id": "archimedes-banya-free-birthday-pass",
@@ -238,8 +327,18 @@
     },
     "promotion_url": "https://banyasf.com/",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["birthday", "100-percent-free", "sauna", "wellness", "soma", "bayview", "high-value"],
-    "is_new": true
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "sauna",
+      "wellness",
+      "soma",
+      "bayview",
+      "high-value"
+    ],
+    "is_new": true,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "balboa-theater-free-birthday-movie",
@@ -260,8 +359,16 @@
     },
     "promotion_url": "https://www.cinemasf.com/balboa",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["birthday", "100-percent-free", "movie", "richmond-district", "entertainment"],
-    "is_new": true
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "movie",
+      "richmond-district",
+      "entertainment"
+    ],
+    "is_new": true,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "ikes-sandwiches-free-birthday-sandwich",
@@ -282,8 +389,17 @@
     },
     "promotion_url": "https://ikessandwich.com/rewards/",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["birthday", "100-percent-free", "free-food", "sandwich", "bay-area-wide", "loyalty"],
-    "is_new": true
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "free-food",
+      "sandwich",
+      "bay-area-wide",
+      "loyalty"
+    ],
+    "is_new": true,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "ghirardelli-square-free-chocolate-sample",
@@ -304,8 +420,17 @@
     },
     "promotion_url": "https://www.ghirardelli.com/store-locations/san-francisco-ghirardelli-square",
     "community_url": "https://sf.funcheap.com/",
-    "tags": ["free-food", "100-percent-free", "chocolate", "north-beach", "fishermans-wharf", "daily-freebie"],
-    "is_new": false
+    "tags": [
+      "free-food",
+      "100-percent-free",
+      "chocolate",
+      "north-beach",
+      "fishermans-wharf",
+      "daily-freebie"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
   },
   {
     "id": "chinatown-night-market-free-admission",
@@ -326,8 +451,18 @@
     },
     "promotion_url": "https://www.chinatownmerchant.org/",
     "community_url": "https://sf.funcheap.com/events/",
-    "tags": ["event", "100-percent-free", "chinatown", "night-market", "culture", "family", "friday"],
-    "is_new": true
+    "tags": [
+      "event",
+      "100-percent-free",
+      "chinatown",
+      "night-market",
+      "culture",
+      "family",
+      "friday"
+    ],
+    "is_new": true,
+    "schedule_type": "Second Friday",
+    "neighborhood_slug": "sf-chinatown-north-beach"
   },
   {
     "id": "sf-cable-car-museum-always-free",
@@ -348,30 +483,49 @@
     },
     "promotion_url": "http://www.cablecarmuseum.org/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
-    "tags": ["museum", "100-percent-free", "nob-hill", "chinatown", "history", "always-free", "family"],
-    "is_new": false
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "nob-hill",
+      "chinatown",
+      "history",
+      "always-free",
+      "family"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
   },
   {
     "id": "musee-mecanique-always-free",
-    "title": "Musée Mécanique - Always 100% Free Admission at Fisherman's Wharf",
+    "title": "Mus\u00e9e M\u00e9canique - Always 100% Free Admission at Fisherman's Wharf",
     "priority_label": "100% Free",
     "priority_rank": 1,
     "category": "Entertainment & Events",
     "location": "SF - Chinatown / North Beach",
     "value": "$15 admission value",
-    "description": "San Francisco's famous Musée Mécanique on Pier 45 at Fisherman's Wharf is one of the world's largest privately owned collections of antique mechanical musical instruments and coin-operated arcade machines. Admission is always 100% FREE!",
-    "redemption_instructions": "1. Visit Musée Mécanique at Pier 45 (Fisherman's Wharf, SF).\n2. Open 365 days a year, 10:00 AM to 8:00 PM.\n3. Free walk-in admission for everyone; coins are only required if you choose to play the antique games.",
+    "description": "San Francisco's famous Mus\u00e9e M\u00e9canique on Pier 45 at Fisherman's Wharf is one of the world's largest privately owned collections of antique mechanical musical instruments and coin-operated arcade machines. Admission is always 100% FREE!",
+    "redemption_instructions": "1. Visit Mus\u00e9e M\u00e9canique at Pier 45 (Fisherman's Wharf, SF).\n2. Open 365 days a year, 10:00 AM to 8:00 PM.\n3. Free walk-in admission for everyone; coins are only required if you choose to play the antique games.",
     "restrictions": "Always free to enter and tour. Arcade games cost 25 to 50 cents to play.",
     "verification": {
       "status": "Verified Official Source",
-      "source_name": "Musée Mécanique Official Policy",
+      "source_name": "Mus\u00e9e M\u00e9canique Official Policy",
       "verified_date": "2026-08-12",
       "notes": "Confirmed on museemecanique.com visitor rules and SF Free Attractions guide."
     },
     "promotion_url": "https://museemecanique.com/",
     "community_url": "https://www.sfgate.com/local/",
-    "tags": ["entertainment", "100-percent-free", "fishermans-wharf", "arcade", "history", "always-free"],
-    "is_new": false
+    "tags": [
+      "entertainment",
+      "100-percent-free",
+      "fishermans-wharf",
+      "arcade",
+      "history",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
   },
   {
     "id": "bank-of-america-museums-on-us-weekend",
@@ -392,8 +546,18 @@
     },
     "promotion_url": "https://about.bankofamerica.com/en/making-an-impact/museums-on-us",
     "community_url": "https://www.sfgate.com/local/article/san-francisco-museums-17796937.php",
-    "tags": ["museum", "100-percent-free", "weekend", "bay-area-wide", "cardholder", "oakland", "sf"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "weekend",
+      "bay-area-wide",
+      "cardholder",
+      "oakland",
+      "sf"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "baskin-robbins-free-birthday-scoop",
@@ -414,8 +578,16 @@
     },
     "promotion_url": "https://www.baskinrobbins.com/en/birthday-club",
     "community_url": "https://www.birthdayhunter.com/birthday-freebies-in/san-francisco",
-    "tags": ["birthday", "100-percent-free", "free-food", "ice-cream", "bay-area-wide"],
-    "is_new": false
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "free-food",
+      "ice-cream",
+      "bay-area-wide"
+    ],
+    "is_new": false,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "nothing-bundt-cakes-free-birthday-bundlet",
@@ -436,8 +608,16 @@
     },
     "promotion_url": "https://www.nothingbundtcakes.com/eclub/",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["birthday", "100-percent-free", "free-food", "cake", "bay-area-wide"],
-    "is_new": true
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "free-food",
+      "cake",
+      "bay-area-wide"
+    ],
+    "is_new": true,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "sfpl-free-nytimes-wsj-digital-access",
@@ -458,8 +638,18 @@
     },
     "promotion_url": "https://sfpl.org/books-and-media",
     "community_url": "https://www.sfgate.com/local/",
-    "tags": ["library", "100-percent-free", "news", "streaming", "sf-resident", "education", "daily-freebie"],
-    "is_new": true
+    "tags": [
+      "library",
+      "100-percent-free",
+      "news",
+      "streaming",
+      "sf-resident",
+      "education",
+      "daily-freebie"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "golden-gate-park-skatin-place-free-skate",
@@ -480,8 +670,18 @@
     },
     "promotion_url": "https://sfrecpark.org/destination/golden-gate-park/skatin-place/",
     "community_url": "https://sf.funcheap.com/events/",
-    "tags": ["event", "100-percent-free", "skating", "golden-gate-park", "weekend", "music", "family"],
-    "is_new": false
+    "tags": [
+      "event",
+      "100-percent-free",
+      "skating",
+      "golden-gate-park",
+      "weekend",
+      "music",
+      "family"
+    ],
+    "is_new": false,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "off-the-grid-treasure-island-free-ferry",
@@ -502,8 +702,17 @@
     },
     "promotion_url": "https://offthegrid.com/",
     "community_url": "https://sf.funcheap.com/grid-waterfront-fest-free-ferry-rides-treasure-island/",
-    "tags": ["transit", "100-percent-free", "ferry", "treasure-island", "event", "waterfront"],
-    "is_new": true
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "ferry",
+      "treasure-island",
+      "event",
+      "waterfront"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "moad-free-second-saturday",
@@ -524,8 +733,17 @@
     },
     "promotion_url": "https://www.moadsf.org/visit",
     "community_url": "https://www.aifunlab.io/learn/free-museum-days-san-francisco-bay-area",
-    "tags": ["museum", "100-percent-free", "soma", "second-saturday", "art", "family"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "soma",
+      "second-saturday",
+      "art",
+      "family"
+    ],
+    "is_new": true,
+    "schedule_type": "Second Saturday",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "oakland-museum-omca-free-first-sunday",
@@ -546,8 +764,18 @@
     },
     "promotion_url": "https://museumca.org/visit/",
     "community_url": "https://www.sfgate.com/local/",
-    "tags": ["museum", "100-percent-free", "oakland", "east-bay", "first-sunday", "history", "art"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "oakland",
+      "east-bay",
+      "first-sunday",
+      "history",
+      "art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Sunday",
+    "neighborhood_slug": "oakland-east-bay"
   },
   {
     "id": "berkeley-bampfa-free-first-thursday",
@@ -568,8 +796,18 @@
     },
     "promotion_url": "https://bampfa.org/visit",
     "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
-    "tags": ["museum", "100-percent-free", "berkeley", "east-bay", "first-thursday", "art", "film"],
-    "is_new": false
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "berkeley",
+      "east-bay",
+      "first-thursday",
+      "art",
+      "film"
+    ],
+    "is_new": false,
+    "schedule_type": "First Thursday",
+    "neighborhood_slug": "oakland-east-bay"
   },
   {
     "id": "museum-of-craft-and-design-free-thursdays",
@@ -590,8 +828,17 @@
     },
     "promotion_url": "https://sfmcd.org/visit/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
-    "tags": ["museum", "100-percent-free", "dogpatch", "first-thursday", "wednesday", "craft"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "dogpatch",
+      "first-thursday",
+      "wednesday",
+      "craft"
+    ],
+    "is_new": true,
+    "schedule_type": "First Thursday",
+    "neighborhood_slug": "sf-mission-castro"
   },
   {
     "id": "glbt-historical-society-free-wednesday",
@@ -601,7 +848,7 @@
     "category": "Museums & Arts",
     "location": "SF - Mission / Castro",
     "value": "$10 value",
-    "description": "The GLBT Historical Society Museum in San Francisco's Castro district—the first full-scale museum of LGBTQ history and culture in the US—offers 100% free general admission on the first Wednesday of every month.",
+    "description": "The GLBT Historical Society Museum in San Francisco's Castro district\u2014the first full-scale museum of LGBTQ history and culture in the US\u2014offers 100% free general admission on the first Wednesday of every month.",
     "redemption_instructions": "1. Visit the museum at 4127 18th Street (in the Castro, near Castro & Collingwood).\n2. Arrive on the first Wednesday of the month between 11:00 AM and 5:00 PM.\n3. Enjoy complimentary walk-in entry to all archives and historical exhibits.",
     "restrictions": "First Wednesday of every month. No advance reservation required.",
     "verification": {
@@ -612,8 +859,17 @@
     },
     "promotion_url": "https://www.glbthistory.org/museum",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
-    "tags": ["museum", "100-percent-free", "castro", "history", "first-wednesday", "lgbtq"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "castro",
+      "history",
+      "first-wednesday",
+      "lgbtq"
+    ],
+    "is_new": true,
+    "schedule_type": "First Wednesday",
+    "neighborhood_slug": "sf-mission-castro"
   },
   {
     "id": "tato-pay-what-you-can-friday-tacos",
@@ -634,8 +890,17 @@
     },
     "promotion_url": "https://sf.funcheap.com/category/event/event-types/free-food/",
     "community_url": "https://sf.funcheap.com/events/",
-    "tags": ["free-food", "100-percent-free", "tacos", "mission-district", "friday", "community"],
-    "is_new": true
+    "tags": [
+      "free-food",
+      "100-percent-free",
+      "tacos",
+      "mission-district",
+      "friday",
+      "community"
+    ],
+    "is_new": true,
+    "schedule_type": "Second Friday",
+    "neighborhood_slug": "sf-mission-castro"
   },
   {
     "id": "chinese-historical-society-always-free",
@@ -656,8 +921,17 @@
     },
     "promotion_url": "https://chsa.org/visit/",
     "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
-    "tags": ["museum", "100-percent-free", "chinatown", "history", "always-free", "family"],
-    "is_new": false
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "chinatown",
+      "history",
+      "always-free",
+      "family"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
   },
   {
     "id": "chipotle-free-guac-or-chips-rewards",
@@ -678,8 +952,17 @@
     },
     "promotion_url": "https://www.chipotle.com/rewards",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["free-food", "free-with-purchase", "chipotle", "guacamole", "bay-area-wide", "loyalty"],
-    "is_new": false
+    "tags": [
+      "free-food",
+      "free-with-purchase",
+      "chipotle",
+      "guacamole",
+      "bay-area-wide",
+      "loyalty"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "buffalo-wild-wings-free-birthday-wings",
@@ -700,8 +983,16 @@
     },
     "promotion_url": "https://www.buffalowildwings.com/rewards/",
     "community_url": "https://www.reddit.com/r/AskSF/comments/1ub304e/its_my_birthday_today_what_can_i_get_for_free_in/",
-    "tags": ["birthday", "free-with-purchase", "wings", "free-food", "bay-area-wide"],
-    "is_new": false
+    "tags": [
+      "birthday",
+      "free-with-purchase",
+      "wings",
+      "free-food",
+      "bay-area-wide"
+    ],
+    "is_new": false,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "quiznos-bogo-birthday-sub",
@@ -722,8 +1013,16 @@
     },
     "promotion_url": "https://www.quiznos.com/toastypoints",
     "community_url": "https://www.birthdayhunter.com/birthday-freebies/birthday-freebies/san-francisco",
-    "tags": ["birthday", "bogo", "free-with-purchase", "sandwich", "free-food"],
-    "is_new": true
+    "tags": [
+      "birthday",
+      "bogo",
+      "free-with-purchase",
+      "sandwich",
+      "free-food"
+    ],
+    "is_new": true,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "underdogs-cantina-1-dollar-margaritas",
@@ -744,8 +1043,17 @@
     },
     "promotion_url": "https://www.underdogscantina.com/",
     "community_url": "https://sf.funcheap.com/events/",
-    "tags": ["discount", "tacos", "margarita", "soma", "tuesday", "nightlife"],
-    "is_new": true
+    "tags": [
+      "discount",
+      "tacos",
+      "margarita",
+      "soma",
+      "tuesday",
+      "nightlife"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "clipper-baypass-student-commuter-pilot",
@@ -766,8 +1074,18 @@
     },
     "promotion_url": "https://mtc.ca.gov/operations/traveler-services/clipper/clipper-baypass",
     "community_url": "https://www.reddit.com/r/bayarea/",
-    "tags": ["transit", "100-percent-free", "clipper", "student", "bart", "muni", "bay-area-wide"],
-    "is_new": true
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "clipper",
+      "student",
+      "bart",
+      "muni",
+      "bay-area-wide"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
     "id": "stern-grove-festival-free-summer-concerts",
@@ -788,8 +1106,18 @@
     },
     "promotion_url": "https://www.sterngrove.org/",
     "community_url": "https://sf.funcheap.com/",
-    "tags": ["event", "100-percent-free", "music", "concert", "stern-grove", "summer", "sunday"],
-    "is_new": false
+    "tags": [
+      "event",
+      "100-percent-free",
+      "music",
+      "concert",
+      "stern-grove",
+      "summer",
+      "sunday"
+    ],
+    "is_new": false,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
   },
   {
     "id": "asian-art-museum-free-first-sunday",
@@ -810,8 +1138,17 @@
     },
     "promotion_url": "https://asianart.org/visit/free-days/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
-    "tags": ["museum", "100-percent-free", "civic-center", "first-sunday", "art", "asian-art"],
-    "is_new": true
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "civic-center",
+      "first-sunday",
+      "art",
+      "asian-art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Sunday",
+    "neighborhood_slug": "sf-soma-downtown"
   },
   {
     "id": "sf-zoo-free-days-sf-residents",
@@ -832,7 +1169,395 @@
     },
     "promotion_url": "https://www.sfzoo.org/visit/tickets/",
     "community_url": "https://www.aifunlab.io/learn/free-museum-days-san-francisco-bay-area",
-    "tags": ["zoo", "100-percent-free", "sf-resident", "ocean-beach", "family", "animals"],
-    "is_new": false
+    "tags": [
+      "zoo",
+      "100-percent-free",
+      "sf-resident",
+      "ocean-beach",
+      "family",
+      "animals"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "ica-sf-the-cube-always-free",
+    "title": "ICA SF (Institute of Contemporary Art) at The Cube - 100% Free Admission",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - SoMa / Downtown",
+    "value": "$20 value",
+    "description": "Located in a stunning 5-story atrium at 345 Montgomery Street in downtown San Francisco ('The Cube'), ICA SF offers 100% free admission to all cutting-edge contemporary art exhibitions.",
+    "redemption_instructions": "1. Visit ICA SF at 345 Montgomery Street (at California St, Financial District/Downtown SF).\n2. Open Wednesday through Sunday, 11:00 AM to 5:00 PM (extended hours Thursdays until 7:00 PM).\n3. Enjoy complimentary walk-in entry; no tickets or reservations required.",
+    "restrictions": "Closed Mondays and Tuesdays. Always free general admission.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "ICA SF Official Admission Policy",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on icasf.org and SF Standard / Funcheap 2026 arts directory."
+    },
+    "promotion_url": "https://www.icasf.org/visit",
+    "community_url": "https://sf.funcheap.com/city-guide/free-sf-art-museum-opens-historic-downtown-bank-building-cube/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "financial-district",
+      "downtown",
+      "contemporary-art",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "randall-museum-always-free",
+    "title": "Randall Museum of Science, Nature & the Arts - 100% Free Daily Admission",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Mission / Castro",
+    "value": "$15 value",
+    "description": "Perched on Corona Heights Park with commanding views over San Francisco, the Randall Museum offers 100% free admission to live animal exhibits, interactive science labs, STEM activities, and a massive basement model train layout.",
+    "redemption_instructions": "1. Visit the Randall Museum at 199 Museum Way (Corona Heights / Castro, SF).\n2. Open Tuesday through Saturday, 10:00 AM - 5:00 PM.\n3. Free walk-in entry for all ages; optional donations are appreciated at the entrance quail.",
+    "restrictions": "Closed Sundays and Mondays. Free general admission.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Randall Museum Official Policy",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on randallmuseum.org and SF Free Attractions guide."
+    },
+    "promotion_url": "https://randallmuseum.org/about-us/",
+    "community_url": "https://www.tripadvisor.com/Attraction_Review-g60713-d557300-Reviews-Randall_Museum-San_Francisco_California.html",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "castro",
+      "science",
+      "animals",
+      "family",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-mission-castro"
+  },
+  {
+    "id": "cantor-arts-center-stanford-always-free",
+    "title": "Cantor Arts Center at Stanford University - 100% Free Admission & Rodin Garden",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "San Jose / South Bay",
+    "value": "$25 value",
+    "description": "Stanford University's Cantor Arts Center in Palo Alto features over 40,000 artworks spanning 5,000 years, including one of the world's largest collections of Auguste Rodin sculptures in its outdoor sculpture garden. Admission is always 100% FREE!",
+    "redemption_instructions": "1. Reserve a free timed admission ticket online at museum.stanford.edu or walk in during open hours.\n2. Open Wednesday - Sunday, 11:00 AM to 5:00 PM (Thursdays until 8:00 PM).\n3. Free parking is available on weekends across Stanford campus.",
+    "restrictions": "Always free admission. Closed Mondays and Tuesdays.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Cantor Arts Center Official Visitor Policy",
+      "verified_date": "2026-08-12",
+      "notes": "Verified via museum.stanford.edu admission rules."
+    },
+    "promotion_url": "https://museum.stanford.edu/visit",
+    "community_url": "https://www.tripadvisor.com/Attraction_Review-g32849-d532040-Reviews-Cantor_Arts_Center-Palo_Alto_California.html",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "stanford",
+      "palo-alto",
+      "south-bay",
+      "sculpture",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "san-jose-south-bay"
+  },
+  {
+    "id": "sf-opera-in-the-park-free-concert",
+    "title": "SF Opera in the Park - 100% Free Outdoor Concert in Golden Gate Park",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - Golden Gate Park / Richmond",
+    "value": "$75 opera ticket value",
+    "description": "San Francisco Opera's annual 'Opera in the Park' celebration brings world-class opera stars and the SF Opera Orchestra to Robin Williams Meadow in Golden Gate Park for a 100% FREE Sunday afternoon concert.",
+    "redemption_instructions": "1. Head to Robin Williams Meadow (formerly Sharon Meadow) in Golden Gate Park on Sunday, September 13, 2026.\n2. Concert starts at 1:30 PM and runs for approximately 2 hours.\n3. Free lawn seating for everyone; bring a picnic blanket and snacks!",
+    "restrictions": "100% free and open to the public. No tickets or reservations required.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Opera Association",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on sfopera.com/operainthepark and 2026 SF Funcheap fall guide."
+    },
+    "promotion_url": "https://www.sfopera.com/operainthepark/",
+    "community_url": "https://sf.funcheap.com/opera-park-golden-gate-park/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "opera",
+      "music",
+      "golden-gate-park",
+      "sunday",
+      "autumn"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
+  },
+  {
+    "id": "stern-grove-terminal-sessions-sfo-free",
+    "title": "Stern Grove 'Terminal Sessions' at SFO Airport - 100% Free Live Concerts",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - All Neighborhoods",
+    "value": "$40 value",
+    "description": "San Francisco's iconic Stern Grove Festival has expanded to San Francisco International Airport (SFO) with 'Terminal Sessions'\u2014a special slate of 100% FREE live summer concerts by Gate B4 in Terminal 1.",
+    "redemption_instructions": "1. Traveling through SFO Terminal 1 (Harvey Milk Terminal) on select summer Fridays?\n2. Head to the performance stage near Gate B4.\n3. Enjoy complimentary live sets from touring bands and Bay Area musicians.",
+    "restrictions": "Free for ticketed passengers inside SFO security screening at Terminal 1.",
+    "verification": {
+      "status": "Verified News Release",
+      "source_name": "Stern Grove Festival & SFO Airport Press Release",
+      "verified_date": "2026-08-12",
+      "notes": "Verified via 2026 SFist and SFO Terminal Sessions announcement."
+    },
+    "promotion_url": "https://www.sterngrove.org/",
+    "community_url": "https://sfist.com/2026/06/05/day-around-the-bay-stern-grove-announces-free-concert-series-at-sfo/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "music",
+      "airport",
+      "sfo",
+      "terminal-sessions"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "sf-fire-department-museum-always-free",
+    "title": "San Francisco Fire Department Museum - 100% Free Historical Museum",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - All Neighborhoods",
+    "value": "$10 value",
+    "description": "The San Francisco Fire Department Museum showcases historic horse-drawn fire engines, antique firefighting gear, and dramatic history from the 1906 Earthquake and Fire. Admission is always 100% FREE!",
+    "redemption_instructions": "1. Visit the museum at 658 Presidio Avenue (between Bush & Pine St, Western Addition / Pac Heights, SF).\n2. Open Thursday through Sunday, 1:00 PM to 4:00 PM.\n3. Enjoy complimentary walk-in entry for the whole family.",
+    "restrictions": "Open Thursday through Sunday afternoons. Always free.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SFFD Historical Society",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on sffiremuseum.org visitor rules."
+    },
+    "promotion_url": "https://sffiremuseum.org/",
+    "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "history",
+      "firefighting",
+      "family",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "sf-camerawork-free-photography-gallery",
+    "title": "SF Camerawork - 100% Free Contemporary Photography Exhibitions",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Chinatown / North Beach",
+    "value": "$12 value",
+    "description": "Located at historic Fort Mason Center for Arts & Culture on the waterfront, SF Camerawork is a non-profit gallery dedicated to emerging and provocative photography. Admission is 100% free for all visitors.",
+    "redemption_instructions": "1. Visit SF Camerawork at Fort Mason Center, 2 Fort Mason, Building A (Marina / North Beach, SF).\n2. Open Tuesday through Saturday, 12:00 PM to 6:00 PM.\n3. Check in at the gallery entrance for free walk-in admission.",
+    "restrictions": "Always free general admission. Closed Sundays and Mondays.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF Camerawork Visitor Policy",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on sfcamerawork.org official free admission rules."
+    },
+    "promotion_url": "https://www.sfcamerawork.org/visit",
+    "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "photography",
+      "fort-mason",
+      "marina",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
+  },
+  {
+    "id": "anderson-collection-stanford-always-free",
+    "title": "Anderson Collection at Stanford - 100% Free American Art Museum",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "San Jose / South Bay",
+    "value": "$20 value",
+    "description": "Adjacent to Cantor Arts Center at Stanford University, the Anderson Collection houses one of the world's most outstanding collections of post-WWII American art (Pollock, Rothko, Diebenkorn). Admission is always 100% FREE!",
+    "redemption_instructions": "1. Visit the Anderson Collection at 314 Lomita Drive (Stanford Campus, Palo Alto).\n2. Open Wednesday through Sunday, 11:00 AM to 5:00 PM.\n3. Free walk-in entry; no tickets or reservations required.",
+    "restrictions": "Closed Mondays and Tuesdays. Always free admission.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Anderson Collection at Stanford University",
+      "verified_date": "2026-08-12",
+      "notes": "Verified via anderson.stanford.edu admission policy."
+    },
+    "promotion_url": "https://anderson.stanford.edu/visit/",
+    "community_url": "https://www.tripadvisor.com/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "stanford",
+      "palo-alto",
+      "south-bay",
+      "modern-art",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "san-jose-south-bay"
+  },
+  {
+    "id": "sf-railway-museum-always-free",
+    "title": "San Francisco Railway Museum - 100% Free Transit & Streetcar Museum",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - SoMa / Downtown",
+    "value": "$10 value",
+    "description": "Located across from the Ferry Building along the Embarcadero, the San Francisco Railway Museum features antique streetcar relics, a full-scale 1911 Muni streetcar replica you can sit in, and interactive transit exhibits\u2014100% FREE!",
+    "redemption_instructions": "1. Visit the museum at 77 Steuart Street (at Market St, near Ferry Building / Embarcadero BART, SF).\n2. Open Tuesday through Saturday, 12:00 PM to 5:00 PM.\n3. Free walk-in admission for everyone.",
+    "restrictions": "Always free general admission. Open Tuesday through Saturday.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Market Street Railway / SF Railway Museum",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on streetcar.org/museum official rules."
+    },
+    "promotion_url": "https://www.streetcar.org/museum/",
+    "community_url": "https://parentspress.com/45-bay-area-museum-attractions-offer-free-or-low-cost-admission-day/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "embarcadero",
+      "soma",
+      "transit",
+      "history",
+      "always-free"
+    ],
+    "is_new": false,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "sf-amateur-astronomers-free-star-parties",
+    "title": "San Francisco Amateur Astronomers - 100% Free Public Star Parties & Lectures",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "SF - Golden Gate Park / Richmond",
+    "value": "$25 value",
+    "description": "The San Francisco Amateur Astronomers (SFAA) hosts 100% free monthly astronomy lectures at the Presidio / Randall Museum and free public star parties with high-powered telescopes in Lands End, Golden Gate Park, and Mt. Tamalpais.",
+    "redemption_instructions": "1. Check the official event schedule at sfaa-astronomy.org for upcoming public star parties and lecture nights.\n2. Arrive at the designated viewing spot (such as Lands End or Presidio Parade Grounds).\n3. Look through members' telescopes at planets, nebulae, and star clusters for free!",
+    "restrictions": "Free and open to the public of all ages. Weather dependent.",
+    "verification": {
+      "status": "Verified Community / Reddit",
+      "source_name": "San Francisco Amateur Astronomers (SFAA)",
+      "verified_date": "2026-08-12",
+      "notes": "Verified via sfaa-astronomy.org public event schedule."
+    },
+    "promotion_url": "https://www.sfaa-astronomy.org/",
+    "community_url": "https://sf.funcheap.com/",
+    "tags": [
+      "community",
+      "100-percent-free",
+      "astronomy",
+      "stargazing",
+      "presidio",
+      "weekend",
+      "family"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
+  },
+  {
+    "id": "sephora-sf-free-birthday-gift-set",
+    "title": "Sephora SF - 100% Free Birthday Beauty & Skincare Gift Set (No Purchase Required)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Birthdays & Freebies",
+    "location": "SF - SoMa / Downtown",
+    "value": "$18 value",
+    "description": "Register for a free Sephora Beauty Insider account and claim a 100% FREE birthday makeup, haircare, or skincare gift set during your birthday month at any San Francisco or Bay Area Sephora store (Union Square, Stonestown, Chestnut St), with zero purchase required in-store!",
+    "redemption_instructions": "1. Sign up for the free Sephora Beauty Insider program prior to your birthday month.\n2. Visit any Sephora store location in SF or the Bay Area during your birthday month.\n3. Provide your registered email or phone number at checkout and choose your free birthday gift set ($0 charge in-store).",
+    "restrictions": "Must be a registered Beauty Insider. No purchase required when claimed in-store (online redemption requires minimum order).",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Sephora Beauty Insider Birthday Policy",
+      "verified_date": "2026-08-12",
+      "notes": "Confirmed on sephora.com/beauty/birthday-gift and r/AskSF birthday freebie confirmations."
+    },
+    "promotion_url": "https://www.sephora.com/beauty/birthday-gift",
+    "community_url": "https://www.birthdayhunter.com/birthday-freebies/birthday-freebies/san-francisco",
+    "tags": [
+      "birthday",
+      "100-percent-free",
+      "beauty",
+      "skincare",
+      "union-square",
+      "bay-area-wide"
+    ],
+    "is_new": false,
+    "schedule_type": "Birthday",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "bay-wheels-bike-share-free-ebt-medical-rides",
+    "title": "Bay Wheels Bike Share - 100% Free 30-Minute Rides for SF EBT / Medi-Cal Residents",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Transit & Services",
+    "location": "SF - All Neighborhoods",
+    "value": "$100+/year bike share value",
+    "description": "Through the 'Bikes for All' equity program, San Francisco and Bay Area residents who receive CalFresh (EBT), Medi-Cal, or SFMTA Lifeline can enroll for $5/year or $0 pilot programs and receive unlimited 100% FREE 30-minute classic bike share trips across SF, Oakland, Berkeley, and San Jose.",
+    "redemption_instructions": "1. Visit baywheels.com/bikes-for-all and apply with your EBT, Medi-Cal, or Lifeline card number.\n2. Once approved, link your account in the Lyft / Bay Wheels mobile app or Clipper card.\n3. Unlock any classic Bay Wheels bike at any docking station across the Bay Area for unlimited free 30-minute rides.",
+    "restrictions": "Requires qualification under CalFresh EBT, Medi-Cal, or Lifeline. Trips under 30 minutes are 100% free.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "MTC / Bay Wheels 'Bikes for All' Official Rules",
+      "verified_date": "2026-08-12",
+      "notes": "Verified via baywheels.com/bikes-for-all equity program documentation."
+    },
+    "promotion_url": "https://www.lyft.com/bikes/bay-wheels/bikes-for-all",
+    "community_url": "https://www.freemania.net/cities/san-francisco-ca",
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "bike-share",
+      "ebt",
+      "city-service",
+      "sf-resident-friendly",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
   }
 ]

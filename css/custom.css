@@ -63,10 +63,17 @@ h1, h2, h3, h4, .font-heading {
   color: #ffffff;
 }
 
+/* Active Schedule Badge */
+.badge-active-today {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  animation: pulse-soft 2.5s infinite ease-in-out;
+}
+
 /* Verified Badge Animation */
 @keyframes pulse-soft {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.04); }
 }
 
 .verified-indicator {
@@ -97,4 +104,18 @@ h1, h2, h3, h4, .font-heading {
   border-bottom: 3px solid #10b981 !important;
   color: #059669 !important;
   font-weight: 700 !important;
+}
+
+/* Saved Bookmark Button Animation */
+.save-btn.saved {
+  color: #f59e0b;
+  transform: scale(1.15);
+}
+
+/* Neighborhood Explorer Card */
+.neighborhood-cluster {
+  transition: all 0.2s ease;
+}
+.neighborhood-cluster:hover {
+  border-color: #10b981;
 }
