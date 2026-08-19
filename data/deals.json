@@ -1316,5 +1316,230 @@
     "is_new": true,
     "schedule_type": "Always Free",
     "neighborhood_slug": "sf-golden-gate-park-richmond"
+  },
+  {
+    "id": "chabot-free-telescope-viewings",
+    "title": "Chabot Space & Science Center - Free Friday & Saturday Night Telescope Viewings",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free public observatory night (museum admission is separate/paid)",
+    "description": "Chabot Space & Science Center in the Oakland hills offers free telescope viewing on the Observatory Deck every Friday and Saturday night, 7:30-10:30 PM, weather permitting - through three historic telescopes: the 8-inch Leah (1883), 20-inch Rachel (1916), and 36-inch Nellie (2003). Chabot calls itself 'the largest observatory complex regularly free for public viewing in the Western United States.'",
+    "redemption_instructions": "1. Check Chabot's weather station and cloud-cover webcam before driving up (viewings are weather-dependent).\n2. Come Friday or Saturday night, 7:30-10:30 PM, to the Observatory Deck in Joaquin Miller Park, Oakland.\n3. No ticket needed for telescope viewing - it is separate from (and free of) museum admission.",
+    "restrictions": "Weather permitting only: Leah and Rachel close when humidity exceeds 90%, Nellie closes at 85%+, and the observatories close when raining. Interior museum exhibits require paid admission.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Chabot Space & Science Center",
+      "verified_date": "2026-08-19",
+      "notes": "Official program page: 'Every Friday and Saturday Night, weather permitting - Chabot Observatory Deck - 7:30-10:30 p.m.' free viewing; humidity closure rules verbatim; 'largest observatory complex regularly free for public viewing in the Western United States.' Discovered via r/bayarea; verified 2026-08-19."
+    },
+    "promotion_url": "https://chabotspace.org/programs/free-telescope-viewings/",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1h5rz4f/telescope_viewings_similar_to_lick_observatory/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "astronomy",
+      "oakland",
+      "east-bay",
+      "weekend",
+      "family",
+      "night"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "rosie-riveter-nhp-free-admission",
+    "title": "Rosie the Riveter WWII Home Front National Historical Park - Free Admission (Richmond)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free NPS visitor center and park (no pass required)",
+    "description": "Rosie the Riveter WWII Home Front National Historical Park in Richmond is a National Park Service site with free admission. The official NPS fees page states: 'Free - No entrance pass required,' and 'Our Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter.'",
+    "redemption_instructions": "1. Check current visitor center days/hours on nps.gov/rori before visiting.\n2. Walk in - no pass, no fee.\n3. Combine with the free Rosie Memorial on the Richmond waterfront.",
+    "restrictions": "The Red Oak Victory ship is a separate partner organization with its own fees/donations (NPS passes not accepted there).",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - Rosie the Riveter WWII Home Front NHP",
+      "verified_date": "2026-08-19",
+      "notes": "Official NPS fees page: 'Free. No entrance pass required'; 'Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter'; Red Oak Victory noted as paid partner. Discovered via r/bayarea; verified 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/rori/planyourvisit/fees.htm",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1rnu66v/whats_something_free_or_extremely_cheap_you_found/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "richmond",
+      "east-bay",
+      "history",
+      "family",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "sfac-galleries-free-exhibitions",
+    "title": "SFAC Galleries - Free City-Run Exhibitions (War Memorial & City Hall)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - SoMa / Downtown",
+    "value": "Free contemporary-art exhibitions",
+    "description": "The San Francisco Arts Commission's official site invites the public to 'Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall in the North Light Court and Ground Floor.' The Main Gallery sits at 401 Van Ness Avenue (ground floor), open Wednesday-Saturday, 12-5 PM.",
+    "redemption_instructions": "1. Visit the SFAC Main Gallery, War Memorial Veterans Building, 401 Van Ness Ave, Ground Floor (Suite 126).\n2. Walk in Wednesday-Saturday, 12:00-5:00 PM - free.\n3. Art at City Hall is viewable in the North Light Court during the building's public hours.",
+    "restrictions": "Main Gallery is open Wednesday-Saturday; exhibitions rotate - check the Arts Commission calendar for current shows and City Hall hours.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Arts Commission (sf.gov)",
+      "verified_date": "2026-08-19",
+      "notes": "Official sf.gov Arts Commission page: 'Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall.' Hours Wed-Sat 12-5 confirmed on the official sfartscommission.org map/directions page. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sf.gov/departments--arts-commission",
+    "community_url": "https://www.sfartscommission.org/content/map-and-directions",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "civic-center",
+      "art",
+      "city-service",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "tilden-little-farm-and-gardens-free",
+    "title": "Tilden Park Little Farm, Botanic Garden & Nature Center - Free Every Day (Berkeley)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free farm, gardens, and nature center (parking no fee)",
+    "description": "East Bay Regional Park District's official Tilden attractions sheet lists the Little Farm ('open during regular park hours'), the Tilden Botanic Garden of California native plants (daily 8:30 AM-5:30 PM, west gate closes 5:00), and the Environmental Education Center (Tuesday-Sunday, 10 AM-4:30 PM) - all with 'No charge.' Tilden parking is also listed as no fee.",
+    "redemption_instructions": "1. Enter Tilden Regional Park via Canon Drive or Shasta Road off Grizzly Peak Blvd, Berkeley (Little Farm area: 600 Canon Drive).\n2. Walk in during park hours - no admission anywhere in the Nature Area complex.\n3. The Environmental Education Center is closed Thanksgiving, Christmas Eve, Christmas, and New Year's Day.",
+    "restrictions": "Hours weather permitting; check the current EBRPD Tilden Attractions sheet for seasonal hours. Park roads/trails may have intermittent closures during 2026 fuels-reduction work.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "East Bay Regional Park District",
+      "verified_date": "2026-08-19",
+      "notes": "Official EBRPD 'Tilden Attractions Summer 2026' PDF: Little Farm 'No charge'; Botanic Garden 'No charge'; Environmental Education Center 'No charge'; tilden park page: 'Parking: No fee.' Community-corroborated by Berkeley Parents Network. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.ebparks.org/parks/tilden",
+    "community_url": "https://www.berkeleyparentsnetwork.org/recommend/places/farmanimals",
+    "tags": [
+      "family",
+      "100-percent-free",
+      "farm",
+      "berkeley",
+      "east-bay",
+      "nature",
+      "kids",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "sfpl-california-state-library-parks-pass",
+    "title": "SFPL - Check Out a Free California State Parks Vehicle Day-Use Pass",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "SF - All Neighborhoods",
+    "value": "Free vehicle day-use entry at 200+ California state parks (often $10+ per vehicle)",
+    "description": "San Francisco Public Library cardholders can check out a California State Library Parks Pass hangtag at any branch for up to three weeks. The official SFPL page explains it provides free vehicle day-use entry into participating state parks - over 200 units statewide - and you can visit more than one park while you have the pass.",
+    "redemption_instructions": "1. Get a free SFPL card at any branch.\n2. Check out a Parks Pass hangtag (up to three weeks) at your local branch.\n3. Display the pass on your rearview mirror or scan its barcode at a participating state park unit.",
+    "restrictions": "Valid only at participating California State Parks units (200+); not honored at federally or locally operated parks, and does not cover per-person/tour fees, museums, camping, boats, group sites, special events, or extra-vehicle fees. Subject to space availability. Ineligible-parks list at CheckOutCAStateParks.com.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF Public Library / California State Parks",
+      "verified_date": "2026-08-19",
+      "notes": "Official sfpl.org/california-state-library-parks-pass page: pass 'provides free vehicle day-use entry into a participating state park'; checkout up to three weeks; valid at 200+ units; part of the California Outdoors for All initiative. Discovered via r/AskSF; verified 2026-08-19."
+    },
+    "promotion_url": "https://sfpl.org/california-state-library-parks-pass",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "library",
+      "100-percent-free",
+      "state-parks",
+      "family",
+      "hiking",
+      "road-trip",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "minnesota-street-project-free-galleries",
+    "title": "Minnesota Street Project - Free Contemporary Art Galleries (Dogpatch)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Mission / Castro",
+    "value": "Free admission to a campus of contemporary galleries",
+    "description": "Minnesota Street Project in Dogpatch - a campus of contemporary art galleries at 1275 Minnesota St and 1150 25th St - states on its official visit page: 'Minnesota Street Project is open to the public. Admission is free.' The MSP Atrium is open Tuesday-Saturday, 11:00 AM-6:00 PM, with more than a dozen individual galleries around it.",
+    "redemption_instructions": "1. Visit 1275 Minnesota St (at 25th St) in Dogpatch; the T Third Muni and 22nd St Caltrain are within four blocks.\n2. Walk the Atrium and galleries Tuesday-Saturday - admission is free.\n3. Individual gallery hours differ and a few require appointments - check the visit page before going.",
+    "restrictions": "Atrium Tue-Sat 11-6; each gallery sets its own days/hours (some Wed-Sat or by appointment). Free street parking in the neighborhood.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Minnesota Street Project",
+      "verified_date": "2026-08-19",
+      "notes": "Official visit page: 'Minnesota Street Project is open to the public. Admission is free.' Atrium Tue-Sat 11-6; per-gallery hours and appointment requirements listed. Verified 2026-08-19."
+    },
+    "promotion_url": "https://minnesotastreetproject.com/visit/",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "dogpatch",
+      "art",
+      "galleries",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-mission-castro"
+  },
+  {
+    "id": "sf-mime-troupe-free-park-shows",
+    "title": "SF Mime Troupe - Free Political Theater in Bay Area Parks (Summer Season)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "Bay Area Wide",
+    "value": "Free live outdoor theater (comparable tickets $25+)",
+    "description": "The Tony Award-winning San Francisco Mime Troupe's official site promises, 'As always FREE performances throughout the Bay Area all summer long!' The 2026 production - WRECKAGE: A Musical Tragicomedy - tours parks across San Francisco, Berkeley, Oakland and beyond, with the season running July 3 through Labor Day weekend (September 7, 2026).",
+    "redemption_instructions": "1. Open the full remaining schedule at sfmt.org/full-schedule.\n2. Show up at the listed park - outdoor shows are free, with live music starting 30 minutes before curtain.\n3. Bring a blanket or low chair; donations are requested but never required.",
+    "restrictions": "Outdoor park shows are free; a few indoor or limited-capacity performances are ticketed or require RSVP - check each date. Season ends after Labor Day weekend; dates are weather-permitting.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Mime Troupe (sfmt.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site: 'As always FREE performances throughout the Bay Area all summer long!' + 'We are also still on tour in the park!' with link to sfmt.org/full-schedule; 2026 season = WRECKAGE, 67th season. Season dates July 3-Sept 7, 2026 and the ticketed-indoor exception corroborated by organizer-submitted Funcheap listings. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sfmt.org/full-schedule",
+    "community_url": "https://sf.funcheap.com/event-series/sf-mime-troupe-free-theater-park-sf-3/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "theater",
+      "parks",
+      "family",
+      "bay-area-wide",
+      "summer"
+    ],
+    "is_new": true,
+    "schedule_type": "Summer Season",
+    "neighborhood_slug": "bay-area-wide"
   }
 ]

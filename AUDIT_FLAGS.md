@@ -155,3 +155,53 @@ No purchase-required, BOGO, minimum-spend, or discount-only offers remain in the
 - `verify_links.py`: 0 errors, 0 warnings; `stats.json` regenerated (12 location buckets)
 - `index.html` badge + README counts updated 29 → 42; app.js neighborhood view extended (no invisible deals)
 - `candidates.json`: Free Muni seniors/disabled marked PROMOTED with verified URL; remaining candidates explicitly marked unaudited
+
+---
+
+# AUDIT 4 — Second Discovery Cycle: 7 More Verified Freebies (2026-08-19, evening)
+
+**Mission:** same protocol — community/social discovery (Reddit r/bayarea telescope/tool-library threads, Berkeley Parents Network, Funcheap organizer-submitted listings, Instagram-sourced travel writeups used ONLY as leads), then official-source verification for every claim.
+
+**Result: 42 → 49 deals. 7 verified and added; 9 candidates left documented-but-unpublished.**
+
+## The 10 passes
+
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | Community discovery sweep (new angles: astronomy nights, NPS sites, city-run galleries, library passes, Dogpatch galleries, summer theater) | ~15 raw leads |
+| 2 | Official-source fetch per candidate | 7 verified (Chabot, Rosie the Riveter, SFAC, Tilden/EBRPD PDF, SFPL parks pass, Minnesota Street, SF Mime Troupe); 3 dead/moved official URLs found (sfartscommission.org → sf.gov; nps.gov/goga point-bonita 404; museemecanique .org → .com previously) |
+| 3 | Free / no-purchase test | 7 passed. Deferred: Point Bonita (official page moved, could not verify current open hours), Internet Archive tours, Oakland First Fridays, Autumn Moon Festival, tool lending libraries — none officially confirmed this pass |
+| 4 | Hallucination screen — sentence-level trace to fetched official text | 1 fix applied (Mime Troupe production title corrected to official "WRECKAGE: A Musical Tragicomedy"); animal-feeding claims for Little Farm kept OUT of the entry (community tip only, not on the official EBRPD sheet) |
+| 5 | Write entries (schema, is_new, official promotion_url + community_url) | 7 entries; all reuse existing location buckets, so no app.js changes needed |
+| 6 | Internal consistency (IDs, schedule_type, slugs, app.js buckets) | 49/49 clean; all locations present in neighborhood view |
+| 7 | Purchase-language sweep across all 49 | 0 hits |
+| 8 | Line-by-line proofread vs. official text | Done; title fix above |
+| 9 | Regression checks (stats regen, verify_links, node --check, JSON validity, README/index counts 42 → 49) | All pass; 0 errors / 0 warnings |
+| 10 | Documentation (this section) + candidates.json bookkeeping | 4 existing candidates annotated (Ferry Fest, Movies on the Square, Autumn Moon, Boudin — not promoted, reasons logged); 4 new documented candidates added |
+
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
+
+| # | New entry | Official proof (verbatim) | Discovered via |
+| :--- | :--- | :--- | :--- |
+| 43 | **Chabot free telescope viewings** (Oakland) | chabotspace.org: "Every Friday and Saturday Night, weather permitting… 7:30-10:30 p.m."; "largest observatory complex regularly free for public viewing in the Western United States"; humidity closure rules (Leah/Rachel >90%, Nellie ≥85%) | r/bayarea telescope threads |
+| 44 | **Rosie the Riveter WWII Home Front NHP** (Richmond) | nps.gov/rori: "Free. No entrance pass required"; "Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter"; Red Oak Victory = paid partner | r/bayarea `1rnu66v` |
+| 45 | **SFAC Galleries** (Civic Center + City Hall) | sf.gov Arts Commission: "Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall in the North Light Court and Ground Floor"; Main Gallery Wed–Sat 12–5 on official map page | City-agency sweep |
+| 46 | **Tilden Little Farm + Botanic Garden + EEC** (Berkeley) | EBRPD official "Tilden Attractions Summer 2026" PDF: Little Farm "No charge"; Botanic Garden "No charge" (daily 8:30–5:30); Environmental Education Center "No charge" (Tue–Sun 10–4:30); park page: "Parking: No fee" | r/AskSF + Berkeley Parents Network |
+| 47 | **SFPL California State Library Parks Pass** | sfpl.org/california-state-library-parks-pass: "provides free vehicle day-use entry into a participating state park"; checkout up to 3 weeks; "valid at over 200 participating state park units" | r/AskSF library thread |
+| 48 | **Minnesota Street Project free galleries** (Dogpatch) | minnesotastreetproject.com/visit: "Minnesota Street Project is open to the public. Admission is free."; Atrium Tue–Sat 11–6; per-gallery hours listed | Prior-audit leftover list |
+| 49 | **SF Mime Troupe free park shows** (Bay Area, thru Sept 7, 2026) | sfmt.org: "As always FREE performances throughout the Bay Area all summer long!"; "still on tour in the park!" → sfmt.org/full-schedule; 2026 = WRECKAGE, 67th season; ticketed-indoor exception corroborated by organizer-submitted Funcheap listings | Funcheap series + r/AskSF |
+
+## Deferred / rejected this cycle (documented, NOT published)
+
+| Candidate | Status |
+| :--- | :--- |
+| Point Bonita Lighthouse (NPS GGNRA) | Old official URL 404s; current open-house schedule could not be verified this pass — needs the live nps.gov/goga page |
+| Internet Archive Friday tour + lunch (Richmond) | Reddit-reported; official tour page not yet verified |
+| Oakland First Fridays / Chinatown Autumn Moon Festival 2026 | Official 2026 status/dates not yet fetched |
+| Oakland & Berkeley tool lending libraries | Strong community consensus; official library pages not yet fetched |
+| Boudin birthday treat | Still no official terms page (2nd consecutive audit) — remains a loyalty rumor |
+| Ferry Fest / Movies on the Square (Redwood City) | One-off or late-season events without a clean official free-admission page this pass |
+
+## Catalog state
+
+**49 deals — 100% Priority #1 "100% Free / No Purchase"** · `verify_links.py` 0 errors · stats regenerated · README + index.html badges at 49 · all 49 visible in every app view.

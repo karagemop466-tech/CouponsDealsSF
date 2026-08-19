@@ -1,7 +1,7 @@
 # 🌉 CouponsDealsSF — Verified San Francisco & Bay Area Freebies, Deals & Promotions
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20App-10b981?style=for-the-badge&logo=github)](https://karagemop466-tech.github.io/CouponsDealsSF/)
-[![Verified Deals](https://img.shields.io/badge/Official%20100%25%20Free-42%20Active-059669?style=for-the-badge)](data/deals.json)
+[![Verified Deals](https://img.shields.io/badge/Official%20100%25%20Free-49%20Active-059669?style=for-the-badge)](data/deals.json)
 [![100% Free Priority #1](https://img.shields.io/badge/100%25%20Free%20No%20Purchase-100%25-10b981?style=for-the-badge)](data/deals.json)
 [![Audited for 2026](https://img.shields.io/badge/Audited%20For-2026-3b82f6?style=for-the-badge)](data/sources.json)
 
@@ -11,7 +11,7 @@
 
 ## 🌟 Live Interactive Web Application & Upgrades
 
-Explore **42 official 100% free / no-purchase** deals, filter by neighborhood, run live deep searches, and export calendar invites on our GitHub Pages web app:
+Explore **49 official 100% free / no-purchase** deals, filter by neighborhood, run live deep searches, and export calendar invites on our GitHub Pages web app:
 
 **👉 [https://karagemop466-tech.github.io/CouponsDealsSF/](https://karagemop466-tech.github.io/CouponsDealsSF/)**
 
@@ -38,7 +38,7 @@ CouponsDealsSF organizes every promotion using a strict **Priority Ranking Hiera
 
 | Priority Tier | Badge | Definition | % in Database | Examples in Database |
 | :--- | :---: | :--- | :---: | :--- |
-| **Priority #1 (only published tier)** | ⭐ `100% FREE` | **Absolutely $0 cost / no purchase necessary**, confirmed on an official page. | **100% (42 / 42)** | • de Young & Legion of Honor Free Saturdays for Bay Area Residents<br>• SFMTA Free Muni for All Youth (18 & Under)<br>• SFPL Discover & Go<br>• ICA SF (always free)<br>• Conservatory of Flowers First Tuesday & SF resident/veteran days |
+| **Priority #1 (only published tier)** | ⭐ `100% FREE` | **Absolutely $0 cost / no purchase necessary**, confirmed on an official page. | **100% (49 / 49)** | • de Young & Legion of Honor Free Saturdays for Bay Area Residents<br>• SFMTA Free Muni for All Youth (18 & Under)<br>• SFPL Discover & Go<br>• ICA SF (always free)<br>• Conservatory of Flowers First Tuesday & SF resident/veteran days |
 | **Not published** | 🎁 / 🏷️ | Free-with-purchase, BOGO, discounts, unofficial community tips, and ended seasonal series | **Removed** | Chipotle, Ike’s, BWW, Quiznos, Underdogs, CHSA paid tickets, Clipper BayPass, Off the Grid (ended), TATO, Banya, Balboa, Ghirardelli samples, Baskin birthday (not guaranteed free), Stern Grove 2026 season (ended), SFO Terminal Sessions (ended), Bay Wheels |
 
 ---
@@ -106,7 +106,7 @@ python3 scripts/generate_stats.py
 
 ## 🗂️ Database Structure (`data/deals.json`)
 
-All **42** official 100% free / no-purchase deals are stored in `data/deals.json`. Each object follows this schema:
+All **49** official 100% free / no-purchase deals are stored in `data/deals.json`. Each object follows this schema:
 
 ```json
 {

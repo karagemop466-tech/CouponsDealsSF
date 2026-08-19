@@ -8,7 +8,7 @@
     "priority_rank": 1,
     "upvotes": 215,
     "scraped_date": "2026-08-12",
-    "status": "Candidate - Ready for Audit"
+    "status": "Not promoted - 2026 Ferry Building event not re-verified on an official organizer page; do not publish without official confirmation"
   },
   {
     "candidate_id": "candidate-sfgate-free-movies-square",
@@ -19,7 +19,7 @@
     "priority_rank": 1,
     "upvotes": 142,
     "scraped_date": "2026-08-12",
-    "status": "Candidate - Ready for Audit"
+    "status": "Not promoted - Redwood City summer series; outside core SF area and late in season; needs official city calendar check first"
   },
   {
     "candidate_id": "candidate-dothebay-chinatown-autumn-moon",
@@ -30,7 +30,7 @@
     "priority_rank": 1,
     "upvotes": 98,
     "scraped_date": "2026-08-12",
-    "status": "Candidate - Ready for Audit"
+    "status": "Still unaudited - confirm 2026 dates on an official organizer page (seasonal September street fair) before promoting"
   },
   {
     "candidate_id": "candidate-reddit-free-muni-seniors-disabled",
@@ -52,6 +52,50 @@
     "priority_rank": 1,
     "upvotes": 64,
     "scraped_date": "2026-08-12",
-    "status": "Candidate - Ready for Audit"
+    "status": "Not promoted - no official Boudin Rewards birthday terms page confirmed (prior audit + this audit); loyalty rumor only"
+  },
+  {
+    "candidate_id": "candidate-nps-point-bonita-lighthouse",
+    "title": "Point Bonita Lighthouse - Free Open House (Marin Headlands, NPS GGNRA)",
+    "source_subreddit": "r/bayarea",
+    "community_url": "https://www.nps.gov/goga",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": null,
+    "scraped_date": "2026-08-19",
+    "status": "Unaudited - old NPS page URL 404s; find the live nps.gov/goga page and verify current open days/hours before promoting"
+  },
+  {
+    "candidate_id": "candidate-internet-archive-friday-tour",
+    "title": "Internet Archive - Free Friday Tour + Lunch (Richmond, CA)",
+    "source_subreddit": "r/bayarea",
+    "community_url": "https://archive.org",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": null,
+    "scraped_date": "2026-08-19",
+    "status": "Unaudited - verify tour schedule on an official archive.org page before promoting"
+  },
+  {
+    "candidate_id": "candidate-oakland-first-fridays",
+    "title": "Oakland First Fridays - Free Community Street Festival",
+    "source_subreddit": "r/bayarea",
+    "community_url": "https://www.oaklandfirstfridays.org",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": null,
+    "scraped_date": "2026-08-19",
+    "status": "Unaudited - verify 2026 season status and free admission on the official site before promoting"
+  },
+  {
+    "candidate_id": "candidate-east-bay-tool-lending-libraries",
+    "title": "Oakland & Berkeley Tool Lending Libraries - Free Tool Checkout with Library Card",
+    "source_subreddit": "r/bayarea",
+    "community_url": "https://oaklandlibrary.org",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "upvotes": null,
+    "scraped_date": "2026-08-19",
+    "status": "Unaudited - verify official Oakland/Berkeley library pages before promoting"
   }
 ]
