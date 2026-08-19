@@ -36,12 +36,12 @@
     "candidate_id": "candidate-reddit-free-muni-seniors-disabled",
     "title": "SFMTA Free Muni for Low-to-Moderate Income Seniors (65+) and People with Disabilities",
     "source_subreddit": "r/AskSF / SFMTA",
-    "community_url": "https://www.sfmta.com/getting-around/muni/fares/free-muni-seniors-and-people-disabilities",
+    "community_url": "https://www.sfmta.com/getting-around/muni/fares/free-muni",
     "priority_label": "100% Free",
     "priority_rank": 1,
     "upvotes": 85,
     "scraped_date": "2026-08-12",
-    "status": "Candidate - Ready for Audit"
+    "status": "Promoted to deals.json 2026-08-19 (sfmta-free-muni-seniors-disabilities) - official sfmta.com/getting-around/muni/fares/free-muni verified"
   },
   {
     "candidate_id": "candidate-reddit-boudin-free-birthday-sweet",

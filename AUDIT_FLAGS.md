@@ -97,3 +97,61 @@ All 29 entries are $0 at redemption with no purchase required:
 No purchase-required, BOGO, minimum-spend, or discount-only offers remain in the catalog (removed in the prior audit: Chipotle, Ike's, BWW, Quiznos, Underdogs, CHSA, Clipper BayPass, Off the Grid, TATO, Banya, Balboa, Ghirardelli, Baskin-Robbins, Stern Grove 2026, SFO Terminal Sessions, Bay Wheels, Fire Museum, Chinatown Night Market, Skatin' Place, SFAA star parties, Musée Mécanique).
 
 **Official sources fetched and cited in this audit:** sfmoma.org (free-days, group-visits), famsf.org (free-reduced-admission, both tickets+hours pages), gggp.org (admissions-hours, japanese-tea-garden, cherryblossoms FAQ, san-francisco-botanical-garden), sfrecpark.org (resident-free ordinance), ybca.org/visit, sfmta.com (free-muni-all-youth), sfpl.org (discover-and-go, emagazines-enews, Kanopy page), missionfoodhub.org, cablecarmuseum.org/info.html, about.bankofamerica.com (Museums on Us CA roster), nothingbundtcakes.com/bundtastic-rewards, moadsf.org/visit, museumca.org/tickets, bampfa.org/visit/hours, sfmcd.org/visit, glbthistory.org/museum-about-visitor-info, about.asianart.org (free-and-reduced + plan-your-visit), sfzoo.org (calendar-of-events + tickets-hours), icasf.org/visit, randallmuseum.org/about-us, museum.stanford.edu/visit, sfopera.com/operainthepark, sfcamerawork.org/visit, anderson.stanford.edu/visit, streetcar.org/museum, sephora.com (birthday-gift + loyalty-program FAQ).
+
+---
+
+# AUDIT 3 — Community-Source Freebie Discovery + Expansion (2026-08-19, later same day)
+
+**Mission:** discover NEW freebies from community/social sources (Reddit r/AskSF + r/bayarea threads, Funcheap, tourism calendars, coupon communities), then verify every candidate against an OFFICIAL source before publishing. Keep only 100% free / no-purchase offers.
+
+**Result: 13 new entries added (29 → 42). 0 unverified claims published. 5 candidates rejected with documented reasons.**
+
+## The 10 passes
+
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | **Community discovery sweep** — Reddit (r/AskSF threads `1e2spmm`, `1e26mi2`; r/bayarea `1rnu66v`), Funcheap, sftourismtips free-museum calendar, travel/press coverage | ~20 raw candidates identified; community sources used for DISCOVERY ONLY, never as proof |
+| 2 | **Official-source fetch** — every surviving candidate's official page fetched and read | 13 fully verified; 2 dead official URLs found and corrected (museemecanique.org → museemecanique.com; museoitaloamericano.org → sfmuseo.org; old SFMTA candidate URL → /fares/free-muni) |
+| 3 | **Free / no-purchase test** — is redemption genuinely $0? | 13 passed. 1 rejected: Muir Woods fee-free days (NPS explicitly says parking/shuttle reservation fee still required). 1 rejected: Cal Academy free days (discontinued since 2024 per current listings; no official free-day page) |
+| 4 | **Hallucination screen** — every sentence in new entries must trace to fetched official text | 4 phrases tightened (Salesforce Park gondola detail, SFCO season span, City Guides tipping, GGP shuttle "bike-friendly") — removed because not present in fetched official text |
+| 5 | **Write entries** — same schema, `is_new: true`, official `promotion_url` + community/discovery `community_url` | 13 entries written; de Young Hamon Tower free-view fact folded into existing de Young entry (verified on famsf.org tickets page) |
+| 6 | **Internal consistency** — IDs, schedule_type, location buckets, slugs | 2 new location buckets added to app.js neighborhood view ("SF - Presidio / Golden Gate", "Marin / North Bay") so no deal is invisible in that view |
+| 7 | **Purchase-language sweep** across all 42 | 0 hits — no purchase, BOGO, minimum-spend, or discount-only language anywhere |
+| 8 | **Line-by-line proofread** of every new entry vs. its fetched official text | All claims verified verbatim or removed (see pass 4) |
+| 9 | **Regression spot-check** of existing 29 | MoAD, GGGP, FAMSF re-confirmed unchanged; all 29 were fully verified earlier on 2026-08-19 |
+| 10 | **Toolchain QA** — `generate_stats.py`, `verify_links.py`, `node --check`, JSON validity, README/index.html counts (29 → 42) | All pass: 42/42 Priority 1 "100% Free", 0 errors, 0 warnings |
+
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
+
+| # | New entry | Official proof (verbatim) | Discovered via |
+| :-- | :--- | :--- | :--- |
+| 30 | **SF City Guides free walking tours** | sfcityguides.org/about-us: "we provide this service free of charge"; SFPL program since 1978; ~300 guides, 75+ tours | r/AskSF (multiple threads) |
+| 31 | **Fort Point NHS free admission** | nps.gov/fopo fees page: "Free. No entrance pass required" | r/AskSF `1e2spmm` |
+| 32 | **Presidio Officers' Club free exhibitions** | presidio.gov: "free exhibitions in the Heritage Gallery… Open Friday through Sunday, 11 a.m. to 4 p.m. No ticket required" | r/AskSF Presidio threads + 2026 Presidio press |
+| 33 | **Presidio GO Shuttle free** | presidio.gov press (Apr 2026): "its free Presidio GO Shuttle fleet" | r/bayarea transit thread |
+| 34 | **Free Muni for low-income seniors (65+) & people with disabilities** | sfmta.com/fares/free-muni: "Provides free access to Muni services for low and moderate income seniors, ages 65+…" + Access Pass for people experiencing homelessness | candidates.json (r/AskSF) — old URL was 404, live page verified |
+| 35 | **Salesforce Park free activities** | tjpa.org (May 2026): "nearly 20 free public programs… each week" May 1–Oct 31; free activities year-round | r/AskSF (Divasf comment) |
+| 36 | **SF-Marin Food Bank free groceries** | sfmfoodbank.org/find-food: Food Locator for "weekly free groceries…"; serves all regardless of immigration status | food-security community listings |
+| 37 | **SF Chamber Orchestra admission-free concerts** | thesfco.org: "world-class, admission-free concerts" (SF/Berkeley/Palo Alto + free family concerts) | r/bayarea `1rnu66v` |
+| 38 | **Museo Italo Americano — FREE Thursdays + First Sundays** | sfmuseo.org: "Thursday General Admission - FREE; First Sunday of the Month - FREE; Under 18 - FREE" ($10 GA) | sftourismtips calendar (which only knew First Sundays — Thursday free is a bonus official fact) |
+| 39 | **Musée Mécanique free admission (RE-ADDED)** | museemecanique.com/visit: "Open 365 Days a Year. Admission is free!" 10 AM–8 PM, Pier 45; games coin-operated | Prior audit removed it because the old .org homepage rendered empty — the live official .com site states free admission explicitly |
+| 40 | **Hardly Strictly Bluegrass, Oct 2–4 2026** | hardlystrictlybluegrass.com: "San Francisco's beloved free music festival"; 2026 lineup announcements; no tickets/RSVP | Music press (JamBase) + festival app community |
+| 41 | **Nike Missile Site SF-88 free open house** | nps.gov/goga: "only open on the first Saturday of every month from 12:00-3:00PM"; GGNRA fees page: no entrance fees except Muir Woods | r/AskSF `1e26mi2` |
+| 42 | **Golden Gate Park free shuttle** | gggp.org: "free Golden Gate Park Shuttle… Monday to Friday 12:00pm to 6:00pm; Saturday, Sundays and holidays 10:00am to 6:00pm"; stops incl. Music Concourse, Stow Lake | gggp.org official page |
+
+## Rejected candidates (documented, not published)
+
+| Candidate | Reason for rejection |
+| :--- | :--- |
+| Muir Woods on NPS fee-free days | nps.gov/goga: "the parking/shuttle reservation fee is still required at Muir Woods on these days" — not clean 100% free |
+| California Academy of Sciences free days | Discontinued since summer 2024 per current listings; no official free-day page to cite |
+| Wells Fargo History Museum | Closed permanently |
+| Stern Grove 2026 / SFO Terminal Sessions / Off the Grid | 2026 seasons ended or offer concluded (prior audit); nothing new to verify |
+| SFAC Galleries / Little Farm Tilden / SFPL State Parks Pass / Minnesota Street Project / Oakland First Fridays / Starbucks & other national birthday clubs | Plausible but NOT verified against official pages in this pass — left in `data/candidates.json` for a future audit. Not published = not hallucinated |
+
+## Catalog state after this audit
+
+- **42 deals — 100% Priority #1 "100% Free / No Purchase"** (29 prior + 13 new)
+- `verify_links.py`: 0 errors, 0 warnings; `stats.json` regenerated (12 location buckets)
+- `index.html` badge + README counts updated 29 → 42; app.js neighborhood view extended (no invisible deals)
+- `candidates.json`: Free Muni seniors/disabled marked PROMOTED with verified URL; remaining candidates explicitly marked unaudited

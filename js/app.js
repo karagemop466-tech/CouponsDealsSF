@@ -581,9 +581,11 @@ document.addEventListener("DOMContentLoaded", () => {
       "SF - Marina / Fort Mason",
       "SF - Mission / Castro",
       "SF - Chinatown / North Beach",
+      "SF - Presidio / Golden Gate",
       "SF - All Neighborhoods",
       "Oakland / East Bay",
       "San Jose / South Bay",
+      "Marin / North Bay",
       "Bay Area Wide"
     ];
 
