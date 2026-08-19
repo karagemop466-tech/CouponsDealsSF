@@ -9,12 +9,12 @@
     "value": "$30 adult general admission value (youth free)",
     "description": "SFMOMA offers 100% free general admission every day for visitors 18 and younger, with no adult ticket purchase required. Periodic Free Family Days waive general admission for up to two adults accompanying one child or teen 18 or younger. The next official Free Family Day is October 25, 2026. Free Community Day dates are listed as TBD.",
     "redemption_instructions": "1. Ages 18 and under: reserve a free youth ticket at sfmoma.org or request one at the ticket desk.\n2. Free Family Day (next official date October 25, 2026): reserve timed tickets about two weeks ahead. Up to two adults are free with one visitor 18 or younger.\n3. Surcharged exhibitions are not included and require separate paid tickets.",
-    "restrictions": "Official Free Family Day companion limit is two adults per child/teen, not four. June 14, 2026 already occurred. Community Days have no published upcoming date. Always free for ages 18 and under.",
+    "restrictions": "Free Family Day admits up to two adults per child/teen 18 or younger (tickets released two weeks ahead). Surcharged exhibitions always require separate paid tickets. Free Community Day dates are TBD - check sfmoma.org/free-days. Ages 18 and under are always free.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "SFMOMA Free Days",
       "verified_date": "2026-08-19",
-      "notes": "Official page: 18 and under always free; Family Day up to two adults; next Family Day October 25, 2026."
+      "notes": "Re-verified 2026-08-19 vs sfmoma.org/free-days + group-visits page: 18 & under always free; Family Day = 2 adults max, tickets 2 weeks ahead; next Family Day Oct 25, 2026; Community Days TBD; adult GA $30 confirmed."
     },
     "promotion_url": "https://www.sfmoma.org/free-days/",
     "community_url": "https://www.sfmoma.org/deals-discounts/",
@@ -37,15 +37,15 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - Golden Gate Park / Richmond",
-    "value": "$20 value per person",
-    "description": "The de Young offers 100% free general admission to permanent collection galleries every Saturday for residents of the nine Bay Area counties, and free general admission for everyone on the first Tuesday of each month. Youth 17 and under are always free to the permanent galleries.",
+    "value": "$25 adult general admission value per person",
+    "description": "The de Young offers 100% free general admission to permanent collection galleries every Saturday for residents of the nine Bay Area counties, and free general admission for everyone on the first Tuesday of each month. Youth 17 and under are always free to the permanent galleries. FAMSF also offers free permanent-collection admission during the final hour each open day (from 4:30 PM). The Hamon Observation Tower's city views never require a ticket.",
     "redemption_instructions": "1. Book a timed general admission ticket at famsf.org or redeem on-site with ID.\n2. Saturdays: choose the Bay Area Resident free ticket and bring proof of residency in one of the nine counties.\n3. First Tuesdays: reserve free general admission in advance when possible.",
     "restrictions": "Permanent collection galleries only; special exhibitions are ticketed. Free Saturdays and First Tuesdays do not run during Bouquets to Art. Counties: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, Sonoma.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "FAMSF Free + Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Official FAMSF policy confirms Free Saturdays for 9-county residents and First Tuesday for all."
+      "notes": "Re-verified 2026-08-19 vs famsf.org: Free Saturdays (9 counties) + First Tuesday confirmed; adult GA now $25 (was $20); 4:30 PM free final hour confirmed on de Young tickets page."
     },
     "promotion_url": "https://www.famsf.org/visit/free-reduced-admission",
     "community_url": "https://www.famsf.org/visit/free-reduced-admission",
@@ -68,15 +68,15 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - Lincoln Park / Sea Cliff",
-    "value": "$20 value per person",
-    "description": "The Legion of Honor offers the same FAMSF free programs: 100% free permanent-gallery admission every Saturday for 9-county Bay Area residents, and free general admission for everyone on the first Tuesday of each month. Typical hours are Tuesday–Sunday 9:30 AM–5:15 PM.",
+    "value": "$25 adult general admission value per person",
+    "description": "The Legion of Honor offers the same FAMSF free programs: 100% free permanent-gallery admission every Saturday for 9-county Bay Area residents, and free general admission for everyone on the first Tuesday of each month. Typical hours are Tuesday–Sunday 9:30 AM–5:15 PM. FAMSF also offers free permanent-collection admission during the final hour each open day (from 4:30 PM).",
     "redemption_instructions": "1. Reserve timed tickets at legionofhonor.famsf.org or famsf.org.\n2. Saturdays: select the Bay Area Resident free ticket and bring residency ID.\n3. First Tuesdays: reserve free general admission when possible.",
     "restrictions": "Permanent galleries only; special exhibitions excluded. Same Bouquets to Art blackout as the de Young. Saturday hours typically 9:30 AM–5:15 PM.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "FAMSF Free + Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Same official FAMSF free Saturday / First Tuesday policy as the de Young."
+      "notes": "Re-verified 2026-08-19 vs famsf.org/visit/legion-tickets-hours: hours Tue-Sun 9:30-5:15 confirmed; adult GA now $25 (was $20)."
     },
     "promotion_url": "https://www.famsf.org/visit/free-reduced-admission",
     "community_url": "https://legionofhonor.famsf.org/visit",
@@ -164,13 +164,13 @@
     "location": "SF - Golden Gate Park / Richmond",
     "value": "$14 value",
     "description": "Official free hour for everyone is Monday, Wednesday, and Friday, 9:00–10:00 AM. San Francisco residents and veterans enter free every open day with valid ID.",
-    "redemption_instructions": "1. Free hour: arrive 9:00–10:00 AM Monday, Wednesday, or Friday at 75 Hagiwara Tea Garden Drive.\n2. SF residents/veterans: show valid ID at the ticket booth any open day.",
+    "redemption_instructions": "1. Free hour: arrive 9:00-10:00 AM Monday, Wednesday, or Friday at 75 Hagiwara Tea Garden Drive (no ticket needed during the free hour).\n2. SF residents/veterans at other times: reserve a FREE timed ticket at gggp.org (the garden requires timed entry for all visitors), then show proof - SF-address ID, or photo ID plus an SF utility bill/lease, or military/veteran benefits card and photo ID.\n3. Last entry is 30 minutes before closing and changes by season.",
     "restrictions": "Free hour requires entry before 10:00 AM. Last entry is 30 minutes before closing and changes by season.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Gardens of Golden Gate Park Admissions & Hours",
       "verified_date": "2026-08-19",
-      "notes": "Official free hour Mon/Wed/Fri 9–10am. japaneseteagardensf.com/visit is 404."
+      "notes": "Re-verified 2026-08-19 vs gggp.org: free hour Mon/Wed/Fri 9-10 AM confirmed; official garden page now requires timed tickets for ALL visitors - redemption instructions updated; resident/veteran free confirmed by sfrecpark.org ordinance and GGGP ticketing FAQ."
     },
     "promotion_url": "https://gggp.org/visit/admissions-hours/",
     "community_url": "https://gggp.org/japanese-tea-garden/",
@@ -202,7 +202,7 @@
       "status": "Verified Official Source",
       "source_name": "YBCA Visit / Ticketing",
       "verified_date": "2026-08-19",
-      "notes": "Official: Wednesdays free for all; Wed hours 11 AM–8 PM; adult ticket $10."
+      "notes": "Re-verified 2026-08-19 vs ybca.org/visit: 'Every Wednesday enjoy free admission for all'; adult $10; Wed 11 AM-8 PM. Fixed schedule_type from 'First Wednesday' to 'Every Wednesday'."
     },
     "promotion_url": "https://ybca.org/visit/",
     "community_url": "https://ybca.org/visit/",
@@ -214,7 +214,7 @@
       "contemporary-art"
     ],
     "is_new": false,
-    "schedule_type": "First Wednesday",
+    "schedule_type": "Every Wednesday",
     "neighborhood_slug": "sf-soma-downtown"
   },
   {
@@ -295,7 +295,7 @@
       "status": "Verified Official Source",
       "source_name": "Mission Food Hub Official Site",
       "verified_date": "2026-08-19",
-      "notes": "Corrected 2026-08-19 audit: official site states the hub now serves families every Friday. The Mon/Wed/Fri 10:00 AM schedule was the 2020 peak and is no longer current."
+      "notes": "Re-verified 2026-08-19 vs missionfoodhub.org: 'serving families every Friday'; 701 Alabama St; contact info confirmed. Fixed schedule_type from 'Second Friday' to 'Every Friday'."
     },
     "promotion_url": "https://www.missionfoodhub.org/",
     "community_url": "https://www.freemania.net/cities/san-francisco-ca",
@@ -308,7 +308,7 @@
       "friday"
     ],
     "is_new": false,
-    "schedule_type": "Second Friday",
+    "schedule_type": "Every Friday",
     "neighborhood_slug": "sf-mission-castro"
   },
   {
@@ -381,16 +381,16 @@
     "category": "Birthdays & Freebies",
     "location": "Bay Area Wide",
     "value": "$6 value",
-    "description": "Bundtastic Rewards / eClub members receive one free individual Bundtlet on their birthday. Official FAQ: no bakery purchase is required to redeem the birthday Bundtlet. Bay Area bakeries are suburban (no SF storefront).",
-    "redemption_instructions": "1. Join Bundtastic Rewards in bakery, at nothingbundtcakes.com, or in the app and add your birthday.\n2. Watch for the birthday email/app barcode about a week before your birthday.\n3. Show the barcode and ID at a participating bakery. Offer is good from email arrival through 7 days after your birthday.",
+    "description": "Bundtastic Rewards is free to join (in bakery, online, or in the app), and members receive one free individual Bundtlet on their birthday. Bay Area bakeries are suburban - there is no San Francisco storefront.",
+    "redemption_instructions": "1. Join Bundtastic Rewards free at nothingbundtcakes.com/bundtastic-rewards, in the app, or in bakery, and add your birthday.\n2. During your birthday window, check in at a participating bakery with your account phone number or email (or your reward in the app).\n3. Confirm your bakery's redemption window when you check in - windows vary by location.",
     "restrictions": "Must join and give a birthdate. One Bundtlet per member per year. No SF store — Daly City, San Rafael, Walnut Creek, San Jose, and other Bay Area bakeries.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Nothing Bundt Cakes Bundtastic Rewards / FAQ",
       "verified_date": "2026-08-19",
-      "notes": "Official: free Bundtlet on birthday for members."
+      "notes": "Re-verified 2026-08-19 vs nothingbundtcakes.com/bundtastic-rewards: 'Members also get a free individual Bundtlet on their birthday'; program is free to join. Removed unverified 7-day-window and 'no purchase' FAQ wording; updated URL from redirecting /eclub/ page."
     },
-    "promotion_url": "https://www.nothingbundtcakes.com/eclub/",
+    "promotion_url": "https://www.nothingbundtcakes.com/bundtastic-rewards/",
     "community_url": "https://www.nothingbundtcakes.com/faqs/",
     "tags": [
       "birthday",
@@ -537,14 +537,14 @@
     "category": "Museums & Arts",
     "location": "SF - Mission / Castro",
     "value": "$10 general admission value",
-    "description": "San Francisco’s Museum of Craft and Design in Dogpatch offers 100% free general admission on the first Thursday of every month. Regular hours are Thursday–Sunday, 12:00–5:00 PM. The museum is closed Monday–Wednesday; there is no Pay-What-You-Can Wednesday.",
+    "description": "San Francisco’s Museum of Craft and Design in Dogpatch offers 100% free general admission on the first Thursday of every month. Regular hours are Thursday–Sunday, 12:00–5:00 PM. The museum is closed Monday–Wednesday; there is no Pay-What-You-Can Wednesday. NOTE: There is no Free First Thursday in September 2026 - the museum is closed for exhibition install; the next Free First Thursday is October 1, 2026.",
     "redemption_instructions": "1. Visit MCD at 2569 Third Street (between 22nd and 23rd, Dogpatch, SF) on the first Thursday of the month.\n2. Hours are 12:00 PM–5:00 PM. No ticket is required for Free First Thursday; RSVP on sfmcd.org if the museum requests it.\n3. Do not plan a Wednesday visit — the museum is closed Monday through Wednesday.",
-    "restrictions": "Free First Thursday only. Closed Monday–Wednesday and on listed holidays. Regular general admission is $10 (students/seniors $8; children 12 and under free).",
+    "restrictions": "Free First Thursday only. Closed Monday-Wednesday and on listed holidays. No Free First Thursday in September 2026 (exhibition install closure); next one is October 1, 2026. Regular general admission is $10 (students/seniors $8; children 12 and under free).",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Museum of Craft and Design Official Visit Page",
       "verified_date": "2026-08-19",
-      "notes": "Corrected 2026-08-19 audit: official hours Thursday–Sunday 12:00–5:00 PM; closed Monday–Wednesday. Pay-What-You-Can Wednesday is discontinued. Free First Thursday confirmed."
+      "notes": "Re-verified 2026-08-19 vs sfmcd.org/visit: Free First Thursday, Thu-Sun 12-5, closed Mon-Wed, $10 GA all confirmed. Added official notice: no Free First Thursday in September 2026 (install closure)."
     },
     "promotion_url": "https://sfmcd.org/visit/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
@@ -598,14 +598,14 @@
     "category": "Museums & Arts",
     "location": "SF - SoMa / Downtown",
     "value": "$20 adult general admission value",
-    "description": "On the first Sunday of each month, Asian Art Museum general admission is free. Special exhibition tickets are a reduced $15 that day (official free-and-reduced page). Address: 200 Larkin Street. Hours: Thursday 1–8 PM; Friday–Monday 10 AM–5 PM; closed Tuesday–Wednesday.",
+    "description": "On the first Sunday of each month, Asian Art Museum general admission is free for everyone. Special exhibition tickets are discounted that day (the museum's Plan Your Visit page lists the surcharge as $10 while its Free & Reduced page lists $15 - confirm the live price when booking). Address: 200 Larkin Street. Hours: Thursday 1-8 PM; Friday-Monday 10 AM-5 PM; closed Tuesday-Wednesday.",
     "redemption_instructions": "1. Reserve a free general-admission ticket at asianart.org/reserve-tickets for the first Sunday.\n2. Or walk up — same-day inventory is limited.\n3. Special exhibitions are not free; pay the published surcharge if you want those galleries.",
-    "restrictions": "First Sunday only. Special exhibitions are extra ($15 on Free First Sundays per official free-admission page).",
+    "restrictions": "First Sunday only; special exhibitions carry a discounted surcharge (official pages currently disagree: $10 vs $15 - verify at checkout). Adult general admission is $20 other days.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Asian Art Museum Free and Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Official Free First Sunday. Old URL /visit/free-days/ is 404. Adult GA $20."
+      "notes": "Re-verified 2026-08-19 vs about.asianart.org: Free First Sunday + adult GA $20 confirmed on plan-your-visit. FLAG: museum lists the discounted special-exhibition price inconsistently ($15 on free-and-reduced page, $10 on plan-your-visit). Entry updated to disclose both."
     },
     "promotion_url": "https://about.asianart.org/ticketing/free-and-reduced-museum-admission/",
     "community_url": "https://about.asianart.org/plan-your-visit/",
@@ -628,7 +628,7 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - All Neighborhoods",
-    "value": "$26–$32 adult admission value on published free days",
+    "value": "$32-$34 adult admission value on published free days",
     "description": "The Zoo’s official calendar lists SF Resident Free Days. Confirmed upcoming dates: Wednesday, September 2, 2026 and Wednesday, October 7, 2026. One free admission per government ID showing San Francisco residency. This is not daily free admission. Parking is paid.",
     "redemption_instructions": "1. Check sfzoo.org/calendar-of-events for “San Francisco Residents receive free admission.”\n2. Next official dates: September 2, 2026 and October 7, 2026.\n3. Bring government-issued ID showing an SF address to the ticket-scan area. One free entry per qualifying ID.",
     "restrictions": "Only on published free days. One free admission per SF-residency ID. Parking is not free. EBT/Medi-Cal is a separate $3 paid ticket, not this offer.",
@@ -636,7 +636,7 @@
       "status": "Verified Official Source",
       "source_name": "SF Zoo Official Event Calendar",
       "verified_date": "2026-08-19",
-      "notes": "Official calendar: SF resident free admission Sep 2 and Oct 7, 2026."
+      "notes": "Re-verified 2026-08-19 vs sfzoo.org: official calendar lists SF resident free days Wed Sep 2 and Wed Oct 7, 2026 (one free entry per SF-residency ID); adult admission $32 weekday/$34 weekend (value corrected); parking paid; $3 EBT/Medi-Cal SF-resident ticket is separate. schedule_type set to 'Published Calendar Dates' - free days are announced per calendar, not a guaranteed monthly rule."
     },
     "promotion_url": "https://www.sfzoo.org/calendar-of-events/",
     "community_url": "https://www.sfzoo.org/tickets-hours/",
@@ -648,7 +648,7 @@
       "calendar"
     ],
     "is_new": false,
-    "schedule_type": "First Wednesday",
+    "schedule_type": "Published Calendar Dates",
     "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
@@ -784,7 +784,7 @@
     "priority_label": "100% Free",
     "priority_rank": 1,
     "category": "Museums & Arts",
-    "location": "SF - All Neighborhoods",
+    "location": "SF - Marina / Fort Mason",
     "value": "$12 value",
     "description": "SF Camerawork exhibitions at Fort Mason Center, 2 Marina Boulevard, Building A, are officially always free. Hours change with each exhibition (often Tuesday or Wednesday through Saturday). Not in Chinatown — Fort Mason / Marina.",
     "redemption_instructions": "1. Check sfcamerawork.org/current-hours before you go.\n2. Visit 2 Marina Blvd, Building A, Fort Mason.\n3. Walk in; exhibitions are free.",
@@ -793,7 +793,7 @@
       "status": "Verified Official Source",
       "source_name": "SF Camerawork Visit",
       "verified_date": "2026-08-19",
-      "notes": "Official: exhibitions always free. Fort Mason Building A."
+      "notes": "Re-verified 2026-08-19 vs sfcamerawork.org/visit: 'SF Camerawork's exhibitions are always free'; 2 Marina Blvd Building A confirmed; hours are exhibition-dependent. Corrected location bucket from 'All Neighborhoods' to Marina / Fort Mason."
     },
     "promotion_url": "https://sfcamerawork.org/visit",
     "community_url": "https://sfcamerawork.org/current-hours",
@@ -807,7 +807,7 @@
     ],
     "is_new": false,
     "schedule_type": "Always Free",
-    "neighborhood_slug": "sf-all-neighborhoods"
+    "neighborhood_slug": "sf-marina-fort-mason"
   },
   {
     "id": "anderson-collection-stanford-always-free",
@@ -903,5 +903,773 @@
     "is_new": false,
     "schedule_type": "Birthday",
     "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "sf-city-guides-free-walking-tours",
+    "title": "SF City Guides - Free Historical & Architecture Walking Tours (SFPL Program)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "SF - All Neighborhoods",
+    "value": "Guided-tour value $25-$50 per walk",
+    "description": "San Francisco City Guides, a nonprofit program of the San Francisco Public Library founded in 1978, runs free volunteer-led walking tours across the city - nearly 300 guides offering 75+ different tours, from Golden Gate Bridge and Chinatown to Lands End and the Presidio. The official site states the service is provided free of charge.",
+    "redemption_instructions": "1. Browse the schedule at sfcityguides.org/find-your-tour and pick a tour.\n2. Show up at the listed meeting point a few minutes early; most tours are 1.5-2 hours.\n3. Reservations are recommended for some tours and required for a few (marked on the site). The service is free of charge per the official site; optional donations support the program.",
+    "restrictions": "Tour schedules rotate seasonally; some tours require advance registration. Groups of 7 or more need private tour arrangements.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF City Guides (SF Public Library program)",
+      "verified_date": "2026-08-19",
+      "notes": "Official about-us page: 'we provide this service free of charge'; SFPL program; ~300 guides, 75+ tours. Discovered via r/AskSF community threads; verified on official site 2026-08-19."
+    },
+    "promotion_url": "https://sfcityguides.org/find-your-tour/",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "tours",
+      "100-percent-free",
+      "history",
+      "walking-tour",
+      "sfpl",
+      "family",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "fort-point-nhs-free-admission",
+    "title": "Fort Point National Historic Site - Free National Park Admission Under the Golden Gate Bridge",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Presidio / Golden Gate",
+    "value": "Free NPS historic-site admission (no pass required)",
+    "description": "Fort Point, the Civil War-era brick fort beneath the Golden Gate Bridge, is a National Park Service site with free admission. The official NPS Fees & Passes page states: no entrance pass is required to access Fort Point National Historic Site.",
+    "redemption_instructions": "1. Check current days/hours on the official park page (nps.gov/fopo) before visiting.\n2. Walk in - no ticket, no pass, no fee.\n3. Reach it via the Presidio's Marine Drive or the Coastal Trail from the Golden Gate Bridge.",
+    "restrictions": "Hours and ranger programs vary seasonally; the fort can close in high wind or storms. Confirm on nps.gov/fopo before you go.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - Fort Point NHS",
+      "verified_date": "2026-08-19",
+      "notes": "Official NPS fees page: 'Free. No entrance pass required.' Discovered via r/AskSF threads; verified on nps.gov 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/fopo/planyourvisit/fees.htm",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e2spmm/where_are_some_free_placesthings_to_godo_but/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "presidio",
+      "golden-gate-bridge",
+      "history",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-presidio-golden-gate"
+  },
+  {
+    "id": "presidio-officers-club-free-exhibitions",
+    "title": "Presidio Officers' Club - Free History Exhibitions (No Ticket Required)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Presidio / Golden Gate",
+    "value": "Free museum galleries (no ticket)",
+    "description": "The Presidio Officers' Club - San Francisco's most historic building - offers free exhibitions in the Heritage Gallery tracing the Presidio's history from indigenous beginnings to today's national park. The official Presidio page states: open Friday through Sunday, 11 a.m. to 4 p.m., no ticket required.",
+    "redemption_instructions": "1. Visit 50 Moraga Avenue on the Presidio's Main Post.\n2. Walk into the Heritage Gallery Friday-Sunday, 11:00 AM-4:00 PM - no ticket needed.\n3. Presidio staff and volunteers are on hand; check presidio.gov for special-exhibition hours.",
+    "restrictions": "Galleries open Friday-Sunday only (closed Monday-Thursday). Special exhibitions may have different dates. Presidio parking is paid.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Presidio Trust (presidio.gov)",
+      "verified_date": "2026-08-19",
+      "notes": "Official destination page: 'free exhibitions in the Heritage Gallery... Open Friday through Sunday, 11 a.m. to 4 p.m. No ticket required.' 2026 Presidio press release confirms free exhibitions at Officers' Club and Visitor Center. Verified 2026-08-19."
+    },
+    "promotion_url": "https://presidio.gov/explore/attractions/presidio-officers-club",
+    "community_url": "https://presidio.gov/about/press/whats-new-at-the-presidio-of-san-francisco-in-2026",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "presidio",
+      "history",
+      "family",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-presidio-golden-gate"
+  },
+  {
+    "id": "presidio-go-shuttle-free",
+    "title": "Presidio GO Shuttle - Free Electric Shuttle Around the Presidio",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Transit & Services",
+    "location": "SF - Presidio / Golden Gate",
+    "value": "Free transit within the Presidio",
+    "description": "The Presidio Trust operates a free Presidio GO Shuttle fleet - now battery-electric buses - connecting the Main Post, Crissy Field, the Golden Gate Bridge and other park destinations for visitors, residents and employees, with more than 300,000 rides a year.",
+    "redemption_instructions": "1. Check routes and schedules at presidio.gov/presidio-go.\n2. Board at any GO Shuttle stop - no fare, no pass needed around the park.\n3. Real-time arrival info is available on the Presidio website.",
+    "restrictions": "Schedules vary by route and day; commuter-oriented Downtown Express trips can have rider restrictions at peak hours - confirm on the official schedule before relying on a specific time.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Presidio Trust (presidio.gov)",
+      "verified_date": "2026-08-19",
+      "notes": "Official April 2026 Presidio Trust press release: 'its free Presidio GO Shuttle fleet'; 'Presidio GO offers a free and convenient alternative to driving.' Routes at presidio.gov/presidio-go. Verified 2026-08-19."
+    },
+    "promotion_url": "https://presidio.gov/presidio-go",
+    "community_url": "https://presidio.gov/about/press/presidio-trust-modernizes-presidio-go-shuttle-fleet",
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "presidio",
+      "shuttle",
+      "golden-gate-bridge",
+      "city-service"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-presidio-golden-gate"
+  },
+  {
+    "id": "sfmta-free-muni-seniors-disabilities",
+    "title": "SFMTA - Free Muni for Low-Income Seniors (65+) & People with Disabilities",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Transit & Services",
+    "location": "SF - All Neighborhoods",
+    "value": "Free Muni rides for approved applicants (no fare needed)",
+    "description": "SFMTA's Free Muni program provides free access to all Muni service for low- and moderate-income San Francisco residents who are seniors (65+) or have qualifying disabilities - gross family income at or below 100% of Bay Area Median Income. SFMTA also offers a free Access Pass for people experiencing homelessness in San Francisco.",
+    "redemption_instructions": "1. Apply at SFMTA.com/FreeMuni (online), by mail, or in person at the SFMTA Customer Service Center, 11 South Van Ness Ave.\n2. Seniors need a Senior Clipper card; people with disabilities first obtain a Clipper Access card, then apply.\n3. Once enrolled, tap your programmed Clipper card and ride Muni free.",
+    "restrictions": "San Francisco residents only; income at or below 100% of Area Median Income. Check the official page for current income limits and required documents.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SFMTA Free Muni Programs",
+      "verified_date": "2026-08-19",
+      "notes": "Official sfmta.com/getting-around/muni/fares/free-muni (updated Jan 2026): 'Provides free access to Muni services for low and moderate income seniors, ages 65+, residing in San Francisco' + Free Muni for People with Disabilities + Access Pass for people experiencing homelessness. Old candidate URL 404; live page verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sfmta.com/getting-around/muni/fares/free-muni",
+    "community_url": "https://www.sfmta.com/blog/free-and-discounted-fare-programs-make-your-muni-ride-more-affordable",
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "seniors",
+      "disability",
+      "muni",
+      "city-service",
+      "low-income"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "salesforce-park-free-activities",
+    "title": "Salesforce Park - Free Rooftop Park Activities Year-Round (Fitness, Kids, Music)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - SoMa / Downtown",
+    "value": "Free fitness classes and events (drop-in classes typically $20+)",
+    "description": "The Transbay Joint Powers Authority's 5.4-acre rooftop park above Salesforce Transit Center offers free public activities year-round. In the May-October high season, nearly 20 free programs run each week - Fitness SF-led Zumba, yoga and bootcamp classes, kids' and family programs, and live music.",
+    "redemption_instructions": "1. See the full lineup at tjpa.org/salesforce-transit-center/activities.\n2. Head up to the rooftop park above the Salesforce Transit Center and join any listed activity.\n3. No sign-up fees; arrive early for popular classes.",
+    "restrictions": "Program schedules change seasonally and are subject to weather. The park is a public space; some adjacent food vendors are paid.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Transbay Joint Powers Authority (tjpa.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official TJPA May 2026 release: high-season programming May 1-Oct 31 with 'nearly 20 free public programs offered in the park each week' including weekly Fitness SF classes; park offers free activities year-round. Discovered via r/AskSF threads; verified 2026-08-19."
+    },
+    "promotion_url": "https://www.tjpa.org/salesforce-transit-center/activities",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "fitness",
+      "yoga",
+      "kids",
+      "downtown",
+      "music",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "sf-marin-food-bank-free-groceries",
+    "title": "SF-Marin Food Bank - Free Weekly Groceries at Pop-Up Pantries (All Welcome)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Food & Dining",
+    "location": "Bay Area Wide",
+    "value": "$40-$60 grocery value per visit",
+    "description": "The SF-Marin Food Bank runs free weekly pop-up grocery pantries across San Francisco and Marin. The official Food Locator maps weekly free groceries, monthly senior food boxes, and emergency food. The Food Bank serves everyone regardless of immigration status and does not collect immigration information.",
+    "redemption_instructions": "1. Open foodlocator.sfmfoodbank.org (or call 211) and enter your ZIP code.\n2. Show up at a nearby pantry's listed day/time - no payment, no purchase.\n3. Bring your own bags; home-delivered groceries exist for eligible seniors and adults with disabilities.",
+    "restrictions": "Pantry schedules and locations change; check the locator before going. No income paperwork is required at most pop-up pantries, but program-specific rules may apply.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF-Marin Food Bank (sfmfoodbank.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official find-food page: Food Locator for 'weekly free groceries, monthly food boxes for seniors, one-time emergency food'; 'committed to serving residents regardless of their immigration status.' Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sfmfoodbank.org/find-food/",
+    "community_url": "https://foodlocator.sfmfoodbank.org/",
+    "tags": [
+      "free-food",
+      "100-percent-free",
+      "groceries",
+      "community-service",
+      "food-pantry",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "bay-area-wide"
+  },
+  {
+    "id": "sf-chamber-orchestra-free-concerts",
+    "title": "San Francisco Chamber Orchestra - Admission-Free Classical Concerts All Season",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "Bay Area Wide",
+    "value": "Admission-free orchestra concerts (typical chamber concert $30-$60)",
+    "description": "The San Francisco Chamber Orchestra is a fully professional Bay Area ensemble dedicated to 'world-class, admission-free concerts' - MainStage programs in San Francisco, Berkeley, and Palo Alto, plus Family Concerts and Very First Concerts for young children at community centers and libraries around the Bay.",
+    "redemption_instructions": "1. Check the season schedule at thesfco.org.\n2. Reserve/attend per each event page's instructions - concerts are admission-free.\n3. Arrive early; venues fill up for popular programs.",
+    "restrictions": "Concert dates and venues vary throughout the season - check each event page at thesfco.org for details and any RSVP guidance. Donations welcome, never required.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Chamber Orchestra (thesfco.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site: 'providing world-class, admission-free concerts and educational programming'; 2026-27 season events listed (MainStage, Family, Very First Concerts). Discovered via r/bayarea; verified 2026-08-19."
+    },
+    "promotion_url": "https://www.thesfco.org/",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1rnu66v/whats_something_free_or_extremely_cheap_you_found/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "classical-music",
+      "family",
+      "concerts",
+      "bay-area-wide"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "bay-area-wide"
+  },
+  {
+    "id": "museo-italo-americano-free-thursday-first-sunday",
+    "title": "Museo Italo Americano - Free Every Thursday & First Sunday (Fort Mason)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Marina / Fort Mason",
+    "value": "$10 admission value",
+    "description": "The Museo Italo Americano at Fort Mason Center (Building C), San Francisco's museum of Italian and Italian-American art and culture, offers free general admission every Thursday and on the first Sunday of each month. Visitors under 18 are always free; regular admission is $10.",
+    "redemption_instructions": "1. Visit Fort Mason Center, 2 Marina Blvd, Building C.\n2. Come Thursday-Saturday 12:00-4:00 PM or Sunday 10:00 AM-2:00 PM; Thursdays and first Sundays are free.\n3. No ticket needed for the free days.",
+    "restrictions": "Open Tue-Sat 12-4 PM and Sun 10 AM-2 PM; Mondays by appointment. Free days: every Thursday and first Sunday of the month.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Museo Italo Americano (sfmuseo.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site footer/Admission block: 'Thursday General Admission - FREE; First Sunday of the Month - FREE; Under 18 years - FREE; General Admission $10.' (museoitaloamericano.org now redirects to sfmuseo.org.) Discovered via sftourismtips free-museum-days calendar; verified 2026-08-19."
+    },
+    "promotion_url": "https://sfmuseo.org/",
+    "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "italian",
+      "fort-mason",
+      "first-sunday",
+      "thursday",
+      "art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Sunday",
+    "neighborhood_slug": "sf-marina-fort-mason"
+  },
+  {
+    "id": "musee-mecanique-free-admission",
+    "title": "Musée Mécanique - Free Admission, Open 365 Days (Pier 45 Antique Arcades)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Chinatown / North Beach",
+    "value": "Free admission; antique games are coin-operated (bring quarters)",
+    "description": "The Musée Mécanique at Pier 45, Fisherman's Wharf - one of the world's largest privately owned collections of coin-operated mechanical musical instruments and antique arcade artifacts - states on its official visit page: 'Open 365 Days a Year. Admission is free!' More than 300 machines are in original working condition.",
+    "redemption_instructions": "1. Visit Pier 45 at the end of Taylor Street, Fisherman's Wharf.\n2. Open daily 10:00 AM-8:00 PM; walk in free.\n3. Bring quarters if you want to play the machines - Laffing Sal, fortune tellers, and antique arcade games operate on coins.",
+    "restrictions": "Admission is free; playing the machines costs coins. No food or drink inside; no private events.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Musée Mécanique (museemecanique.com)",
+      "verified_date": "2026-08-19",
+      "notes": "Official visit page: 'Open 365 Days a Year - Admission is free!'; hours 10 AM-8 PM daily; Pier 45. Re-added after prior audit removed it when the old museemecanique.org homepage showed no text - the live official site is museemecanique.com. Verified 2026-08-19."
+    },
+    "promotion_url": "https://museemecanique.com/visit",
+    "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "fishermans-wharf",
+      "arcade",
+      "history",
+      "family",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-chinatown-north-beach"
+  },
+  {
+    "id": "hardly-strictly-bluegrass-2026-free-festival",
+    "title": "Hardly Strictly Bluegrass - Free 3-Day Music Festival, Oct 2-4, 2026 (Golden Gate Park)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - Golden Gate Park / Richmond",
+    "value": "Free 3-day festival (comparable festivals $150+)",
+    "description": "Hardly Strictly Bluegrass, the beloved free music festival endowed to stay free forever, returns to Golden Gate Park Friday, October 2 through Sunday, October 4, 2026 - its 26th year. The 2026 lineup includes My Morning Jacket, Alison Krauss & Union Station, Steve Earle, Gillian Welch & David Rawlings, and Old Crow Medicine Show across multiple meadow stages. No tickets, no RSVP.",
+    "redemption_instructions": "1. Just show up at Golden Gate Park's western meadows October 2-4, 2026 - no tickets and no RSVP required.\n2. Check hardlystrictlybluegrass.com or the free HSB app for stage schedules as dates approach.\n3. Bring a blanket or low chair; take Muni or the free Golden Gate Park shuttle.",
+    "restrictions": "One weekend a year. The festival-eve tribute at The Masonic (Oct 1) is a separate paid benefit concert. Schedules and stages are announced closer to the event.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Hardly Strictly Bluegrass (hardlystrictlybluegrass.com)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site bills itself 'San Francisco's beloved free music festival' with rolling 2026 lineup announcements; Oct 2-4, 2026 dates confirmed by the festival's 2026 lineup announcements and music-press coverage (JamBase, July/Aug 2026). Verified 2026-08-19."
+    },
+    "promotion_url": "https://hardlystrictlybluegrass.com/",
+    "community_url": "https://www.jambase.com/article/hardly-strictly-bluegrass-2026-lineup",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "music-festival",
+      "bluegrass",
+      "golden-gate-park",
+      "family",
+      "autumn"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
+  },
+  {
+    "id": "nike-missile-site-sf88-free-open-house",
+    "title": "Nike Missile Site SF-88 - Free Cold War Open House, First Saturdays (Marin Headlands)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Marin / North Bay",
+    "value": "Free Cold War historic-site visit",
+    "description": "SF-88 in the Marin Headlands is 'the most fully restored Nike missile site in the country,' preserved by Golden Gate National Recreation Area and volunteers. The NPS opens the site to visitors the first Saturday of every month, 12:00-3:00 PM. GGNRA charges no entrance fees except at Muir Woods, so visiting is free.",
+    "redemption_instructions": "1. Go to the Nike Missile Site on Field Road in the Marin Headlands on the first Saturday of the month, 12:00-3:00 PM.\n2. Walk in - no fee or ticket.\n3. Check the GGNRA calendar (nps.gov/goga) for special restoration demonstrations.",
+    "restrictions": "First Saturdays only, 12:00-3:00 PM. Closed during inclement weather; only portable restrooms on site (better restrooms a mile before on Field Road).",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - GGNRA",
+      "verified_date": "2026-08-19",
+      "notes": "Official NPS page (updated April 2026): 'The Nike Missile Site is only open on the first Saturday of every month from 12:00-3:00PM'; GGNRA fees page confirms no entrance fees except Muir Woods. Discovered via r/AskSF; verified 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/goga/nike-missile-site.htm",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "marin-headlands",
+      "cold-war",
+      "history",
+      "first-saturday"
+    ],
+    "is_new": true,
+    "schedule_type": "First Saturday",
+    "neighborhood_slug": "marin-north-bay"
+  },
+  {
+    "id": "golden-gate-park-free-shuttle",
+    "title": "Golden Gate Park Free Shuttle - Free Daily Ride Along JFK Drive",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Transit & Services",
+    "location": "SF - Golden Gate Park / Richmond",
+    "value": "Free in-park transit",
+    "description": "The free Golden Gate Park Shuttle runs daily along JFK Drive with stops including the Music Concourse (near the Japanese Tea Garden and de Young), Stow Lake Boathouse, and the park's eastern half. Monday-Friday it runs 12:00-6:00 PM; Saturdays, Sundays and holidays 10:00 AM-6:00 PM. The official site describes it as free and accessible.",
+    "redemption_instructions": "1. Wait at any Golden Gate Park shuttle stop along JFK Drive.\n2. Board free - no fare or pass.\n3. Useful stop: Music Concourse for the de Young, Japanese Tea Garden, and Gardens of Golden Gate Park.",
+    "restrictions": "Daily service hours differ weekdays vs weekends (Mon-Fri 12-6 PM; Sat/Sun/holidays 10 AM-6 PM). Schedule can change for events.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Gardens of Golden Gate Park / SF Rec & Parks",
+      "verified_date": "2026-08-19",
+      "notes": "Official gggp.org admissions page: 'The free Golden Gate Park Shuttle offers access to the Gardens and the eastern half of Golden Gate Park... Monday to Friday 12:00pm to 6:00pm; Saturday, Sundays and holidays 10:00am to 6:00pm' with link to sfrecpark.org/1617. Verified 2026-08-19."
+    },
+    "promotion_url": "https://gggp.org/visit/admissions-hours/",
+    "community_url": "https://sfrecpark.org/1617/Golden-Gate-Park-Free-Shuttle",
+    "tags": [
+      "transit",
+      "100-percent-free",
+      "golden-gate-park",
+      "shuttle",
+      "family",
+      "city-service",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-golden-gate-park-richmond"
+  },
+  {
+    "id": "chabot-free-telescope-viewings",
+    "title": "Chabot Space & Science Center - Free Friday & Saturday Night Telescope Viewings",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free public observatory night (museum admission is separate/paid)",
+    "description": "Chabot Space & Science Center in the Oakland hills offers free telescope viewing on the Observatory Deck every Friday and Saturday night, 7:30-10:30 PM, weather permitting - through three historic telescopes: the 8-inch Leah (1883), 20-inch Rachel (1916), and 36-inch Nellie (2003). Chabot calls itself 'the largest observatory complex regularly free for public viewing in the Western United States.'",
+    "redemption_instructions": "1. Check Chabot's weather station and cloud-cover webcam before driving up (viewings are weather-dependent).\n2. Come Friday or Saturday night, 7:30-10:30 PM, to the Observatory Deck in Joaquin Miller Park, Oakland.\n3. No ticket needed for telescope viewing - it is separate from (and free of) museum admission.",
+    "restrictions": "Weather permitting only: Leah and Rachel close when humidity exceeds 90%, Nellie closes at 85%+, and the observatories close when raining. Interior museum exhibits require paid admission.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Chabot Space & Science Center",
+      "verified_date": "2026-08-19",
+      "notes": "Official program page: 'Every Friday and Saturday Night, weather permitting - Chabot Observatory Deck - 7:30-10:30 p.m.' free viewing; humidity closure rules verbatim; 'largest observatory complex regularly free for public viewing in the Western United States.' Discovered via r/bayarea; verified 2026-08-19."
+    },
+    "promotion_url": "https://chabotspace.org/programs/free-telescope-viewings/",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1h5rz4f/telescope_viewings_similar_to_lick_observatory/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "astronomy",
+      "oakland",
+      "east-bay",
+      "weekend",
+      "family",
+      "night"
+    ],
+    "is_new": true,
+    "schedule_type": "Weekend",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "rosie-riveter-nhp-free-admission",
+    "title": "Rosie the Riveter WWII Home Front National Historical Park - Free Admission (Richmond)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free NPS visitor center and park (no pass required)",
+    "description": "Rosie the Riveter WWII Home Front National Historical Park in Richmond is a National Park Service site with free admission. The official NPS fees page states: 'Free - No entrance pass required,' and 'Our Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter.'",
+    "redemption_instructions": "1. Check current visitor center days/hours on nps.gov/rori before visiting.\n2. Walk in - no pass, no fee.\n3. Combine with the free Rosie Memorial on the Richmond waterfront.",
+    "restrictions": "The Red Oak Victory ship is a separate partner organization with its own fees/donations (NPS passes not accepted there).",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - Rosie the Riveter WWII Home Front NHP",
+      "verified_date": "2026-08-19",
+      "notes": "Official NPS fees page: 'Free. No entrance pass required'; 'Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter'; Red Oak Victory noted as paid partner. Discovered via r/bayarea; verified 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/rori/planyourvisit/fees.htm",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1rnu66v/whats_something_free_or_extremely_cheap_you_found/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "richmond",
+      "east-bay",
+      "history",
+      "family",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "sfac-galleries-free-exhibitions",
+    "title": "SFAC Galleries - Free City-Run Exhibitions (War Memorial & City Hall)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - SoMa / Downtown",
+    "value": "Free contemporary-art exhibitions",
+    "description": "The San Francisco Arts Commission's official site invites the public to 'Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall in the North Light Court and Ground Floor.' The Main Gallery sits at 401 Van Ness Avenue (ground floor), open Wednesday-Saturday, 12-5 PM.",
+    "redemption_instructions": "1. Visit the SFAC Main Gallery, War Memorial Veterans Building, 401 Van Ness Ave, Ground Floor (Suite 126).\n2. Walk in Wednesday-Saturday, 12:00-5:00 PM - free.\n3. Art at City Hall is viewable in the North Light Court during the building's public hours.",
+    "restrictions": "Main Gallery is open Wednesday-Saturday; exhibitions rotate - check the Arts Commission calendar for current shows and City Hall hours.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Arts Commission (sf.gov)",
+      "verified_date": "2026-08-19",
+      "notes": "Official sf.gov Arts Commission page: 'Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall.' Hours Wed-Sat 12-5 confirmed on the official sfartscommission.org map/directions page. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sf.gov/departments--arts-commission",
+    "community_url": "https://www.sfartscommission.org/content/map-and-directions",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "civic-center",
+      "art",
+      "city-service",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-soma-downtown"
+  },
+  {
+    "id": "tilden-little-farm-and-gardens-free",
+    "title": "Tilden Park Little Farm, Botanic Garden & Nature Center - Free Every Day (Berkeley)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Oakland / East Bay",
+    "value": "Free farm, gardens, and nature center (parking no fee)",
+    "description": "East Bay Regional Park District's official Tilden attractions sheet lists the Little Farm ('open during regular park hours'), the Tilden Botanic Garden of California native plants (daily 8:30 AM-5:30 PM, west gate closes 5:00), and the Environmental Education Center (Tuesday-Sunday, 10 AM-4:30 PM) - all with 'No charge.' Tilden parking is also listed as no fee.",
+    "redemption_instructions": "1. Enter Tilden Regional Park via Canon Drive or Shasta Road off Grizzly Peak Blvd, Berkeley (Little Farm area: 600 Canon Drive).\n2. Walk in during park hours - no admission anywhere in the Nature Area complex.\n3. The Environmental Education Center is closed Thanksgiving, Christmas Eve, Christmas, and New Year's Day.",
+    "restrictions": "Hours weather permitting; check the current EBRPD Tilden Attractions sheet for seasonal hours. Park roads/trails may have intermittent closures during 2026 fuels-reduction work.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "East Bay Regional Park District",
+      "verified_date": "2026-08-19",
+      "notes": "Official EBRPD 'Tilden Attractions Summer 2026' PDF: Little Farm 'No charge'; Botanic Garden 'No charge'; Environmental Education Center 'No charge'; tilden park page: 'Parking: No fee.' Community-corroborated by Berkeley Parents Network. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.ebparks.org/parks/tilden",
+    "community_url": "https://www.berkeleyparentsnetwork.org/recommend/places/farmanimals",
+    "tags": [
+      "family",
+      "100-percent-free",
+      "farm",
+      "berkeley",
+      "east-bay",
+      "nature",
+      "kids",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "sfpl-california-state-library-parks-pass",
+    "title": "SFPL - Check Out a Free California State Parks Vehicle Day-Use Pass",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "SF - All Neighborhoods",
+    "value": "Free vehicle day-use entry at 200+ California state parks (often $10+ per vehicle)",
+    "description": "San Francisco Public Library cardholders can check out a California State Library Parks Pass hangtag at any branch for up to three weeks. The official SFPL page explains it provides free vehicle day-use entry into participating state parks - over 200 units statewide - and you can visit more than one park while you have the pass.",
+    "redemption_instructions": "1. Get a free SFPL card at any branch.\n2. Check out a Parks Pass hangtag (up to three weeks) at your local branch.\n3. Display the pass on your rearview mirror or scan its barcode at a participating state park unit.",
+    "restrictions": "Valid only at participating California State Parks units (200+); not honored at federally or locally operated parks, and does not cover per-person/tour fees, museums, camping, boats, group sites, special events, or extra-vehicle fees. Subject to space availability. Ineligible-parks list at CheckOutCAStateParks.com.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF Public Library / California State Parks",
+      "verified_date": "2026-08-19",
+      "notes": "Official sfpl.org/california-state-library-parks-pass page: pass 'provides free vehicle day-use entry into a participating state park'; checkout up to three weeks; valid at 200+ units; part of the California Outdoors for All initiative. Discovered via r/AskSF; verified 2026-08-19."
+    },
+    "promotion_url": "https://sfpl.org/california-state-library-parks-pass",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "library",
+      "100-percent-free",
+      "state-parks",
+      "family",
+      "hiking",
+      "road-trip",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-all-neighborhoods"
+  },
+  {
+    "id": "minnesota-street-project-free-galleries",
+    "title": "Minnesota Street Project - Free Contemporary Art Galleries (Dogpatch)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "SF - Mission / Castro",
+    "value": "Free admission to a campus of contemporary galleries",
+    "description": "Minnesota Street Project in Dogpatch - a campus of contemporary art galleries at 1275 Minnesota St and 1150 25th St - states on its official visit page: 'Minnesota Street Project is open to the public. Admission is free.' The MSP Atrium is open Tuesday-Saturday, 11:00 AM-6:00 PM, with more than a dozen individual galleries around it.",
+    "redemption_instructions": "1. Visit 1275 Minnesota St (at 25th St) in Dogpatch; the T Third Muni and 22nd St Caltrain are within four blocks.\n2. Walk the Atrium and galleries Tuesday-Saturday - admission is free.\n3. Individual gallery hours differ and a few require appointments - check the visit page before going.",
+    "restrictions": "Atrium Tue-Sat 11-6; each gallery sets its own days/hours (some Wed-Sat or by appointment). Free street parking in the neighborhood.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Minnesota Street Project",
+      "verified_date": "2026-08-19",
+      "notes": "Official visit page: 'Minnesota Street Project is open to the public. Admission is free.' Atrium Tue-Sat 11-6; per-gallery hours and appointment requirements listed. Verified 2026-08-19."
+    },
+    "promotion_url": "https://minnesotastreetproject.com/visit/",
+    "community_url": "https://www.reddit.com/r/AskSF/comments/1e26mi2/free_things_to_do_as_an_unemployed/",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "dogpatch",
+      "art",
+      "galleries",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "sf-mission-castro"
+  },
+  {
+    "id": "sf-mime-troupe-free-park-shows",
+    "title": "SF Mime Troupe - Free Political Theater in Bay Area Parks (Summer Season)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "Bay Area Wide",
+    "value": "Free live outdoor theater (comparable tickets $25+)",
+    "description": "The Tony Award-winning San Francisco Mime Troupe's official site promises, 'As always FREE performances throughout the Bay Area all summer long!' The 2026 production - WRECKAGE: A Musical Tragicomedy - tours parks across San Francisco, Berkeley, Oakland and beyond, with the season running July 3 through Labor Day weekend (September 7, 2026).",
+    "redemption_instructions": "1. Open the full remaining schedule at sfmt.org/full-schedule.\n2. Show up at the listed park - outdoor shows are free, with live music starting 30 minutes before curtain.\n3. Bring a blanket or low chair; donations are requested but never required.",
+    "restrictions": "Outdoor park shows are free; a few indoor or limited-capacity performances are ticketed or require RSVP - check each date. Season ends after Labor Day weekend; dates are weather-permitting.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "San Francisco Mime Troupe (sfmt.org)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site: 'As always FREE performances throughout the Bay Area all summer long!' + 'We are also still on tour in the park!' with link to sfmt.org/full-schedule; 2026 season = WRECKAGE, 67th season. Season dates July 3-Sept 7, 2026 and the ticketed-indoor exception corroborated by organizer-submitted Funcheap listings. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.sfmt.org/full-schedule",
+    "community_url": "https://sf.funcheap.com/event-series/sf-mime-troupe-free-theater-park-sf-3/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "theater",
+      "parks",
+      "family",
+      "bay-area-wide",
+      "summer"
+    ],
+    "is_new": true,
+    "schedule_type": "Summer Season",
+    "neighborhood_slug": "bay-area-wide"
+  },
+  {
+    "id": "point-bonita-lighthouse-free-open-house",
+    "title": "Point Bonita Lighthouse - Free Monthly Open House, Third Saturdays (Marin Headlands)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Marin / North Bay",
+    "value": "Free ranger-led lighthouse visit (Fee: Free per NPS calendar)",
+    "description": "The Point Bonita Lighthouse - welcoming ships to San Francisco Bay since 1855 - opens to the public one day a month. Per the official NPS page, the Point Bonita Trail is open only on the third Saturday of every month, 12:30-3:30 PM, and the NPS calendar lists the monthly 'Point Bonita Open House' with Fee: Free, including a ranger 'light chat' at 12:15 PM. IMPORTANT: the trail leads to a viewing platform - the suspension bridge to the lighthouse itself is closed until further notice for safety.",
+    "redemption_instructions": "1. Check the nps.gov/goga calendar for the next third-Saturday open house before going.\n2. Arrive by 12:15 PM for the ranger's 15-minute 'light chat,' then walk the trail 12:30-3:30 PM.\n3. No fee and no ticket; the route runs through the historic tunnel to the viewing platform.",
+    "restrictions": "Third Saturdays ONLY, 12:30-3:30 PM. The suspension bridge at the end of the trail is CLOSED until further notice - the lighthouse interior is inaccessible; visitors reach the viewing platform. Cancellations possible in bad weather.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - GGNRA",
+      "verified_date": "2026-08-19",
+      "notes": "Official nps.gov/goga/pobo.htm (updated April 2026): 'The Point Bonita Trail is only open on the third Saturday of every month from 12:30-3:30'; bridge closed 'until further notice.' NPS calendar event 'Point Bonita Open House': 'Fee: Free,' monthly third Saturday, ranger light chat 12:15 PM. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/goga/pobo.htm",
+    "community_url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2E193420-0F96-6C72-80EF309DAA15FCEC",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "marin-headlands",
+      "lighthouse",
+      "history",
+      "third-saturday"
+    ],
+    "is_new": true,
+    "schedule_type": "Third Saturday",
+    "neighborhood_slug": "marin-north-bay"
+  },
+  {
+    "id": "oakland-first-fridays-free-festival",
+    "title": "Oakland First Fridays - Free Monthly Street Festival on Telegraph Avenue",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "Oakland / East Bay",
+    "value": "Free street festival with live music and art (monthly)",
+    "description": "The official Oakland First Fridays site describes 'a free, monthly street festival that celebrates the vibrant art, culture, and community of Oakland... held on the first Friday of every month along Telegraph Avenue from West Grand to 27th Street,' 5:00-9:30 PM, with live music, local art, food vendors, and a main stage. The next 2026 edition is Friday, August 7.",
+    "redemption_instructions": "1. Check oaklandfirstfridays.org for each month's theme and schedule.\n2. Show up on Telegraph Avenue (West Grand to 27th) first Friday, 5:00-9:30 PM - no ticket.\n3. 19th Street BART is a short walk from the festival footprint.",
+    "restrictions": "Monthly on first Fridays, 5:00-9:30 PM, weather permitting; schedules and themes change monthly. Food and vendor purchases are paid; the festival itself is free.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Oakland First Fridays (KONO Community Benefit District)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site: 'a free, monthly street festival... first Friday of every month along Telegraph Avenue from West Grand to 27th Street'; August 7, 2026 event listed 5-9:30pm; program of KONO CBD nonprofit. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.oaklandfirstfridays.org/",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1rnu66v/whats_something_free_or_extremely_cheap_you_found/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "festival",
+      "oakland",
+      "east-bay",
+      "first-friday",
+      "music",
+      "art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Friday",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "chinatown-autumn-moon-festival-free",
+    "title": "SF Chinatown Autumn Moon Festival - Free Street Festival, Sept 19-20, 2026",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - Chinatown / North Beach",
+    "value": "Free two-day cultural festival with parade and lion dancing",
+    "description": "The Chinatown Merchants Association's official festival page lists the 2026 SF Chinatown Autumn Moon Festival for Saturday-Sunday, September 19-20, 2026, 11:00 AM-5:00 PM on Grant Avenue between California and Broadway - with 'Cost: FREE!' Expect an opening parade and ribbon-cutting at 11:00 AM Saturday at California & Grant, lion and dragon dances, folk dance on the main stage at Washington & Grant, mooncakes, and children's activities.",
+    "redemption_instructions": "1. Come to Grant Avenue (California to Broadway) either day, 11:00 AM-5:00 PM - no ticket needed.\n2. Saturday 11 AM catches the opening parade and lion dance at California & Grant.\n3. Powell Street BART or the Stockton Street buses are the easiest way in.",
+    "restrictions": "One weekend a year (2026: September 19-20). Program subject to change without notice; food and mooncake purchases are paid.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF Chinatown Autumn Moon Festival (Chinatown Merchants Association)",
+      "verified_date": "2026-08-19",
+      "notes": "Official organizer site moonfestival.org: 'September 19 - 20 (11am - 5pm)... GRANT Avenue Between California & Broadway... Cost: FREE!' with Saturday opening parade and entertainment schedule. Corroborated by sftravel.com September events. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.moonfestival.org/",
+    "community_url": "https://www.sftravel.com/article/san-francisco-festivals-events-september",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "festival",
+      "chinatown",
+      "family",
+      "culture",
+      "autumn"
+    ],
+    "is_new": true,
+    "schedule_type": "Annual Event",
+    "neighborhood_slug": "sf-chinatown-north-beach"
+  },
+  {
+    "id": "oakland-tool-lending-library-free",
+    "title": "Oakland Tool Lending Library - Borrow 3,500+ Tools Free with a Library Card",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "Oakland / East Bay",
+    "value": "Free tool loans (tool rentals typically $10-$50+ per day)",
+    "description": "The Oakland Tool Lending Library - a branch of the Oakland Public Library in the Temescal branch basement at 5205 Telegraph Ave - lends more than 3,500 tools free with an OPL card, from hand tools to power tools. Loans run seven days; first visit you may borrow two tools, then up to ten at a time (maximum three power tools). Free DIY workshops are also offered.",
+    "redemption_instructions": "1. Get an Oakland Public Library card, then register at the Tool Lending Library with the card, current photo ID, and address verification (sign a waiver).\n2. Borrow tools for seven days; eligible loans renew automatically.\n3. Return tools during open hours (the large-tool shed closes 15 minutes before closing).",
+    "restrictions": "Borrowing limited to residents and property owners 18+ of Oakland, Piedmont, and Emeryville. Late fines run $1-$5 per day per tool - return on time. Registration required even with an existing OPL card.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Oakland Public Library - Tool Lending Library",
+      "verified_date": "2026-08-19",
+      "notes": "Official oaklandlibrary.org OTLL rules/lending pages: eligibility (Oakland/Piedmont/Emeryville residents 18+), 7-day loans, 2 tools first visit then 10 max/3 power tools; Friends of the OTLL (fotll.org): 'more than 3,500 tools that residents... can borrow for free with their library card'; located at Temescal branch. Verified 2026-08-19."
+    },
+    "promotion_url": "https://oaklandlibrary.org/otll/lending/",
+    "community_url": "https://fotll.org/",
+    "tags": [
+      "library",
+      "100-percent-free",
+      "tools",
+      "diy",
+      "oakland",
+      "east-bay",
+      "free-services",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
   }
 ]

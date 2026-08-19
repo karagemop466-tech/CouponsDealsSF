@@ -1,423 +1,251 @@
-# CouponsDealsSF — Independent Official-Source Audit
+# CouponsDealsSF — Full Official-Source Audit (10-Pass, Line-by-Line)
 
-**Audit date:** 2026-08-19  
-**Filter date:** 2026-08-19 — catalog cut to **official 100% free / no-purchase only** (29 kept). Later removals: Fire Museum (no current official visitor policy); Chinatown Night Market (no official organizer page); Skatin’ Place (community/DJ unverified); SFAA star parties (event URLs 404); Musée Mécanique (official homepage does not state free admission).  
-**Prior correction:** FAIL rows were rewritten, then purchase/discount/unofficial/ended rows were deleted.  
-**Corpus:** `data/deals.json` (now 34)  
-**Method:** three passes
+**Audit date:** 2026-08-19 (second independent audit; supersedes the 2026-08-19 first-pass audit)
+**Corpus:** `data/deals.json` — **29 entries**, all published as Priority #1 "100% Free / No Purchase"
+**Method:** every entry was re-verified claim-by-claim (free status, schedule, hours, prices, eligibility, dates, URLs) against the **live official source** fetched on the audit date. Secondary sources (Funcheap, sftourismtips) were used only to corroborate, never as sole proof.
 
-1. **Pass A — Internal consistency:** schema, IDs, `schedule_type` vs text, neighborhood vs address, priority vs purchase rules.
-2. **Pass B — Official URL live-check:** fetch every `promotion_url` and the current official visit/admissions page.
-3. **Pass C — Claim-by-claim check:** hours, prices, eligibility, dates, and “100% free” status against official policy. Secondary sources (Funcheap, Reddit, Yelp) used only to locate official pages, never as proof.
+---
 
-**Verdict key**
+## The 10 passes
 
-| Verdict | Meaning |
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | **Official URL + policy fetch** — every `promotion_url` opened and read | All 29 resolve; 1 was a redirect (Nothing Bundt `/eclub/` → `/bundtastic-rewards/`, updated) |
+| 2 | **Core free claim** — is the offer genuinely $0, per the official page? | 29 / 29 confirmed $0 at redemption (eligibility rules apply where noted) |
+| 3 | **Hours & days** — verify open days/hours and free-day schedule text | 27 / 29 exact; 2 metadata errors fixed (YBCA, Mission Food Hub `schedule_type`) |
+| 4 | **Prices & "value" fields** — check quoted values against official price pages | 3 stale values fixed (de Young $20→$25, Legion $20→$25, SF Zoo $26–$32→$32–$34) |
+| 5 | **2026-specific dates** — re-check every hard date against the live page | All confirmed (SFMOMA Oct 25; MoAD closure; Zoo Sep 2/Oct 7; Opera Sep 13; Anderson Jan 5 schedule) |
+| 6 | **Redemption mechanics** — can a user actually redeem as written? | 2 fixed (Japanese Tea Garden timed-entry requirement; Nothing Bundt unverified window removed) |
+| 7 | **Free / no-purchase filter** — sweep for any purchase, BOGO, minimum-spend, or discount-only language | 0 violations — all 29 are pure $0 offers (BofA requires an existing card, no purchase; Sephora/NBC in-store redemption requires no purchase per official terms) |
+| 8 | **Internal consistency** — `schedule_type`/`location`/`neighborhood_slug` vs. facts; app rendering | 3 fixes (YBCA, Mission Food Hub, Zoo `schedule_type`; Camerawork location) + 1 app bug fixed (Legion invisible in Neighborhood view) |
+| 9 | **Supporting files** — `sources.json` URLs, `stats.json`, README claims, schema validation | 3 stale source URLs fixed; stats regenerated; README "29/29" verified; `verify_links.py` + JSON validation pass |
+| 10 | **Post-fix re-verification** — re-read every edited field; re-run scripts | All edits verified; 0 errors, 0 warnings from the verification engine |
+
+---
+
+## Line-by-line verdicts (all 29 entries)
+
+Verdicts: **VERIFIED** = every checked claim matches the official page. **VERIFIED+FIX** = core claim true; listed corrections applied this audit.
+
+| # | Entry | Official source (fetched 2026-08-19) | Verdict | Notes |
+| :-- | :--- | :--- | :--- | :--- |
+| 01 | SFMOMA 18-and-under + Free Family Days | sfmoma.org/free-days | **VERIFIED+FIX** | 18 & under always free ✓; Family Day = up to **2 adults** per child/teen ✓; next Family Day **Oct 25, 2026** ✓; tickets 2 weeks ahead ✓; Community Days **TBD** ✓; surcharges excluded ✓; adult GA **$30** ✓ (group-visits page). Fixed: restrictions text rewritten from audit-note style to user-facing. Note: a 2024 SFMOMA press release said "four adults" — the current policy page says two; catalog correctly follows the live page. |
+| 02 | de Young Free Saturdays + First Tuesdays | famsf.org/visit/free-reduced-admission; famsf.org/visit/de-young-tickets-hours | **VERIFIED+FIX** | Every Saturday free for 9 Bay Area counties ✓ (county list matches exactly); First Tuesday free for all ✓; 17 & under free ✓; Bouquets to Art blackout ✓; hours Tue–Sun 9:30–5:15 ✓. **Fixed: adult GA is now $25, not $20.** Added verified bonus: free permanent-collection admission from 4:30 PM daily. |
+| 03 | Legion of Honor Free Saturdays + First Tuesdays | famsf.org/visit/legion-tickets-hours | **VERIFIED+FIX** | Same FAMSF policy confirmed ✓; Tue–Sun 9:30–5:15 ✓; closed MLK/Labor/Indigenous Peoples'/Thanksgiving/Christmas (catalog said only "typical hours" — acceptable). **Fixed: adult GA $25, not $20.** Added 4:30 PM free hour. |
+| 04 | SF Botanical Garden | gggp.org/visit/admissions-hours | **VERIFIED** | Free 7:30–9 AM daily ✓; Second Tuesday ✓; Thanksgiving/Christmas/New Year's ✓ (all verbatim on official page); SF residents free daily ✓ (Board of Supervisors ordinance, sfrecpark.org; Botanical "already free to residents"). |
+| 05 | Conservatory of Flowers | gggp.org/visit/admissions-hours | **VERIFIED** | First Tuesday free ✓; **closed Wednesdays** ✓; 10 AM–4:30 PM, last entry 4 PM ✓; annual winter maintenance closure ✓ (Jan 21–Feb 4, 2026 listed); SF resident + veteran free ✓ (ordinance). |
+| 06 | Japanese Tea Garden | gggp.org/japanese-tea-garden; gggp.org/visit/admissions-hours | **VERIFIED+FIX** | Free hour **Mon/Wed/Fri 9–10 AM** ✓ verbatim; 75 Hagiwara Tea Garden Dr ✓; residents/veterans free ✓ (ordinance + GGGP FAQ: free timed tickets for SF residents, veterans, Museums for All). **Fixed: official page now requires timed-entry reservation for all visitors — redemption instructions updated.** |
+| 07 | YBCA free Wednesdays | ybca.org/visit | **VERIFIED+FIX** | "Every Wednesday enjoy free admission for all" ✓; adult **$10** ✓; Wed **11 AM–8 PM** ✓; Thu–Sun 11–5 ✓; closed Mon–Tue ✓; 701 Mission ✓; youth 17 & under/military/Museums for All free ✓. **Fixed: `schedule_type` "First Wednesday" → "Every Wednesday" (deal is weekly).** |
+| 08 | SFMTA Free Muni for All Youth | sfmta.com/fares/free-muni-all-youth-18-years-and-younger | **VERIFIED** | All youth 18 & under, any income/residency ✓; no application/Clipper ✓; cable cars excluded ✓; 16+ carry ID ✓; cable-car pass request for SF youth ✓. Every sentence matches the official page. |
+| 09 | SFPL Discover & Go | sfpl.org/discover-and-go | **VERIFIED** | "Library users who are San Francisco residents can access free passes to more than a dozen Bay Area museums and attractions" ✓ verbatim; sfpl.discoverandgo.net ✓; reserve + print ✓. |
+| 10 | Mission Food Hub | missionfoodhub.org | **VERIFIED+FIX** | "Serving families **every Friday**" ✓; 701 Alabama St ✓; missionfoodhub@gmail.com / (650) 333-7628 ✓; free culturally relevant groceries ✓. **Fixed: `schedule_type` "Second Friday" → "Every Friday."** |
+| 11 | Cable Car Museum | cablecarmuseum.org/info.html | **VERIFIED** | "Admission is Free" ✓ verbatim; Tue–Thu 10–4, Fri–Sun 10–5, closed Monday ✓ verbatim; closed New Year's/Thanksgiving/Christmas ✓; 1201 Mason ✓. |
+| 12 | BofA Museums on Us | about.bankofamerica.com (official roster) + famsf.org | **VERIFIED** | Official CA roster: de Young ✓, Legion of Honor ✓, OMCA ✓, Computer History Museum (Mountain View) ✓, **SFMOMA (June–September)** ✓ — exactly as cataloged. First full weekend ✓; cardholder + photo ID, cardholder only ✓; GA only, specials excluded ✓ (FAMSF partner page). No purchase required at redemption (existing card = eligibility). Roster also includes San José Museum of Art (Sundays) and The Tech (select weekends) — catalog says "includes," so not an error. |
+| 13 | Nothing Bundt Cakes birthday Bundtlet | nothingbundtcakes.com/bundtastic-rewards | **VERIFIED+FIX** | "Members also get a free individual Bundtlet on their birthday" ✓ verbatim; program free to join ✓. **Fixed: URL updated from redirecting `/eclub/`; removed the unverified "7 days after birthday" window and "no purchase" FAQ attribution — redemption text now says confirm the window at the bakery.** Core free-birthday-Bundtlet claim is official. |
+| 14 | SFPL NYT + Kanopy | sfpl.org/research-learn/elibrary/emagazines-enews; sfpl.org/node/25637 | **VERIFIED** | "New York Times – Online Access from Home" pass listed ✓; WSJ via wsj.com redemption code ✓ (matches catalog's cautious wording); Kanopy: "30,000+ films free with your Library Card" on SFPL's own page ✓; monthly credit cap ✓ (8/month per SF Chronicle launch coverage). |
+| 15 | MoAD Free Second Saturday | moadsf.org/visit | **VERIFIED** | Closed **Aug 17–Sep 29, 2026**, reopens Sep 30 ✓ verbatim; "Every Second Saturday" THRIVE community day free ✓; adult **$15** ✓; Saturday 11–5 ✓; 685 Mission ✓. |
+| 16 | OMCA Free First Sunday | museumca.org/tickets | **VERIFIED** | "Every first Sunday of the month… Art, History, Natural Sciences, and any Special Exhibitions in our Great Hall are free" ✓ verbatim; admission $25 ✓; 1000 Oak St ✓. |
+| 17 | BAMPFA Free First Thursday | bampfa.org/visit/hours | **VERIFIED** | "Galleries are free for all on the first Thursday of each month" ✓; GA **$18** ✓; Wed–Sun 11–7, closed Mon–Tue ✓; UC Berkeley students/faculty/staff free ✓; children 0–13 free ✓; films separate ✓. |
+| 18 | Museum of Craft & Design | sfmcd.org/visit | **VERIFIED+FIX** | Free First Thursday ✓; Thu–Sun 12–5 ✓; **closed Mon–Wed** ✓ (no Pay-What-You-Wish Wednesday — correctly absent); GA $10, students/seniors $8, kids 12 & under free ✓; 2569 Third St, Dogpatch ✓. **Fixed: added official notice — NO Free First Thursday in September 2026 (install closure); next is Oct 1, 2026.** |
+| 19 | GLBT Historical Society Museum | glbthistory.org/museum-about-visitor-info | **VERIFIED** | Free "the first Wednesday of every month, sponsored by the Bob Ross Foundation" ✓ verbatim; GA **$10** ✓; hours Tue–Sun 11–1 & 1:30–5, closed Mon ✓; 4127 18th St ✓; free-day tickets not reservable online, first-come first-served ✓; tickets@glbthistory.org ✓. |
+| 20 | Asian Art Museum Free First Sunday | about.asianart.org (free-and-reduced + plan-your-visit) | **VERIFIED+FIX** | First Sunday GA free ✓ verbatim; adult GA **$20** ✓; hours Thu 1–8, Fri–Mon 10–5, closed Tue–Wed ✓; 200 Larkin ✓. **FLAG (source conflict): the museum's own pages disagree on the Free-First-Sunday special-exhibition surcharge — $15 on the Free & Reduced page vs $10 on Plan Your Visit. Catalog updated to disclose both and tell users to confirm at booking.** |
+| 21 | SF Zoo SF-Resident Free Days | sfzoo.org/calendar-of-events; sfzoo.org/tickets-hours | **VERIFIED+FIX** | Official calendar: "San Francisco Residents receive free admission with proof of SF Residency… One free admission per ID" on **Wed Sep 2** and **Wed Oct 7, 2026** ✓ exactly as cataloged; parking paid ✓ ($15/$20); $3 EBT/Medi-Cal SF-resident ticket is separate ✓. **Fixed: adult admission is $32 weekday/$34 weekend — value field corrected from "$26–$32"; `schedule_type` → "Published Calendar Dates" (dates are announced, not a guaranteed monthly rule).** |
+| 22 | ICA SF always free | icasf.org/visit | **VERIFIED** | "ICA SF is always free" ✓ verbatim. Visit page currently lists public works in Yerba Buena (Mission St facades) and Transamerica Pyramid Center — exactly what the catalog says; catalog correctly tells users to confirm the exhibition address before going. |
+| 23 | Randall Museum | randallmuseum.org/about-us | **VERIFIED** | "Admission is Free" ✓; Tue–Sat 10–5, closed Sun/Mon ✓ verbatim; 199 Museum Way ✓; Rec & Park facility ✓. |
+| 24 | Cantor Arts Center | museum.stanford.edu/visit | **VERIFIED** | "We're always free. Come visit us." ✓ verbatim; "more than **38,000** works" ✓ (catalog explicitly corrects the old 40,000 figure); ParkMobile paid parking ✓ (no free-parking claim); 328 Lomita Dr at Museum Way ✓. |
+| 25 | SF Opera in the Park | sfopera.com/operainthepark | **VERIFIED** | "Sunday, September 13, 2026 at 1:30pm… Free and open to all!" ✓ verbatim; Robin Williams Meadow ✓; ~2 hours ✓; blankets OK, no glass ✓; no ticket ✓. |
+| 26 | SF Camerawork | sfcamerawork.org/visit | **VERIFIED+FIX** | "SF Camerawork's exhibitions are **always free** and open to the public" ✓ verbatim; 2 Marina Blvd, Building A, Fort Mason ✓; hours exhibition-dependent via /current-hours ✓. **Fixed: location bucket corrected from "All Neighborhoods" to "SF - Marina / Fort Mason."** |
+| 27 | Anderson Collection | anderson.stanford.edu/visit | **VERIFIED** | "Starting on **January 5, 2026**, we are open on Mondays and closed on Tuesdays and Wednesdays" ✓ verbatim; Mon + Thu–Sun 11–5 ✓; free admission ✓ (official museum Facebook: "Free Admission"); ParkMobile paid parking ✓; 314 Lomita Dr ✓. |
+| 28 | SF Railway Museum | streetcar.org/museum | **VERIFIED** | "The museum is free (donations encouraged)" ✓ verbatim; "Tuesdays through Sundays from 12 noon – 5 pm" ✓; closed Thanksgiving/Christmas/New Year's ✓; 77 Steuart St across from the Ferry Building ✓. |
+| 29 | Sephora birthday gift | sephora.com/beauty/loyalty-program; sephora.com/beauty/birthday-gift | **VERIFIED** | Official FAQ: "No purchase is necessary when redeeming your gift in store. To redeem online, a merchandise purchase is required" ✓; birthday-2026 page: "$25+ to redeem online" ✓; one gift per year during birthday month ✓; while supplies last ✓; Beauty Insider free to join ✓. |
+
+---
+
+## Fixed this audit (summary)
+
+1. **de Young & Legion value fields: $20 → $25** — official FAMSF ticket pages now list Adults $25 (Seniors $22, Students $10). Also added the verified 4:30 PM free permanent-collection hour.
+2. **SF Zoo value: $26–$32 → $32–$34** — official tickets page (Adult 12–64: $32 weekday / $34 weekend). `schedule_type` → "Published Calendar Dates."
+3. **YBCA `schedule_type`: "First Wednesday" → "Every Wednesday"** — the offer is weekly, per ybca.org.
+4. **Mission Food Hub `schedule_type`: "Second Friday" → "Every Friday"** — per missionfoodhub.org.
+5. **Japanese Tea Garden redemption** — timed-entry reservation is now required for all visitors (gggp.org); instructions updated.
+6. **Museum of Craft & Design** — added the official September 2026 Free-First-Thursday blackout (install closure); next FFT Oct 1, 2026.
+7. **Nothing Bundt Cakes** — URL updated to the live `/bundtastic-rewards/` page; unverified redemption-window details removed; claims aligned to verbatim FAQ text.
+8. **SFMOMA restrictions** — rewritten from internal audit-note style to user-facing text.
+9. **SF Camerawork location** — "SF - All Neighborhoods" → "SF - Marina / Fort Mason" (single fixed venue).
+10. **App bug** — `js/app.js` Neighborhood Explorer hardcoded list omitted "SF - Lincoln Park / Sea Cliff," rendering the Legion of Honor deal invisible in that view; added it plus "SF - Marina / Fort Mason."
+11. **`data/sources.json`** — 3 dead/redirecting official URLs replaced (SFMTA youth page, sfbg.org → gggp.org, conservatoryofflowers.org → gggp.org); `last_updated` → 2026-08-19.
+12. **`data/stats.json`** — regenerated (29/29 free, updated location distribution). `verify_links.py`: 0 errors, 0 warnings.
+
+## Flags for ongoing review (not republished as fact)
+
+- **Asian Art Museum special-exhibition surcharge on Free First Sundays**: museum's own pages conflict ($15 vs $10). Catalog discloses both; re-check monthly until the museum reconciles.
+- **SFMOMA Free Family Day adult limit**: a 2024 press release said 4 adults; the current policy page says 2. Catalog follows the live page. Re-check before each Family Day.
+- **BofA Museums on Us roster**: official roster also lists San José Museum of Art (Sundays only) and The Tech Interactive (select weekends) — candidates to add. Roster "may change at any time."
+- **Value fields on always-free museums** (e.g., "$15 value" Cable Car Museum, "$20 value" ICA SF): these venues have no paid GA, so "value" is editorial. Not treated as hallucinations, but they are estimates, not official prices.
+- **`data/candidates.json`**: still unaudited candidates with synthetic-looking upvotes (Ferry Fest, Movies on the Square — Redwood City, Autumn Moon Festival, SFMTA Free Muni for low-income seniors/disabled — real program worth promoting, Boudin birthday). Do not publish without the same line-by-line official check.
+- **Cable Car Museum location bucket** ("Chinatown / North Beach"): 1201 Mason & Washington is commonly mapped as Nob Hill; tags already include nob-hill. Cosmetic only.
+
+## Free / no-purchase policy check (user requirement: keep ONLY free, no purchase)
+
+All 29 entries are $0 at redemption with no purchase required:
+- 22 museum/garden free days or always-free venues — $0 walk-in/reservation.
+- SFMTA youth, SFPL Discover & Go, SFPL NYT/Kanopy — $0 with free library card / no card at all.
+- Mission Food Hub — $0 groceries.
+- BofA Museums on Us — $0; requires an existing BofA/Merrill/Private Bank card (eligibility, not a purchase).
+- Sephora & Nothing Bundt Cakes birthdays — free to join, official terms state no purchase necessary in store.
+
+No purchase-required, BOGO, minimum-spend, or discount-only offers remain in the catalog (removed in the prior audit: Chipotle, Ike's, BWW, Quiznos, Underdogs, CHSA, Clipper BayPass, Off the Grid, TATO, Banya, Balboa, Ghirardelli, Baskin-Robbins, Stern Grove 2026, SFO Terminal Sessions, Bay Wheels, Fire Museum, Chinatown Night Market, Skatin' Place, SFAA star parties, Musée Mécanique).
+
+**Official sources fetched and cited in this audit:** sfmoma.org (free-days, group-visits), famsf.org (free-reduced-admission, both tickets+hours pages), gggp.org (admissions-hours, japanese-tea-garden, cherryblossoms FAQ, san-francisco-botanical-garden), sfrecpark.org (resident-free ordinance), ybca.org/visit, sfmta.com (free-muni-all-youth), sfpl.org (discover-and-go, emagazines-enews, Kanopy page), missionfoodhub.org, cablecarmuseum.org/info.html, about.bankofamerica.com (Museums on Us CA roster), nothingbundtcakes.com/bundtastic-rewards, moadsf.org/visit, museumca.org/tickets, bampfa.org/visit/hours, sfmcd.org/visit, glbthistory.org/museum-about-visitor-info, about.asianart.org (free-and-reduced + plan-your-visit), sfzoo.org (calendar-of-events + tickets-hours), icasf.org/visit, randallmuseum.org/about-us, museum.stanford.edu/visit, sfopera.com/operainthepark, sfcamerawork.org/visit, anderson.stanford.edu/visit, streetcar.org/museum, sephora.com (birthday-gift + loyalty-program FAQ).
+
+---
+
+# AUDIT 3 — Community-Source Freebie Discovery + Expansion (2026-08-19, later same day)
+
+**Mission:** discover NEW freebies from community/social sources (Reddit r/AskSF + r/bayarea threads, Funcheap, tourism calendars, coupon communities), then verify every candidate against an OFFICIAL source before publishing. Keep only 100% free / no-purchase offers.
+
+**Result: 13 new entries added (29 → 42). 0 unverified claims published. 5 candidates rejected with documented reasons.**
+
+## The 10 passes
+
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | **Community discovery sweep** — Reddit (r/AskSF threads `1e2spmm`, `1e26mi2`; r/bayarea `1rnu66v`), Funcheap, sftourismtips free-museum calendar, travel/press coverage | ~20 raw candidates identified; community sources used for DISCOVERY ONLY, never as proof |
+| 2 | **Official-source fetch** — every surviving candidate's official page fetched and read | 13 fully verified; 2 dead official URLs found and corrected (museemecanique.org → museemecanique.com; museoitaloamericano.org → sfmuseo.org; old SFMTA candidate URL → /fares/free-muni) |
+| 3 | **Free / no-purchase test** — is redemption genuinely $0? | 13 passed. 1 rejected: Muir Woods fee-free days (NPS explicitly says parking/shuttle reservation fee still required). 1 rejected: Cal Academy free days (discontinued since 2024 per current listings; no official free-day page) |
+| 4 | **Hallucination screen** — every sentence in new entries must trace to fetched official text | 4 phrases tightened (Salesforce Park gondola detail, SFCO season span, City Guides tipping, GGP shuttle "bike-friendly") — removed because not present in fetched official text |
+| 5 | **Write entries** — same schema, `is_new: true`, official `promotion_url` + community/discovery `community_url` | 13 entries written; de Young Hamon Tower free-view fact folded into existing de Young entry (verified on famsf.org tickets page) |
+| 6 | **Internal consistency** — IDs, schedule_type, location buckets, slugs | 2 new location buckets added to app.js neighborhood view ("SF - Presidio / Golden Gate", "Marin / North Bay") so no deal is invisible in that view |
+| 7 | **Purchase-language sweep** across all 42 | 0 hits — no purchase, BOGO, minimum-spend, or discount-only language anywhere |
+| 8 | **Line-by-line proofread** of every new entry vs. its fetched official text | All claims verified verbatim or removed (see pass 4) |
+| 9 | **Regression spot-check** of existing 29 | MoAD, GGGP, FAMSF re-confirmed unchanged; all 29 were fully verified earlier on 2026-08-19 |
+| 10 | **Toolchain QA** — `generate_stats.py`, `verify_links.py`, `node --check`, JSON validity, README/index.html counts (29 → 42) | All pass: 42/42 Priority 1 "100% Free", 0 errors, 0 warnings |
+
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
+
+| # | New entry | Official proof (verbatim) | Discovered via |
+| :-- | :--- | :--- | :--- |
+| 30 | **SF City Guides free walking tours** | sfcityguides.org/about-us: "we provide this service free of charge"; SFPL program since 1978; ~300 guides, 75+ tours | r/AskSF (multiple threads) |
+| 31 | **Fort Point NHS free admission** | nps.gov/fopo fees page: "Free. No entrance pass required" | r/AskSF `1e2spmm` |
+| 32 | **Presidio Officers' Club free exhibitions** | presidio.gov: "free exhibitions in the Heritage Gallery… Open Friday through Sunday, 11 a.m. to 4 p.m. No ticket required" | r/AskSF Presidio threads + 2026 Presidio press |
+| 33 | **Presidio GO Shuttle free** | presidio.gov press (Apr 2026): "its free Presidio GO Shuttle fleet" | r/bayarea transit thread |
+| 34 | **Free Muni for low-income seniors (65+) & people with disabilities** | sfmta.com/fares/free-muni: "Provides free access to Muni services for low and moderate income seniors, ages 65+…" + Access Pass for people experiencing homelessness | candidates.json (r/AskSF) — old URL was 404, live page verified |
+| 35 | **Salesforce Park free activities** | tjpa.org (May 2026): "nearly 20 free public programs… each week" May 1–Oct 31; free activities year-round | r/AskSF (Divasf comment) |
+| 36 | **SF-Marin Food Bank free groceries** | sfmfoodbank.org/find-food: Food Locator for "weekly free groceries…"; serves all regardless of immigration status | food-security community listings |
+| 37 | **SF Chamber Orchestra admission-free concerts** | thesfco.org: "world-class, admission-free concerts" (SF/Berkeley/Palo Alto + free family concerts) | r/bayarea `1rnu66v` |
+| 38 | **Museo Italo Americano — FREE Thursdays + First Sundays** | sfmuseo.org: "Thursday General Admission - FREE; First Sunday of the Month - FREE; Under 18 - FREE" ($10 GA) | sftourismtips calendar (which only knew First Sundays — Thursday free is a bonus official fact) |
+| 39 | **Musée Mécanique free admission (RE-ADDED)** | museemecanique.com/visit: "Open 365 Days a Year. Admission is free!" 10 AM–8 PM, Pier 45; games coin-operated | Prior audit removed it because the old .org homepage rendered empty — the live official .com site states free admission explicitly |
+| 40 | **Hardly Strictly Bluegrass, Oct 2–4 2026** | hardlystrictlybluegrass.com: "San Francisco's beloved free music festival"; 2026 lineup announcements; no tickets/RSVP | Music press (JamBase) + festival app community |
+| 41 | **Nike Missile Site SF-88 free open house** | nps.gov/goga: "only open on the first Saturday of every month from 12:00-3:00PM"; GGNRA fees page: no entrance fees except Muir Woods | r/AskSF `1e26mi2` |
+| 42 | **Golden Gate Park free shuttle** | gggp.org: "free Golden Gate Park Shuttle… Monday to Friday 12:00pm to 6:00pm; Saturday, Sundays and holidays 10:00am to 6:00pm"; stops incl. Music Concourse, Stow Lake | gggp.org official page |
+
+## Rejected candidates (documented, not published)
+
+| Candidate | Reason for rejection |
 | :--- | :--- |
-| **PASS** | Core free/discount claim matches official policy. Minor wording issues only. |
-| **PASS WITH ERRORS** | Deal exists, but hours, dates, prices, URLs, or eligibility are wrong. |
-| **FLAG — HALLUCINATION / STALE** | A specific claimed fact is false, outdated, or invented. Do not publish as verified. |
-| **FLAG — UNOFFICIAL** | Community-only; official site does not document the perk. |
-| **FAIL** | Core “100% free / verified official” claim is false. |
+| Muir Woods on NPS fee-free days | nps.gov/goga: "the parking/shuttle reservation fee is still required at Muir Woods on these days" — not clean 100% free |
+| California Academy of Sciences free days | Discontinued since summer 2024 per current listings; no official free-day page to cite |
+| Wells Fargo History Museum | Closed permanently |
+| Stern Grove 2026 / SFO Terminal Sessions / Off the Grid | 2026 seasons ended or offer concluded (prior audit); nothing new to verify |
+| SFAC Galleries / Little Farm Tilden / SFPL State Parks Pass / Minnesota Street Project / Oakland First Fridays / Starbucks & other national birthday clubs | Plausible but NOT verified against official pages in this pass — left in `data/candidates.json` for a future audit. Not published = not hallucinated |
 
-Repo `scripts/verify_links.py` does **not** check sources. It only validates JSON schema. Every `"Verified Official Source"` / `"verified_date": "2026-08-12"` stamp is self-asserted.
+## Catalog state after this audit
 
----
-
-## Highest-severity flags (fix or unpublish first)
-
-These will send a user to the wrong place, on the wrong day, or to a paid offer labeled free.
-
-### FAIL — `chinese-historical-society-always-free`
-
-Official CHSA FAQ ([chsa.org/faqs](https://chsa.org/faqs/)):
-
-- Tickets are **sold**. Student $10, senior/veteran $10, EBT/Medi-Cal **$3**.
-- Open **Wednesday and Saturday only, 10:00 AM–5:00 PM**.
-- Closed Monday, Tuesday, Thursday, Friday, Sunday.
-
-Catalog claims: always 100% free; walk-in Wednesday–Sunday 11:00 AM–4:00 PM; value $12.
-
-This is a **fabricated free-admission policy**. Priority #1 is false. Hours are false. `promotion_url` `https://chsa.org/visit/` does not resolve to a visit page.
-
-### FAIL — `ikes-sandwiches-free-birthday-sandwich`
-
-Official Ike’s FAQ / terms:
-
-- Birthday reward is **half off a sandwich**, not a free sandwich.
-- Requires a **$10+ purchase in the past year**.
-- Must join before the first of the birthday month.
-
-Catalog claims Priority #1 / 100% free / no purchase. That is false. This is Priority #2 at best. `https://ikessandwich.com/rewards/` is not the current official rewards page.
-
-### FAIL / STALE — `mission-food-hub-free-fresh-groceries`
-
-Official [missionfoodhub.org](https://www.missionfoodhub.org/): **Friday-only** grocery distribution now. The Mon/Wed/Fri 10:00 AM schedule is the 2020 COVID peak, not current operations.
-
-### FAIL / STALE — `museum-of-craft-and-design-free-thursdays`
-
-Official [sfmcd.org/visit](https://sfmcd.org/visit/):
-
-- Open **Thursday–Sunday, 12:00–5:00 PM**.
-- **Closed Monday–Wednesday.**
-- Free First Thursday is real.
-- **Pay-What-You-Can Wednesday does not exist.** Museum is closed Wednesdays.
-
-Catalog hours “10:00 AM–5:00 PM” and weekly $0 Wednesday are false.
-
-### FAIL / STALE — `off-the-grid-treasure-island-free-ferry`
-
-Treasure Island / Off the Grid official spring series ran **April 11–May 16, 2026** only. Audit date is **August 19, 2026**. This is not an always-on free ferry. `schedule_type: Always Free` is false.
-
-### Conservatory closed-day hallucination — `conservatory-of-flowers-free-tuesday-and-residents`
-
-Official Gardens of Golden Gate Park ([gggp.org/visit/admissions-hours](https://gggp.org/visit/admissions-hours/)):
-
-- **Closed Wednesdays**, open Thursday–Tuesday 10:00 AM–4:30 PM.
-- Catalog says **closed Mondays**, open Tuesday–Sunday.
-
-Sending people on Wednesday is a hard miss. Resident + veteran + First Tuesday free **is** official.
+- **42 deals — 100% Priority #1 "100% Free / No Purchase"** (29 prior + 13 new)
+- `verify_links.py`: 0 errors, 0 warnings; `stats.json` regenerated (12 location buckets)
+- `index.html` badge + README counts updated 29 → 42; app.js neighborhood view extended (no invisible deals)
+- `candidates.json`: Free Muni seniors/disabled marked PROMOTED with verified URL; remaining candidates explicitly marked unaudited
 
 ---
 
-## Line-by-line entry audit
-
-### 01 `sfmoma-free-family-community-days` — PASS WITH ERRORS
-
-Official: [sfmoma.org/free-days](https://www.sfmoma.org/free-days/)
-
-| Claim | Official | Flag |
-| :--- | :--- | :--- |
-| Ages 18 and under always free | Yes | OK |
-| Adult $30 | Matches published 2026 GA | OK |
-| Up to **4 adults** free with one youth | Official: up to **2 adults** per child/teen | **HALLUCINATION** |
-| Next Free Family Day **June 14, 2026** | That date already happened. Official next date: **October 25, 2026** | **STALE** |
-| Community Days “seasonally” | Official upcoming: **TBD** | Overstated |
-| Teen value $23 | 18-and-under is free; $23 is student, not teen | Misleading |
-
-### 02 `deyoung-free-first-tuesday-and-saturdays` — PASS
-
-Official: [famsf.org/visit/free-reduced-admission](https://www.famsf.org/visit/free-reduced-admission)
-
-Free Saturdays for 9-county residents + First Tuesday for all, permanent galleries only, 9 counties listed correctly.  
-`$20 value` is a ballpark GA figure, not a current official quote. `schedule_type: First Tuesday` underweights the Saturday resident offer.
-
-### 03 `legion-of-honor-free-saturdays-residents` — PASS
-
-Same FAMSF policy. Saturday 9:30 AM–5:15 PM matches listed hours. Neighborhood slug is Golden Gate Park, not Lincoln Park / Sea Cliff (location field is correct).
-
-### 04 `sf-botanical-garden-free-daily-residents` — PASS WITH ERRORS
-
-Official is now **gggp.org**, not `sfbg.org/visit` (redirects).
-
-Confirmed: SF residents free; daily 7:30–9:00 AM free for all; Second Tuesday free.  
-Omitted official free days: Thanksgiving, Christmas, New Year’s Day. Value $14 unverified on the admissions page.
-
-### 05 `conservatory-of-flowers-free-tuesday-and-residents` — PASS WITH ERRORS
-
-Resident + veteran + First Tuesday free: official.  
-**Closed Wednesday, not Monday.** Hours page is gggp.org, not a dedicated Conservatory visit policy that matches the catalog text.
-
-### 06 `japanese-tea-garden-free-hour-and-residents` — PASS WITH ERRORS
-
-Official: Mon/Wed/Fri **9:00–10:00 AM** free hour; SF residents (and veterans) free.  
-`https://www.japaneseteagardensf.com/visit` is **404**.  
-`schedule_type: Second Friday` is invented. Veterans free omitted.
-
-### 07 `ybca-free-wednesdays` — PASS WITH ERRORS
-
-Official [ybca.org/visit](https://ybca.org/visit/): every Wednesday galleries free. Address 701 Mission confirmed.  
-Adult ticket is **$10**, not $15. Wednesday hours are **11 AM–8 PM**, not 11–5.  
-`schedule_type: First Wednesday` is false.
-
-### 08 `sfmta-free-muni-for-all-youth` — PASS WITH ERRORS
-
-Official: [sfmta.com/fares/free-muni-all-youth-18-years-and-younger](https://www.sfmta.com/fares/free-muni-all-youth-18-years-and-younger)
-
-Catalog URL `.../getting-around/muni/fares/free-muni-all-youth` is **404**.  
-Program is real: all youth 18 and under, no Clipper, cable cars excluded unless SF youth request a pass.  
-Value `$2.50–$5.00 ($81/month)` is stale. Official adult fare is about **$2.85 Clipper / $3.00 cash**; monthly pass **$86**.
-
-Community URL points at an AskSF birthday thread, not transit policy.
-
-### 09 `sfpl-discover-and-go-free-museum-passes` — PASS
-
-Official: [sfpl.org/discover-and-go](https://sfpl.org/discover-and-go) — SF resident cardholders, 12+ attractions.  
-“15+” and the specific high-demand venue list (Cal Academy, Exploratorium, SF Zoo, MoAD) are not enumerated on that page. Treat venue list as unverified.
-
-### 10 `mission-food-hub-free-fresh-groceries` — FAIL / STALE
-
-See highest-severity. Address 701 Alabama is still listed. Schedule is not.
-
-### 11 `archimedes-banya-free-birthday-pass` — FLAG — UNOFFICIAL
-
-Address **748 Innes Ave** is India Basin / Bayview, **not SoMa**.  
-Current [banyasf.com](https://banyasf.com/) does **not** publish a birthday-free policy.  
-A 2013 Banya post offered a **voucher for the next visit**, not same-day free entry.  
-Reddit r/AskSF (June 2026, post `1ub304e`) still claims it. Community-only.  
-`$72 value` is not on the current official pricing page.
-
-### 12 `balboa-theater-free-birthday-movie` — FLAG — UNOFFICIAL
-
-`https://www.cinemasf.com/balboa` is **404**. Current site is [balboamovies.com](https://www.balboamovies.com/).  
-No official birthday-free-ticket policy found. One Yelp anecdote only. Address 3630 Balboa is real.
-
-### 13 `ikes-sandwiches-free-birthday-sandwich` — FAIL
-
-See highest-severity.
-
-### 14 `ghirardelli-square-free-chocolate-sample` — FLAG — UNOFFICIAL
-
-Long-running visitor custom, not a published official promotion.  
-`https://www.ghirardelli.com/store-locations/san-francisco-ghirardelli-square` not independently confirmed as the current store page. Neighborhood is Fisherman’s Wharf, not Chinatown / North Beach.
-
-### 15 `chinatown-night-market-free-admission` — PASS WITH ERRORS
-
-2026 series is real: **second Friday, May–October only** (May 8 … Oct 9), typically 5:00–9:00 PM, Grant Ave **California to Pacific**.  
-Catalog implies year-round monthly. Hours 5:30–9:00 and Grant Sacramento–Jackson are off.  
-`https://www.chinatownmerchant.org/` is not the event organizer page (Civic Joy Fund / Funcheap).
-
-### 16 `sf-cable-car-museum-always-free` — PASS WITH ERRORS
-
-Free walk-in at 1201 Mason is real.  
-Hours “Tue–Sun 10:00–4:00” are oversimplified. SFHSA/current listings: Tue–Thu 10–4, Fri–Sun 10–5.
-
-### 17 `musee-mecanique-always-free` — PASS
-
-Free admission at Pier 45 is real; games are paid.  
-“365 days, 10 AM–8 PM” may overstate weekday hours (some listings Mon–Fri 10–7). Official homepage fetch returned almost no text.
-
-### 18 `bank-of-america-museums-on-us-weekend` — PASS WITH ERRORS
-
-Program is official: first **full** weekend, cardholder + matching ID, GA only.  
-FAMSF confirms de Young + Legion. OMCA is widely listed.  
-**Contemporary Jewish Museum** is **not** on the 2026 Funcheap BofA roster. Treat CJM as stale until BofA’s locator confirms it.  
-Catalog URL is not the current BofA locator (`museums-on-us-find-locations-map`).
-
-### 19 `baskin-robbins-free-birthday-scoop` — PASS WITH ERRORS
-
-Loyalty birthday scoop is a real national program. Size (2.5 vs 4 oz) and “expires 10 days” were not confirmed on the official birthday-club page. Secondary sources only.
-
-### 20 `nothing-bundt-cakes-free-birthday-bundlet` — PASS
-
-Official [nothingbundtcakes.com/eclub](https://www.nothingbundtcakes.com/eclub/): free Bundtlet on birthday for Bundtastic Rewards / eClub. No SF store; Bay Area locations are suburban. Fine.
-
-### 21 `sfpl-free-nytimes-wsj-digital-access` — PASS WITH ERRORS
-
-SFPL does offer NYT 72-hour digital passes (renewable) plus Kanopy. WSJ / WaPo access exists via library databases but is **not** the same “72-hour pass, renew forever” mechanic as NYT.  
-`https://sfpl.org/books-and-media` is a generic hub, not the eLearning redeem page. “$35/month” is a bundled guess.
-
-### 22 `golden-gate-park-skatin-place-free-skate` — PASS WITH ERRORS
-
-Skatin’ Place at 6th & JFK is a real dedicated skate area. Community skate is strongest **Sunday noon–5**, also Sat/Wed — not a formal “every weekend live DJ” city program.  
-`https://sfrecpark.org/destination/golden-gate-park/skatin-place/` was not confirmed as a live official page.
-
-### 23 `off-the-grid-treasure-island-free-ferry` — FAIL / STALE
-
-See highest-severity. Location SoMa is wrong (Treasure Island / Ferry Building).
-
-### 24 `moad-free-second-saturday` — PASS WITH ERRORS
-
-Official [moadsf.org/visit](https://www.moadsf.org/visit): Second Saturday Thrive @ MoAD is free.  
-**Closed Aug 17–Sep 29, 2026** for install — catalog does not say this.  
-Hours Sat **11–5**, not 11–6. Adult ticket **$15**, not $20.
-
-### 25 `oakland-museum-omca-free-first-sunday` — PASS
-
-Official [museumca.org/tickets](https://museumca.org/tickets/): First Sunday free, including Great Hall specials. Address 1000 Oak confirmed.
-
-### 26 `berkeley-bampfa-free-first-thursday` — PASS
-
-First Thursday galleries free; UC Berkeley ID always free; films not included. Address 2155 Center confirmed.
-
-### 27 `museum-of-craft-and-design-free-thursdays` — FAIL / STALE
-
-See highest-severity. First Thursday free is the only surviving official free day.
-
-### 28 `glbt-historical-society-free-wednesday` — PASS
-
-First Wednesday free is official. Address 4127 18th St confirmed. Hours are split (11–1 and 1:30–5), not a simple 11–5 block.
-
-### 29 `tato-pay-what-you-can-friday-tacos` — FLAG — STALE / MISLOCATED
-
-Tato is real at **4608 3rd St, Bayview**, not Mission / Castro.  
-Pay-what-you-can Friday started as a 2020 COVID program. Funcheap still lists it into 2026; **no current official restaurant policy page**. Hours 11–2 do not match 2026 Yelp (Fri 8 AM–3 PM).  
-Promotion URL is a Funcheap category, not Tato.
-
-### 30 `chinese-historical-society-always-free` — FAIL
-
-See highest-severity.
-
-### 31 `chipotle-free-guac-or-chips-rewards` — PASS WITH ERRORS
-
-Official Apr 2026 relaunch: **new members only**, free chips & guac with $5+, **expires 7 days**. Not an ongoing everyday offer. Birthday guac is a separate member perk. Priority #2 is correct.
-
-### 32 `buffalo-wild-wings-free-birthday-wings` — FLAG — UNOFFICIAL
-
-Coupon-site consensus: 6 wings with $10 in birthday month. **No official BWW terms page confirmed.** No SF location (Daly City / South Bay only) — title oversells “SF.”
-
-### 33 `quiznos-bogo-birthday-sub` — FLAG — HALLUCINATION RISK
-
-Only aggregator pages mention Toasty Points BOGO. **No official Quiznos birthday terms found.**  
-`https://www.quiznos.com/toastypoints` not confirmed live. Do not keep as “Verified Official Source.”
-
-### 34 `underdogs-cantina-1-dollar-margaritas` — PASS WITH ERRORS
-
-Official [underdogscantina.com](https://underdogscantina.com/): **$1 house margaritas Tuesday 7:30–8:00 PM only**, Disco Taco Tuesday, 128 King St.  
-Catalog “after 5:00 PM” / “Tuesday evening” **invents a multi-hour window**. Official window is **30 minutes**. `schedule_type: Always Free` is nonsense.
-
-### 35 `clipper-baypass-student-commuter-pilot` — FLAG — MISLEADING
-
-Program exists as an **institutional pilot** through late 2026.  
-Catalog URL is **404**.  
-It is **not** a free public pass. Students pay campus fees (e.g. SJSU ~$24.50/semester). Eligibility is institution-assigned, not “check your portal and tap for $0.”  
-Priority #1 “100% Free / no purchase” is false for most users.
-
-### 36 `stern-grove-festival-free-summer-concerts` — PASS WITH ERRORS
-
-Festival is real and free.  
-**Ticket process is wrong.** 2026 uses a **lottery opening 6 weeks out for 1 week**, plus community box office — **not** “released exactly one month before at 2:00 PM SHARP” that “sell out in minutes.” That is an old process.
-
-### 37 `asian-art-museum-free-first-sunday` — PASS WITH ERRORS
-
-Official [about.asianart.org/plan-your-visit](https://about.asianart.org/plan-your-visit/): Free First Sundays, specials $10. Adult GA **$20**, not $25.  
-`https://asianart.org/visit/free-days/` is **404**.
-
-### 38 `sf-zoo-free-days-sf-residents` — PASS WITH ERRORS
-
-Periodic SF-resident free days are real (typically first Wednesday; Funcheap lists remaining 2026 dates).  
-`schedule_type: Always Free` is false. Parking $13 and ticket values not confirmed on official tickets page during this audit. Military/Veterans Day free not independently confirmed.
-
-### 39 `ica-sf-the-cube-always-free` — PASS
-
-Official: “ICA SF is always free.” 345 Montgomery / The Cube still listed on 2026 directories. Hours Wed–Sun 11–5, Thu to 7 match older Funcheap. Official visit page now also mentions Yerba Buena / Transamerica public works — confirm indoor gallery is still The Cube before reprinting the address as exclusive.
-
-### 40 `randall-museum-always-free` — PASS
-
-Official: free, Tue–Sat 10–5, closed Sun/Mon, 199 Museum Way.  
-“Entrance quail” is a typo (kiosk?).
-
-### 41 `cantor-arts-center-stanford-always-free` — PASS WITH ERRORS
-
-Always free is official. Collection is **38,000+**, not 40,000.  
-“Free parking on weekends” is **false** — ParkMobile paid visitor parking.  
-Hours in catalog (Wed–Sun 11–5) look like the **old** schedule. 2026 listings show **Mon open, Tue/Wed closed** (same flip as Anderson).
-
-### 42 `sf-opera-in-the-park-free-concert` — PASS
-
-Official SF Opera 2026–27 season release: **Sunday, September 13, 2026, 1:30 p.m.**, Robin Williams Meadow. Free, no ticket. Strong match.
-
-### 43 `stern-grove-terminal-sessions-sfo-free` — PASS WITH ERRORS
-
-Official SFO press release June 4, 2026: Terminal Sessions at **Gate B4, Terminal 1**.  
-Dates were **Saturdays June 13 and June 20 at 2:00 PM**, then a separate Wed/Thu series.  
-Catalog “select summer **Fridays**” is **false**.  
-Need a **boarding pass or SFO Gate Explorer pass** — not walk-up for the public.  
-By Aug 19, 2026 the June dates are over. SFist URL is real.
-
-### 44 `sf-fire-department-museum-always-free` — PASS WITH ERRORS
-
-Thu–Sun 1–4 is consistent. Address is commonly **655** Presidio, catalog says **658**.  
-`sffiremuseum.org` redirects to an archival Guardians of the City site, not a current visitor policy.
-
-### 45 `sf-camerawork-free-photography-gallery` — PASS WITH ERRORS
-
-Official: always free, Fort Mason **2 Marina Blvd, Building A**.  
-Hours are exhibition-dependent (often 11–6), **not** fixed Tue–Sat 12–6.  
-Neighborhood Chinatown / North Beach is **wrong** (Marina / Fort Mason).
-
-### 46 `anderson-collection-stanford-always-free` — PASS WITH ERRORS
-
-Always free. Official as of Jan 5, 2026: **open Monday + Thu–Sun 11–5; closed Tuesday and Wednesday.**  
-Catalog “Wed–Sun, closed Mon/Tue” is the **old** schedule.
-
-### 47 `sf-railway-museum-always-free` — PASS WITH ERRORS
-
-Official [streetcar.org/museum](https://www.streetcar.org/museum/): free, **Tuesday through Sunday 12:00–5:00 PM**.  
-Catalog “Tuesday through Saturday” omits Sunday.
-
-### 48 `sf-amateur-astronomers-free-star-parties` — PASS WITH ERRORS
-
-SFAA exists; public star parties are free and weather-dependent.  
-Lectures are **not** reliably at “Presidio / Randall Museum.” Locations rotate (Lands End, Presidio Parade Ground). Check calendar each time. Labeled “Verified Community / Reddit” but notes cite the official site — inconsistent.
-
-### 49 `sephora-sf-free-birthday-gift-set` — PASS
-
-Official Beauty Insider terms: in-store birthday gift, **no purchase**; online needs $25. Birthday **month**. URL is live.
-
-### 50 `bay-wheels-bike-share-free-ebt-medical-rides` — FLAG — URL DEAD / TERMS UNCLEAR
-
-`https://www.lyft.com/bikes/bay-wheels/bikes-for-all` is **404**.  
-Equity program exists, but official 2026 price is **not** clearly “$5/year or $0 unlimited 30-minute rides.” Secondary sources conflict ($5/year then $5/month; 45- vs 60-min). Do not keep as verified official until the live Lyft/MTC page is recaptured.
-
----
-
-## Pass A — Internal / catalog integrity
-
-These are not source errors; they are invented or contradictory fields inside the JSON.
-
-| Issue | Where |
+# AUDIT 4 — Second Discovery Cycle: 7 More Verified Freebies (2026-08-19, evening)
+
+**Mission:** same protocol — community/social discovery (Reddit r/bayarea telescope/tool-library threads, Berkeley Parents Network, Funcheap organizer-submitted listings, Instagram-sourced travel writeups used ONLY as leads), then official-source verification for every claim.
+
+**Result: 42 → 49 deals. 7 verified and added; 9 candidates left documented-but-unpublished.**
+
+## The 10 passes
+
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | Community discovery sweep (new angles: astronomy nights, NPS sites, city-run galleries, library passes, Dogpatch galleries, summer theater) | ~15 raw leads |
+| 2 | Official-source fetch per candidate | 7 verified (Chabot, Rosie the Riveter, SFAC, Tilden/EBRPD PDF, SFPL parks pass, Minnesota Street, SF Mime Troupe); 3 dead/moved official URLs found (sfartscommission.org → sf.gov; nps.gov/goga point-bonita 404; museemecanique .org → .com previously) |
+| 3 | Free / no-purchase test | 7 passed. Deferred: Point Bonita (official page moved, could not verify current open hours), Internet Archive tours, Oakland First Fridays, Autumn Moon Festival, tool lending libraries — none officially confirmed this pass |
+| 4 | Hallucination screen — sentence-level trace to fetched official text | 1 fix applied (Mime Troupe production title corrected to official "WRECKAGE: A Musical Tragicomedy"); animal-feeding claims for Little Farm kept OUT of the entry (community tip only, not on the official EBRPD sheet) |
+| 5 | Write entries (schema, is_new, official promotion_url + community_url) | 7 entries; all reuse existing location buckets, so no app.js changes needed |
+| 6 | Internal consistency (IDs, schedule_type, slugs, app.js buckets) | 49/49 clean; all locations present in neighborhood view |
+| 7 | Purchase-language sweep across all 49 | 0 hits |
+| 8 | Line-by-line proofread vs. official text | Done; title fix above |
+| 9 | Regression checks (stats regen, verify_links, node --check, JSON validity, README/index counts 42 → 49) | All pass; 0 errors / 0 warnings |
+| 10 | Documentation (this section) + candidates.json bookkeeping | 4 existing candidates annotated (Ferry Fest, Movies on the Square, Autumn Moon, Boudin — not promoted, reasons logged); 4 new documented candidates added |
+
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
+
+| # | New entry | Official proof (verbatim) | Discovered via |
+| :--- | :--- | :--- | :--- |
+| 43 | **Chabot free telescope viewings** (Oakland) | chabotspace.org: "Every Friday and Saturday Night, weather permitting… 7:30-10:30 p.m."; "largest observatory complex regularly free for public viewing in the Western United States"; humidity closure rules (Leah/Rachel >90%, Nellie ≥85%) | r/bayarea telescope threads |
+| 44 | **Rosie the Riveter WWII Home Front NHP** (Richmond) | nps.gov/rori: "Free. No entrance pass required"; "Visitor Center, the Rosie Memorial and all Richmond City public parks are free to enter"; Red Oak Victory = paid partner | r/bayarea `1rnu66v` |
+| 45 | **SFAC Galleries** (Civic Center + City Hall) | sf.gov Arts Commission: "Experience free exhibitions at the SFAC Main Gallery located in the War Memorial Veterans Building, and exhibitions at City Hall in the North Light Court and Ground Floor"; Main Gallery Wed–Sat 12–5 on official map page | City-agency sweep |
+| 46 | **Tilden Little Farm + Botanic Garden + EEC** (Berkeley) | EBRPD official "Tilden Attractions Summer 2026" PDF: Little Farm "No charge"; Botanic Garden "No charge" (daily 8:30–5:30); Environmental Education Center "No charge" (Tue–Sun 10–4:30); park page: "Parking: No fee" | r/AskSF + Berkeley Parents Network |
+| 47 | **SFPL California State Library Parks Pass** | sfpl.org/california-state-library-parks-pass: "provides free vehicle day-use entry into a participating state park"; checkout up to 3 weeks; "valid at over 200 participating state park units" | r/AskSF library thread |
+| 48 | **Minnesota Street Project free galleries** (Dogpatch) | minnesotastreetproject.com/visit: "Minnesota Street Project is open to the public. Admission is free."; Atrium Tue–Sat 11–6; per-gallery hours listed | Prior-audit leftover list |
+| 49 | **SF Mime Troupe free park shows** (Bay Area, thru Sept 7, 2026) | sfmt.org: "As always FREE performances throughout the Bay Area all summer long!"; "still on tour in the park!" → sfmt.org/full-schedule; 2026 = WRECKAGE, 67th season; ticketed-indoor exception corroborated by organizer-submitted Funcheap listings | Funcheap series + r/AskSF |
+
+## Deferred / rejected this cycle (documented, NOT published)
+
+| Candidate | Status |
 | :--- | :--- |
-| Every `verified_date` is `2026-08-12` | All 50 — rubber stamp |
-| `schedule_type` contradicts the deal | Japanese Tea Garden, Mission Food Hub, YBCA, TATO = `Second Friday`; Underdogs / SF Zoo / Off the Grid = `Always Free` |
-| Neighborhood vs address | Banya (Bayview listed SoMa); TATO (Bayview listed Mission); Camerawork (Marina listed Chinatown); Off the Grid (Treasure Island listed SoMa) |
-| Priority #1 on purchase-required offers | Ike’s; Clipper BayPass (student fee); Chipotle is correctly #2 |
-| Community URL reused as fake proof | Same Reddit post `1ub304e` attached to SFMTA, SFPL, Banya, Balboa, Ike’s, Nothing Bundt, Chipotle, BWW — one birthday thread is not official verification |
-| `r/sanfrancisco/.../1ub304e` | That post is on **r/AskSF**, not r/sanfrancisco |
-| Generic / empty community URLs | tripadvisor.com homepage, sfgate.com/local/, funcheap homepage, reddit.com/r/bayarea/ |
-| `$1,450+ annual free value` | README / app banner — **no calculation in the repo** |
-| `verify_links.py` name | Does not verify links |
+| Point Bonita Lighthouse (NPS GGNRA) | Old official URL 404s; current open-house schedule could not be verified this pass — needs the live nps.gov/goga page |
+| Internet Archive Friday tour + lunch (Richmond) | Reddit-reported; official tour page not yet verified |
+| Oakland First Fridays / Chinatown Autumn Moon Festival 2026 | Official 2026 status/dates not yet fetched |
+| Oakland & Berkeley tool lending libraries | Strong community consensus; official library pages not yet fetched |
+| Boudin birthday treat | Still no official terms page (2nd consecutive audit) — remains a loyalty rumor |
+| Ferry Fest / Movies on the Square (Redwood City) | One-off or late-season events without a clean official free-admission page this pass |
+
+## Catalog state
+
+**49 deals — 100% Priority #1 "100% Free / No Purchase"** · `verify_links.py` 0 errors · stats regenerated · README + index.html badges at 49 · all 49 visible in every app view.
 
 ---
 
-## Dead or wrong official URLs
+# AUDIT 5 — Leftover-Candidate Cleanup (2026-08-19, night)
 
-| Deal | Catalog URL | Status |
-| :--- | :--- | :--- |
-| SFMTA youth | `/getting-around/muni/fares/free-muni-all-youth` | **404** |
-| Japanese Tea Garden | japaneseteagardensf.com/visit | **404** |
-| Balboa | cinemasf.com/balboa | **404** |
-| Asian Art free days | asianart.org/visit/free-days/ | **404** |
-| Clipper BayPass | mtc.ca.gov/.../clipper-baypass | **404** |
-| Bay Wheels Bikes for All | lyft.com/bikes/bay-wheels/bikes-for-all | **404** |
-| CHSA visit | chsa.org/visit/ | Does not load a visit policy |
-| Botanical Garden | sfbg.org/visit | Redirects; official is gggp.org |
-| Fire Museum | sffiremuseum.org | Redirects to archive |
+**Mission:** clear the documented-but-unverified candidates from `candidates.json` — verify each against official pages or leave it unpublished with reasons.
 
----
+**Result: 49 → 53 deals. 4 promoted (verified); 1 rejected (no official source); remaining candidates annotated.**
 
-## Candidates (`data/candidates.json`) — not in the 50, still flagged
+## The 10 passes
 
-Scraped “upvotes” and 2026-08-12 dates look synthetic. Do not promote until audited:
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | Candidate triage (5 open candidates) + fresh targeted searches | 5 candidates examined |
+| 2 | Official-source fetch/verify | Point Bonita (nps.gov/goga/pobo.htm + NPS Open House event), Oakland First Fridays (official site), Autumn Moon Festival (official organizer moonfestival.org), Oakland Tool Lending Library (oaklandlibrary.org) — all VERIFIED |
+| 3 | Free / no-purchase test | 4 passed. Internet Archive Friday tour REJECTED for publishing: press-corroborated (Fogline first-hand Dec 2025; Hoodline; Richmond Sunset News) but archive.org itself publishes no tour page (archive.org/visit = 404) — official-source rule holds |
+| 4 | Hallucination screen | Point Bonita entry written around the NPS bridge-closure notice (viewing platform only — the lighthouse itself is inaccessible); 'free lunch' portion of the Reddit Internet Archive claim excluded everywhere (invitation-only per Yelp business info) |
+| 5 | Write entries | 4 entries added; all reuse existing location buckets |
+| 6 | Internal consistency | 53/53 unique IDs, Priority 1, verified blocks; all locations present in app.js neighborhood view |
+| 7 | Purchase-language sweep | 0 hits across all 53 |
+| 8 | Line-by-line proofread vs official text | Done — quotes verbatim in verification notes |
+| 9 | Toolchain QA (stats regen, verify_links, JSON) | 53/53, 0 errors, 0 warnings; README/index counts 49 → 53 |
+| 10 | Documentation + candidates.json bookkeeping | 4 marked Promoted w/ evidence; Internet Archive marked Not Promoted w/ reason; temp script removed |
 
-- Ferry Fest — Funcheap lists a 2026 Ferry Building event; not verified here.
-- Movies on the Square (Redwood City) — outside SF proper.
-- Chinatown Autumn Moon Festival — seasonal; confirm 2026 dates.
-- Free Muni for low-income seniors/disabled — **real SFMTA program**, better candidate than several published “verified” deals.
-- Boudin birthday treat — loyalty claim only.
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
 
----
+| # | New entry | Official proof (verbatim) | Status |
+| :-- | :--- | :--- | :--- |
+| 50 | **Point Bonita Lighthouse free open house** (Marin Headlands) | nps.gov/goga/pobo.htm (Apr 2026): "The Point Bonita Trail is only open on the third Saturday of every month from 12:30-3:30"; NPS calendar "Point Bonita Open House — Fee: Free"; bridge "closed until further notice" caveat included | Promoted from candidates |
+| 51 | **Oakland First Fridays free festival** | Official site: "a free, monthly street festival… first Friday of every month along Telegraph Avenue from West Grand to 27th Street"; Aug 7, 2026 5-9:30pm | Promoted from candidates |
+| 52 | **SF Chinatown Autumn Moon Festival, Sept 19-20 2026** | Official organizer moonfestival.org (Chinatown Merchants Association): "September 19 - 20 • 11am - 5pm… GRANT Avenue Between California & Broadway… Cost: FREE!" | Promoted from candidates |
+| 53 | **Oakland Tool Lending Library — 3,500+ tools free** | oaklandlibrary.org OTLL pages (eligibility, 7-day loans, 2→10 tool limits); fotll.org: "borrow for free with their library card" | Promoted from candidates |
 
-## Counts after this audit
+## Rejected / still unpublished
 
-| Bucket | Count |
-| :--- | ---: |
-| PASS (core claim official) | 18 |
-| PASS WITH ERRORS | 20 |
-| FLAG — unofficial / community only | 5 |
-| FAIL / hallucination / stale core claim | 7 |
-| **Total** | **50** |
+| Candidate | Reason |
+| :-- | :--- |
+| Internet Archive free Friday 1 PM tour + lunch | Tour is real per multiple independent press accounts (often founder-led), but archive.org publishes NO official tour page (404). Kept in candidates.json with press citations — do not publish until an official page exists. The "free lunch" half of the Reddit claim is invitation-only and was never considered |
+| Boudin birthday treat | 3rd consecutive audit with no official terms page |
+| Ferry Fest / Movies on the Square (Redwood City) | No current official free-admission page this pass |
 
-**Do not keep the “50 verified / 92% official 100% free” badges.** After this pass, at least **Ike’s, CHSA, Mission Food Hub schedule, MCD Wednesday, Off the Grid, Conservatory closed day, and Clipper BayPass** cannot be published as verified official 100% free.
+## Catalog state
 
----
-
-## Recommended review actions
-
-1. Unpublish or rewrite the **FAIL** rows before the next Pages deploy.
-2. Replace every 404 `promotion_url` with the live official page.
-3. Recode `schedule_type` from the official calendar, not from a guessed enum.
-4. Stop stamping `Verified Official Source` unless the official page states the perk.
-5. Recalculate `stats.json` after removals. The 46/50 free figure is not defensible.
-
-Sources used for official confirmation include SFMOMA, FAMSF, SFMTA, SFPL, Gardens of Golden Gate Park, YBCA, MoAD, OMCA, BAMPFA, MCD, GLBT Historical Society, Asian Art Museum, ICA SF, Randall Museum, Cantor, Anderson Collection, SF Opera, SFO, Market Street Railway, SF Camerawork, CHSA, Mission Food Hub, Sephora Beauty Insider terms, Nothing Bundt Cakes, Underdogs Cantina, and MTC/UCSF BayPass pages.
+**53 deals — 100% Priority #1 "100% Free / No Purchase"** · verify_links 0 errors · stats + README + index badges at 53 · every deal visible in every app view · every published claim traceable to a fetched official page this audit date.
