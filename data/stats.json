@@ -1,36 +1,32 @@
 {
-  "last_compiled": "2026-08-12 17:46:20 UTC",
-  "total_deals": 50,
-  "free_deals_count": 46,
-  "free_percentage": "92.0%",
+  "last_compiled": "2026-08-19 15:12:17 UTC",
+  "total_deals": 29,
+  "free_deals_count": 29,
+  "free_percentage": "100.0%",
   "total_monitored_sources": 15,
   "priority_distribution": {
-    "100% Free": 46,
-    "Free with Purchase": 3,
-    "Discount/Coupon": 1
+    "100% Free": 29
   },
   "category_distribution": {
-    "Museums & Arts": 24,
-    "Transit & Services": 4,
-    "Community & Library": 3,
-    "Food & Dining": 7,
-    "Birthdays & Freebies": 6,
-    "Entertainment & Events": 6
+    "Museums & Arts": 22,
+    "Transit & Services": 1,
+    "Community & Library": 2,
+    "Food & Dining": 1,
+    "Birthdays & Freebies": 2,
+    "Entertainment & Events": 1
   },
   "location_distribution": {
-    "SF - SoMa / Downtown": 10,
-    "SF - Golden Gate Park / Richmond": 9,
+    "SF - SoMa / Downtown": 7,
+    "SF - Golden Gate Park / Richmond": 5,
     "SF - Lincoln Park / Sea Cliff": 1,
-    "SF - All Neighborhoods": 10,
-    "SF - Mission / Castro": 5,
-    "SF - Chinatown / North Beach": 6,
-    "Bay Area Wide": 5,
+    "SF - All Neighborhoods": 5,
+    "SF - Mission / Castro": 4,
+    "SF - Chinatown / North Beach": 1,
+    "Bay Area Wide": 2,
     "Oakland / East Bay": 2,
     "San Jose / South Bay": 2
   },
   "verification_status_breakdown": {
-    "Verified Official Source": 40,
-    "Verified News Release": 6,
-    "Verified Community / Reddit": 4
+    "Verified Official Source": 29
   }
 }
