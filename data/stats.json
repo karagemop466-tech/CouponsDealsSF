@@ -1,19 +1,19 @@
 {
-  "last_compiled": "2026-08-19 21:08:01 UTC",
-  "total_deals": 49,
-  "free_deals_count": 49,
+  "last_compiled": "2026-08-19 21:11:32 UTC",
+  "total_deals": 53,
+  "free_deals_count": 53,
   "free_percentage": "100.0%",
   "total_monitored_sources": 15,
   "priority_distribution": {
-    "100% Free": 49
+    "100% Free": 53
   },
   "category_distribution": {
-    "Museums & Arts": 32,
+    "Museums & Arts": 33,
     "Transit & Services": 4,
-    "Community & Library": 4,
+    "Community & Library": 5,
     "Food & Dining": 2,
     "Birthdays & Freebies": 2,
-    "Entertainment & Events": 5
+    "Entertainment & Events": 7
   },
   "location_distribution": {
     "SF - SoMa / Downtown": 9,
@@ -21,15 +21,15 @@
     "SF - Lincoln Park / Sea Cliff": 1,
     "SF - All Neighborhoods": 7,
     "SF - Mission / Castro": 5,
-    "SF - Chinatown / North Beach": 2,
+    "SF - Chinatown / North Beach": 3,
     "Bay Area Wide": 5,
-    "Oakland / East Bay": 5,
+    "Oakland / East Bay": 7,
     "San Jose / South Bay": 2,
     "SF - Marina / Fort Mason": 2,
     "SF - Presidio / Golden Gate": 3,
-    "Marin / North Bay": 1
+    "Marin / North Bay": 2
   },
   "verification_status_breakdown": {
-    "Verified Official Source": 49
+    "Verified Official Source": 53
   }
 }

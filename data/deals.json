@@ -1541,5 +1541,135 @@
     "is_new": true,
     "schedule_type": "Summer Season",
     "neighborhood_slug": "bay-area-wide"
+  },
+  {
+    "id": "point-bonita-lighthouse-free-open-house",
+    "title": "Point Bonita Lighthouse - Free Monthly Open House, Third Saturdays (Marin Headlands)",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Museums & Arts",
+    "location": "Marin / North Bay",
+    "value": "Free ranger-led lighthouse visit (Fee: Free per NPS calendar)",
+    "description": "The Point Bonita Lighthouse - welcoming ships to San Francisco Bay since 1855 - opens to the public one day a month. Per the official NPS page, the Point Bonita Trail is open only on the third Saturday of every month, 12:30-3:30 PM, and the NPS calendar lists the monthly 'Point Bonita Open House' with Fee: Free, including a ranger 'light chat' at 12:15 PM. IMPORTANT: the trail leads to a viewing platform - the suspension bridge to the lighthouse itself is closed until further notice for safety.",
+    "redemption_instructions": "1. Check the nps.gov/goga calendar for the next third-Saturday open house before going.\n2. Arrive by 12:15 PM for the ranger's 15-minute 'light chat,' then walk the trail 12:30-3:30 PM.\n3. No fee and no ticket; the route runs through the historic tunnel to the viewing platform.",
+    "restrictions": "Third Saturdays ONLY, 12:30-3:30 PM. The suspension bridge at the end of the trail is CLOSED until further notice - the lighthouse interior is inaccessible; visitors reach the viewing platform. Cancellations possible in bad weather.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "National Park Service - GGNRA",
+      "verified_date": "2026-08-19",
+      "notes": "Official nps.gov/goga/pobo.htm (updated April 2026): 'The Point Bonita Trail is only open on the third Saturday of every month from 12:30-3:30'; bridge closed 'until further notice.' NPS calendar event 'Point Bonita Open House': 'Fee: Free,' monthly third Saturday, ranger light chat 12:15 PM. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.nps.gov/goga/pobo.htm",
+    "community_url": "https://www.nps.gov/planyourvisit/event-details.htm?id=2E193420-0F96-6C72-80EF309DAA15FCEC",
+    "tags": [
+      "museum",
+      "100-percent-free",
+      "national-park",
+      "marin-headlands",
+      "lighthouse",
+      "history",
+      "third-saturday"
+    ],
+    "is_new": true,
+    "schedule_type": "Third Saturday",
+    "neighborhood_slug": "marin-north-bay"
+  },
+  {
+    "id": "oakland-first-fridays-free-festival",
+    "title": "Oakland First Fridays - Free Monthly Street Festival on Telegraph Avenue",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "Oakland / East Bay",
+    "value": "Free street festival with live music and art (monthly)",
+    "description": "The official Oakland First Fridays site describes 'a free, monthly street festival that celebrates the vibrant art, culture, and community of Oakland... held on the first Friday of every month along Telegraph Avenue from West Grand to 27th Street,' 5:00-9:30 PM, with live music, local art, food vendors, and a main stage. The next 2026 edition is Friday, August 7.",
+    "redemption_instructions": "1. Check oaklandfirstfridays.org for each month's theme and schedule.\n2. Show up on Telegraph Avenue (West Grand to 27th) first Friday, 5:00-9:30 PM - no ticket.\n3. 19th Street BART is a short walk from the festival footprint.",
+    "restrictions": "Monthly on first Fridays, 5:00-9:30 PM, weather permitting; schedules and themes change monthly. Food and vendor purchases are paid; the festival itself is free.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Oakland First Fridays (KONO Community Benefit District)",
+      "verified_date": "2026-08-19",
+      "notes": "Official site: 'a free, monthly street festival... first Friday of every month along Telegraph Avenue from West Grand to 27th Street'; August 7, 2026 event listed 5-9:30pm; program of KONO CBD nonprofit. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.oaklandfirstfridays.org/",
+    "community_url": "https://www.reddit.com/r/bayarea/comments/1rnu66v/whats_something_free_or_extremely_cheap_you_found/",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "festival",
+      "oakland",
+      "east-bay",
+      "first-friday",
+      "music",
+      "art"
+    ],
+    "is_new": true,
+    "schedule_type": "First Friday",
+    "neighborhood_slug": "oakland-east-bay"
+  },
+  {
+    "id": "chinatown-autumn-moon-festival-free",
+    "title": "SF Chinatown Autumn Moon Festival - Free Street Festival, Sept 19-20, 2026",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Entertainment & Events",
+    "location": "SF - Chinatown / North Beach",
+    "value": "Free two-day cultural festival with parade and lion dancing",
+    "description": "The Chinatown Merchants Association's official festival page lists the 2026 SF Chinatown Autumn Moon Festival for Saturday-Sunday, September 19-20, 2026, 11:00 AM-5:00 PM on Grant Avenue between California and Broadway - with 'Cost: FREE!' Expect an opening parade and ribbon-cutting at 11:00 AM Saturday at California & Grant, lion and dragon dances, folk dance on the main stage at Washington & Grant, mooncakes, and children's activities.",
+    "redemption_instructions": "1. Come to Grant Avenue (California to Broadway) either day, 11:00 AM-5:00 PM - no ticket needed.\n2. Saturday 11 AM catches the opening parade and lion dance at California & Grant.\n3. Powell Street BART or the Stockton Street buses are the easiest way in.",
+    "restrictions": "One weekend a year (2026: September 19-20). Program subject to change without notice; food and mooncake purchases are paid.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "SF Chinatown Autumn Moon Festival (Chinatown Merchants Association)",
+      "verified_date": "2026-08-19",
+      "notes": "Official organizer site moonfestival.org: 'September 19 - 20 (11am - 5pm)... GRANT Avenue Between California & Broadway... Cost: FREE!' with Saturday opening parade and entertainment schedule. Corroborated by sftravel.com September events. Verified 2026-08-19."
+    },
+    "promotion_url": "https://www.moonfestival.org/",
+    "community_url": "https://www.sftravel.com/article/san-francisco-festivals-events-september",
+    "tags": [
+      "event",
+      "100-percent-free",
+      "festival",
+      "chinatown",
+      "family",
+      "culture",
+      "autumn"
+    ],
+    "is_new": true,
+    "schedule_type": "Annual Event",
+    "neighborhood_slug": "sf-chinatown-north-beach"
+  },
+  {
+    "id": "oakland-tool-lending-library-free",
+    "title": "Oakland Tool Lending Library - Borrow 3,500+ Tools Free with a Library Card",
+    "priority_label": "100% Free",
+    "priority_rank": 1,
+    "category": "Community & Library",
+    "location": "Oakland / East Bay",
+    "value": "Free tool loans (tool rentals typically $10-$50+ per day)",
+    "description": "The Oakland Tool Lending Library - a branch of the Oakland Public Library in the Temescal branch basement at 5205 Telegraph Ave - lends more than 3,500 tools free with an OPL card, from hand tools to power tools. Loans run seven days; first visit you may borrow two tools, then up to ten at a time (maximum three power tools). Free DIY workshops are also offered.",
+    "redemption_instructions": "1. Get an Oakland Public Library card, then register at the Tool Lending Library with the card, current photo ID, and address verification (sign a waiver).\n2. Borrow tools for seven days; eligible loans renew automatically.\n3. Return tools during open hours (the large-tool shed closes 15 minutes before closing).",
+    "restrictions": "Borrowing limited to residents and property owners 18+ of Oakland, Piedmont, and Emeryville. Late fines run $1-$5 per day per tool - return on time. Registration required even with an existing OPL card.",
+    "verification": {
+      "status": "Verified Official Source",
+      "source_name": "Oakland Public Library - Tool Lending Library",
+      "verified_date": "2026-08-19",
+      "notes": "Official oaklandlibrary.org OTLL rules/lending pages: eligibility (Oakland/Piedmont/Emeryville residents 18+), 7-day loans, 2 tools first visit then 10 max/3 power tools; Friends of the OTLL (fotll.org): 'more than 3,500 tools that residents... can borrow for free with their library card'; located at Temescal branch. Verified 2026-08-19."
+    },
+    "promotion_url": "https://oaklandlibrary.org/otll/lending/",
+    "community_url": "https://fotll.org/",
+    "tags": [
+      "library",
+      "100-percent-free",
+      "tools",
+      "diy",
+      "oakland",
+      "east-bay",
+      "free-services",
+      "always-free"
+    ],
+    "is_new": true,
+    "schedule_type": "Always Free",
+    "neighborhood_slug": "oakland-east-bay"
   }
 ]

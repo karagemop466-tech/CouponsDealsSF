@@ -30,7 +30,7 @@
     "priority_rank": 1,
     "upvotes": 98,
     "scraped_date": "2026-08-12",
-    "status": "Still unaudited - confirm 2026 dates on an official organizer page (seasonal September street fair) before promoting"
+    "status": "Promoted to deals.json 2026-08-19 (chinatown-autumn-moon-festival-free) - official organizer moonfestival.org verified Sep 19-20 2026, Cost: FREE"
   },
   {
     "candidate_id": "candidate-reddit-free-muni-seniors-disabled",
@@ -63,7 +63,7 @@
     "priority_rank": 1,
     "upvotes": null,
     "scraped_date": "2026-08-19",
-    "status": "Unaudited - old NPS page URL 404s; find the live nps.gov/goga page and verify current open days/hours before promoting"
+    "status": "Promoted to deals.json 2026-08-19 (point-bonita-lighthouse-free-open-house) - nps.gov/goga/pobo.htm + NPS calendar verified; bridge-closure caveat included"
   },
   {
     "candidate_id": "candidate-internet-archive-friday-tour",
@@ -74,7 +74,7 @@
     "priority_rank": 1,
     "upvotes": null,
     "scraped_date": "2026-08-19",
-    "status": "Unaudited - verify tour schedule on an official archive.org page before promoting"
+    "status": "Not promoted - free Friday 1pm tour is press-corroborated (Fogline Dec 2025, Hoodline, Richmond Sunset News) but archive.org publishes no official tour page (archive.org/visit is 404). Do not publish without an official source"
   },
   {
     "candidate_id": "candidate-oakland-first-fridays",
@@ -85,7 +85,7 @@
     "priority_rank": 1,
     "upvotes": null,
     "scraped_date": "2026-08-19",
-    "status": "Unaudited - verify 2026 season status and free admission on the official site before promoting"
+    "status": "Promoted to deals.json 2026-08-19 (oakland-first-fridays-free-festival) - official site verified"
   },
   {
     "candidate_id": "candidate-east-bay-tool-lending-libraries",
@@ -96,6 +96,6 @@
     "priority_rank": 1,
     "upvotes": null,
     "scraped_date": "2026-08-19",
-    "status": "Unaudited - verify official Oakland/Berkeley library pages before promoting"
+    "status": "Promoted to deals.json 2026-08-19 (oakland-tool-lending-library-free) - official oaklandlibrary.org pages verified; Berkeley TLL not separately verified"
   }
 ]

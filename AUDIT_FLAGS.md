@@ -205,3 +205,47 @@ No purchase-required, BOGO, minimum-spend, or discount-only offers remain in the
 ## Catalog state
 
 **49 deals — 100% Priority #1 "100% Free / No Purchase"** · `verify_links.py` 0 errors · stats regenerated · README + index.html badges at 49 · all 49 visible in every app view.
+
+---
+
+# AUDIT 5 — Leftover-Candidate Cleanup (2026-08-19, night)
+
+**Mission:** clear the documented-but-unverified candidates from `candidates.json` — verify each against official pages or leave it unpublished with reasons.
+
+**Result: 49 → 53 deals. 4 promoted (verified); 1 rejected (no official source); remaining candidates annotated.**
+
+## The 10 passes
+
+| # | Pass | Result |
+| :-- | :-- | :-- |
+| 1 | Candidate triage (5 open candidates) + fresh targeted searches | 5 candidates examined |
+| 2 | Official-source fetch/verify | Point Bonita (nps.gov/goga/pobo.htm + NPS Open House event), Oakland First Fridays (official site), Autumn Moon Festival (official organizer moonfestival.org), Oakland Tool Lending Library (oaklandlibrary.org) — all VERIFIED |
+| 3 | Free / no-purchase test | 4 passed. Internet Archive Friday tour REJECTED for publishing: press-corroborated (Fogline first-hand Dec 2025; Hoodline; Richmond Sunset News) but archive.org itself publishes no tour page (archive.org/visit = 404) — official-source rule holds |
+| 4 | Hallucination screen | Point Bonita entry written around the NPS bridge-closure notice (viewing platform only — the lighthouse itself is inaccessible); 'free lunch' portion of the Reddit Internet Archive claim excluded everywhere (invitation-only per Yelp business info) |
+| 5 | Write entries | 4 entries added; all reuse existing location buckets |
+| 6 | Internal consistency | 53/53 unique IDs, Priority 1, verified blocks; all locations present in app.js neighborhood view |
+| 7 | Purchase-language sweep | 0 hits across all 53 |
+| 8 | Line-by-line proofread vs official text | Done — quotes verbatim in verification notes |
+| 9 | Toolchain QA (stats regen, verify_links, JSON) | 53/53, 0 errors, 0 warnings; README/index counts 49 → 53 |
+| 10 | Documentation + candidates.json bookkeeping | 4 marked Promoted w/ evidence; Internet Archive marked Not Promoted w/ reason; temp script removed |
+
+## New entries — line-by-line verdicts (all VERIFIED against official pages fetched 2026-08-19)
+
+| # | New entry | Official proof (verbatim) | Status |
+| :-- | :--- | :--- | :--- |
+| 50 | **Point Bonita Lighthouse free open house** (Marin Headlands) | nps.gov/goga/pobo.htm (Apr 2026): "The Point Bonita Trail is only open on the third Saturday of every month from 12:30-3:30"; NPS calendar "Point Bonita Open House — Fee: Free"; bridge "closed until further notice" caveat included | Promoted from candidates |
+| 51 | **Oakland First Fridays free festival** | Official site: "a free, monthly street festival… first Friday of every month along Telegraph Avenue from West Grand to 27th Street"; Aug 7, 2026 5-9:30pm | Promoted from candidates |
+| 52 | **SF Chinatown Autumn Moon Festival, Sept 19-20 2026** | Official organizer moonfestival.org (Chinatown Merchants Association): "September 19 - 20 • 11am - 5pm… GRANT Avenue Between California & Broadway… Cost: FREE!" | Promoted from candidates |
+| 53 | **Oakland Tool Lending Library — 3,500+ tools free** | oaklandlibrary.org OTLL pages (eligibility, 7-day loans, 2→10 tool limits); fotll.org: "borrow for free with their library card" | Promoted from candidates |
+
+## Rejected / still unpublished
+
+| Candidate | Reason |
+| :-- | :--- |
+| Internet Archive free Friday 1 PM tour + lunch | Tour is real per multiple independent press accounts (often founder-led), but archive.org publishes NO official tour page (404). Kept in candidates.json with press citations — do not publish until an official page exists. The "free lunch" half of the Reddit claim is invitation-only and was never considered |
+| Boudin birthday treat | 3rd consecutive audit with no official terms page |
+| Ferry Fest / Movies on the Square (Redwood City) | No current official free-admission page this pass |
+
+## Catalog state
+
+**53 deals — 100% Priority #1 "100% Free / No Purchase"** · verify_links 0 errors · stats + README + index badges at 53 · every deal visible in every app view · every published claim traceable to a fetched official page this audit date.
