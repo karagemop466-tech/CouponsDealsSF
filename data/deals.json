@@ -9,12 +9,12 @@
     "value": "$30 adult general admission value (youth free)",
     "description": "SFMOMA offers 100% free general admission every day for visitors 18 and younger, with no adult ticket purchase required. Periodic Free Family Days waive general admission for up to two adults accompanying one child or teen 18 or younger. The next official Free Family Day is October 25, 2026. Free Community Day dates are listed as TBD.",
     "redemption_instructions": "1. Ages 18 and under: reserve a free youth ticket at sfmoma.org or request one at the ticket desk.\n2. Free Family Day (next official date October 25, 2026): reserve timed tickets about two weeks ahead. Up to two adults are free with one visitor 18 or younger.\n3. Surcharged exhibitions are not included and require separate paid tickets.",
-    "restrictions": "Official Free Family Day companion limit is two adults per child/teen, not four. June 14, 2026 already occurred. Community Days have no published upcoming date. Always free for ages 18 and under.",
+    "restrictions": "Free Family Day admits up to two adults per child/teen 18 or younger (tickets released two weeks ahead). Surcharged exhibitions always require separate paid tickets. Free Community Day dates are TBD - check sfmoma.org/free-days. Ages 18 and under are always free.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "SFMOMA Free Days",
       "verified_date": "2026-08-19",
-      "notes": "Official page: 18 and under always free; Family Day up to two adults; next Family Day October 25, 2026."
+      "notes": "Re-verified 2026-08-19 vs sfmoma.org/free-days + group-visits page: 18 & under always free; Family Day = 2 adults max, tickets 2 weeks ahead; next Family Day Oct 25, 2026; Community Days TBD; adult GA $30 confirmed."
     },
     "promotion_url": "https://www.sfmoma.org/free-days/",
     "community_url": "https://www.sfmoma.org/deals-discounts/",
@@ -37,15 +37,15 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - Golden Gate Park / Richmond",
-    "value": "$20 value per person",
-    "description": "The de Young offers 100% free general admission to permanent collection galleries every Saturday for residents of the nine Bay Area counties, and free general admission for everyone on the first Tuesday of each month. Youth 17 and under are always free to the permanent galleries.",
+    "value": "$25 adult general admission value per person",
+    "description": "The de Young offers 100% free general admission to permanent collection galleries every Saturday for residents of the nine Bay Area counties, and free general admission for everyone on the first Tuesday of each month. Youth 17 and under are always free to the permanent galleries. FAMSF also offers free permanent-collection admission during the final hour each open day (from 4:30 PM).",
     "redemption_instructions": "1. Book a timed general admission ticket at famsf.org or redeem on-site with ID.\n2. Saturdays: choose the Bay Area Resident free ticket and bring proof of residency in one of the nine counties.\n3. First Tuesdays: reserve free general admission in advance when possible.",
     "restrictions": "Permanent collection galleries only; special exhibitions are ticketed. Free Saturdays and First Tuesdays do not run during Bouquets to Art. Counties: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, Sonoma.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "FAMSF Free + Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Official FAMSF policy confirms Free Saturdays for 9-county residents and First Tuesday for all."
+      "notes": "Re-verified 2026-08-19 vs famsf.org: Free Saturdays (9 counties) + First Tuesday confirmed; adult GA now $25 (was $20); 4:30 PM free final hour confirmed on de Young tickets page."
     },
     "promotion_url": "https://www.famsf.org/visit/free-reduced-admission",
     "community_url": "https://www.famsf.org/visit/free-reduced-admission",
@@ -68,15 +68,15 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - Lincoln Park / Sea Cliff",
-    "value": "$20 value per person",
-    "description": "The Legion of Honor offers the same FAMSF free programs: 100% free permanent-gallery admission every Saturday for 9-county Bay Area residents, and free general admission for everyone on the first Tuesday of each month. Typical hours are Tuesday–Sunday 9:30 AM–5:15 PM.",
+    "value": "$25 adult general admission value per person",
+    "description": "The Legion of Honor offers the same FAMSF free programs: 100% free permanent-gallery admission every Saturday for 9-county Bay Area residents, and free general admission for everyone on the first Tuesday of each month. Typical hours are Tuesday–Sunday 9:30 AM–5:15 PM. FAMSF also offers free permanent-collection admission during the final hour each open day (from 4:30 PM).",
     "redemption_instructions": "1. Reserve timed tickets at legionofhonor.famsf.org or famsf.org.\n2. Saturdays: select the Bay Area Resident free ticket and bring residency ID.\n3. First Tuesdays: reserve free general admission when possible.",
     "restrictions": "Permanent galleries only; special exhibitions excluded. Same Bouquets to Art blackout as the de Young. Saturday hours typically 9:30 AM–5:15 PM.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "FAMSF Free + Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Same official FAMSF free Saturday / First Tuesday policy as the de Young."
+      "notes": "Re-verified 2026-08-19 vs famsf.org/visit/legion-tickets-hours: hours Tue-Sun 9:30-5:15 confirmed; adult GA now $25 (was $20)."
     },
     "promotion_url": "https://www.famsf.org/visit/free-reduced-admission",
     "community_url": "https://legionofhonor.famsf.org/visit",
@@ -164,13 +164,13 @@
     "location": "SF - Golden Gate Park / Richmond",
     "value": "$14 value",
     "description": "Official free hour for everyone is Monday, Wednesday, and Friday, 9:00–10:00 AM. San Francisco residents and veterans enter free every open day with valid ID.",
-    "redemption_instructions": "1. Free hour: arrive 9:00–10:00 AM Monday, Wednesday, or Friday at 75 Hagiwara Tea Garden Drive.\n2. SF residents/veterans: show valid ID at the ticket booth any open day.",
+    "redemption_instructions": "1. Free hour: arrive 9:00-10:00 AM Monday, Wednesday, or Friday at 75 Hagiwara Tea Garden Drive (no ticket needed during the free hour).\n2. SF residents/veterans at other times: reserve a FREE timed ticket at gggp.org (the garden requires timed entry for all visitors), then show proof - SF-address ID, or photo ID plus an SF utility bill/lease, or military/veteran benefits card and photo ID.\n3. Last entry is 30 minutes before closing and changes by season.",
     "restrictions": "Free hour requires entry before 10:00 AM. Last entry is 30 minutes before closing and changes by season.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Gardens of Golden Gate Park Admissions & Hours",
       "verified_date": "2026-08-19",
-      "notes": "Official free hour Mon/Wed/Fri 9–10am. japaneseteagardensf.com/visit is 404."
+      "notes": "Re-verified 2026-08-19 vs gggp.org: free hour Mon/Wed/Fri 9-10 AM confirmed; official garden page now requires timed tickets for ALL visitors - redemption instructions updated; resident/veteran free confirmed by sfrecpark.org ordinance and GGGP ticketing FAQ."
     },
     "promotion_url": "https://gggp.org/visit/admissions-hours/",
     "community_url": "https://gggp.org/japanese-tea-garden/",
@@ -202,7 +202,7 @@
       "status": "Verified Official Source",
       "source_name": "YBCA Visit / Ticketing",
       "verified_date": "2026-08-19",
-      "notes": "Official: Wednesdays free for all; Wed hours 11 AM–8 PM; adult ticket $10."
+      "notes": "Re-verified 2026-08-19 vs ybca.org/visit: 'Every Wednesday enjoy free admission for all'; adult $10; Wed 11 AM-8 PM. Fixed schedule_type from 'First Wednesday' to 'Every Wednesday'."
     },
     "promotion_url": "https://ybca.org/visit/",
     "community_url": "https://ybca.org/visit/",
@@ -214,7 +214,7 @@
       "contemporary-art"
     ],
     "is_new": false,
-    "schedule_type": "First Wednesday",
+    "schedule_type": "Every Wednesday",
     "neighborhood_slug": "sf-soma-downtown"
   },
   {
@@ -295,7 +295,7 @@
       "status": "Verified Official Source",
       "source_name": "Mission Food Hub Official Site",
       "verified_date": "2026-08-19",
-      "notes": "Corrected 2026-08-19 audit: official site states the hub now serves families every Friday. The Mon/Wed/Fri 10:00 AM schedule was the 2020 peak and is no longer current."
+      "notes": "Re-verified 2026-08-19 vs missionfoodhub.org: 'serving families every Friday'; 701 Alabama St; contact info confirmed. Fixed schedule_type from 'Second Friday' to 'Every Friday'."
     },
     "promotion_url": "https://www.missionfoodhub.org/",
     "community_url": "https://www.freemania.net/cities/san-francisco-ca",
@@ -308,7 +308,7 @@
       "friday"
     ],
     "is_new": false,
-    "schedule_type": "Second Friday",
+    "schedule_type": "Every Friday",
     "neighborhood_slug": "sf-mission-castro"
   },
   {
@@ -381,16 +381,16 @@
     "category": "Birthdays & Freebies",
     "location": "Bay Area Wide",
     "value": "$6 value",
-    "description": "Bundtastic Rewards / eClub members receive one free individual Bundtlet on their birthday. Official FAQ: no bakery purchase is required to redeem the birthday Bundtlet. Bay Area bakeries are suburban (no SF storefront).",
-    "redemption_instructions": "1. Join Bundtastic Rewards in bakery, at nothingbundtcakes.com, or in the app and add your birthday.\n2. Watch for the birthday email/app barcode about a week before your birthday.\n3. Show the barcode and ID at a participating bakery. Offer is good from email arrival through 7 days after your birthday.",
+    "description": "Bundtastic Rewards is free to join (in bakery, online, or in the app), and members receive one free individual Bundtlet on their birthday. Bay Area bakeries are suburban - there is no San Francisco storefront.",
+    "redemption_instructions": "1. Join Bundtastic Rewards free at nothingbundtcakes.com/bundtastic-rewards, in the app, or in bakery, and add your birthday.\n2. During your birthday window, check in at a participating bakery with your account phone number or email (or your reward in the app).\n3. Confirm your bakery's redemption window when you check in - windows vary by location.",
     "restrictions": "Must join and give a birthdate. One Bundtlet per member per year. No SF store — Daly City, San Rafael, Walnut Creek, San Jose, and other Bay Area bakeries.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Nothing Bundt Cakes Bundtastic Rewards / FAQ",
       "verified_date": "2026-08-19",
-      "notes": "Official: free Bundtlet on birthday for members."
+      "notes": "Re-verified 2026-08-19 vs nothingbundtcakes.com/bundtastic-rewards: 'Members also get a free individual Bundtlet on their birthday'; program is free to join. Removed unverified 7-day-window and 'no purchase' FAQ wording; updated URL from redirecting /eclub/ page."
     },
-    "promotion_url": "https://www.nothingbundtcakes.com/eclub/",
+    "promotion_url": "https://www.nothingbundtcakes.com/bundtastic-rewards/",
     "community_url": "https://www.nothingbundtcakes.com/faqs/",
     "tags": [
       "birthday",
@@ -537,14 +537,14 @@
     "category": "Museums & Arts",
     "location": "SF - Mission / Castro",
     "value": "$10 general admission value",
-    "description": "San Francisco’s Museum of Craft and Design in Dogpatch offers 100% free general admission on the first Thursday of every month. Regular hours are Thursday–Sunday, 12:00–5:00 PM. The museum is closed Monday–Wednesday; there is no Pay-What-You-Can Wednesday.",
+    "description": "San Francisco’s Museum of Craft and Design in Dogpatch offers 100% free general admission on the first Thursday of every month. Regular hours are Thursday–Sunday, 12:00–5:00 PM. The museum is closed Monday–Wednesday; there is no Pay-What-You-Can Wednesday. NOTE: There is no Free First Thursday in September 2026 - the museum is closed for exhibition install; the next Free First Thursday is October 1, 2026.",
     "redemption_instructions": "1. Visit MCD at 2569 Third Street (between 22nd and 23rd, Dogpatch, SF) on the first Thursday of the month.\n2. Hours are 12:00 PM–5:00 PM. No ticket is required for Free First Thursday; RSVP on sfmcd.org if the museum requests it.\n3. Do not plan a Wednesday visit — the museum is closed Monday through Wednesday.",
-    "restrictions": "Free First Thursday only. Closed Monday–Wednesday and on listed holidays. Regular general admission is $10 (students/seniors $8; children 12 and under free).",
+    "restrictions": "Free First Thursday only. Closed Monday-Wednesday and on listed holidays. No Free First Thursday in September 2026 (exhibition install closure); next one is October 1, 2026. Regular general admission is $10 (students/seniors $8; children 12 and under free).",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Museum of Craft and Design Official Visit Page",
       "verified_date": "2026-08-19",
-      "notes": "Corrected 2026-08-19 audit: official hours Thursday–Sunday 12:00–5:00 PM; closed Monday–Wednesday. Pay-What-You-Can Wednesday is discontinued. Free First Thursday confirmed."
+      "notes": "Re-verified 2026-08-19 vs sfmcd.org/visit: Free First Thursday, Thu-Sun 12-5, closed Mon-Wed, $10 GA all confirmed. Added official notice: no Free First Thursday in September 2026 (install closure)."
     },
     "promotion_url": "https://sfmcd.org/visit/",
     "community_url": "https://www.sftourismtips.com/free-museum-admission-days.html",
@@ -598,14 +598,14 @@
     "category": "Museums & Arts",
     "location": "SF - SoMa / Downtown",
     "value": "$20 adult general admission value",
-    "description": "On the first Sunday of each month, Asian Art Museum general admission is free. Special exhibition tickets are a reduced $15 that day (official free-and-reduced page). Address: 200 Larkin Street. Hours: Thursday 1–8 PM; Friday–Monday 10 AM–5 PM; closed Tuesday–Wednesday.",
+    "description": "On the first Sunday of each month, Asian Art Museum general admission is free for everyone. Special exhibition tickets are discounted that day (the museum's Plan Your Visit page lists the surcharge as $10 while its Free & Reduced page lists $15 - confirm the live price when booking). Address: 200 Larkin Street. Hours: Thursday 1-8 PM; Friday-Monday 10 AM-5 PM; closed Tuesday-Wednesday.",
     "redemption_instructions": "1. Reserve a free general-admission ticket at asianart.org/reserve-tickets for the first Sunday.\n2. Or walk up — same-day inventory is limited.\n3. Special exhibitions are not free; pay the published surcharge if you want those galleries.",
-    "restrictions": "First Sunday only. Special exhibitions are extra ($15 on Free First Sundays per official free-admission page).",
+    "restrictions": "First Sunday only; special exhibitions carry a discounted surcharge (official pages currently disagree: $10 vs $15 - verify at checkout). Adult general admission is $20 other days.",
     "verification": {
       "status": "Verified Official Source",
       "source_name": "Asian Art Museum Free and Reduced Admission",
       "verified_date": "2026-08-19",
-      "notes": "Official Free First Sunday. Old URL /visit/free-days/ is 404. Adult GA $20."
+      "notes": "Re-verified 2026-08-19 vs about.asianart.org: Free First Sunday + adult GA $20 confirmed on plan-your-visit. FLAG: museum lists the discounted special-exhibition price inconsistently ($15 on free-and-reduced page, $10 on plan-your-visit). Entry updated to disclose both."
     },
     "promotion_url": "https://about.asianart.org/ticketing/free-and-reduced-museum-admission/",
     "community_url": "https://about.asianart.org/plan-your-visit/",
@@ -628,7 +628,7 @@
     "priority_rank": 1,
     "category": "Museums & Arts",
     "location": "SF - All Neighborhoods",
-    "value": "$26–$32 adult admission value on published free days",
+    "value": "$32-$34 adult admission value on published free days",
     "description": "The Zoo’s official calendar lists SF Resident Free Days. Confirmed upcoming dates: Wednesday, September 2, 2026 and Wednesday, October 7, 2026. One free admission per government ID showing San Francisco residency. This is not daily free admission. Parking is paid.",
     "redemption_instructions": "1. Check sfzoo.org/calendar-of-events for “San Francisco Residents receive free admission.”\n2. Next official dates: September 2, 2026 and October 7, 2026.\n3. Bring government-issued ID showing an SF address to the ticket-scan area. One free entry per qualifying ID.",
     "restrictions": "Only on published free days. One free admission per SF-residency ID. Parking is not free. EBT/Medi-Cal is a separate $3 paid ticket, not this offer.",
@@ -636,7 +636,7 @@
       "status": "Verified Official Source",
       "source_name": "SF Zoo Official Event Calendar",
       "verified_date": "2026-08-19",
-      "notes": "Official calendar: SF resident free admission Sep 2 and Oct 7, 2026."
+      "notes": "Re-verified 2026-08-19 vs sfzoo.org: official calendar lists SF resident free days Wed Sep 2 and Wed Oct 7, 2026 (one free entry per SF-residency ID); adult admission $32 weekday/$34 weekend (value corrected); parking paid; $3 EBT/Medi-Cal SF-resident ticket is separate. schedule_type set to 'Published Calendar Dates' - free days are announced per calendar, not a guaranteed monthly rule."
     },
     "promotion_url": "https://www.sfzoo.org/calendar-of-events/",
     "community_url": "https://www.sfzoo.org/tickets-hours/",
@@ -648,7 +648,7 @@
       "calendar"
     ],
     "is_new": false,
-    "schedule_type": "First Wednesday",
+    "schedule_type": "Published Calendar Dates",
     "neighborhood_slug": "sf-all-neighborhoods"
   },
   {
@@ -784,7 +784,7 @@
     "priority_label": "100% Free",
     "priority_rank": 1,
     "category": "Museums & Arts",
-    "location": "SF - All Neighborhoods",
+    "location": "SF - Marina / Fort Mason",
     "value": "$12 value",
     "description": "SF Camerawork exhibitions at Fort Mason Center, 2 Marina Boulevard, Building A, are officially always free. Hours change with each exhibition (often Tuesday or Wednesday through Saturday). Not in Chinatown — Fort Mason / Marina.",
     "redemption_instructions": "1. Check sfcamerawork.org/current-hours before you go.\n2. Visit 2 Marina Blvd, Building A, Fort Mason.\n3. Walk in; exhibitions are free.",
@@ -793,7 +793,7 @@
       "status": "Verified Official Source",
       "source_name": "SF Camerawork Visit",
       "verified_date": "2026-08-19",
-      "notes": "Official: exhibitions always free. Fort Mason Building A."
+      "notes": "Re-verified 2026-08-19 vs sfcamerawork.org/visit: 'SF Camerawork's exhibitions are always free'; 2 Marina Blvd Building A confirmed; hours are exhibition-dependent. Corrected location bucket from 'All Neighborhoods' to Marina / Fort Mason."
     },
     "promotion_url": "https://sfcamerawork.org/visit",
     "community_url": "https://sfcamerawork.org/current-hours",
@@ -807,7 +807,7 @@
     ],
     "is_new": false,
     "schedule_type": "Always Free",
-    "neighborhood_slug": "sf-all-neighborhoods"
+    "neighborhood_slug": "sf-marina-fort-mason"
   },
   {
     "id": "anderson-collection-stanford-always-free",

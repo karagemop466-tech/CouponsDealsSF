@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12",
+  "last_updated": "2026-08-19",
   "verification_policy": {
     "highest_priority": "100% Free / No Purchase Necessary",
     "secondary_priority": "Free with Purchase / BOGO",
@@ -34,23 +34,23 @@
     {
       "id": "sfmta_free_muni",
       "name": "SFMTA Free Muni Program Official Guide",
-      "url": "https://www.sfmta.com/getting-around/muni/fares/free-muni-all-youth",
+      "url": "https://www.sfmta.com/fares/free-muni-all-youth-18-years-and-younger",
       "type": "Official Source",
       "category": "Transit & Services",
       "trust_score": 100
     },
     {
       "id": "sfbotanical",
-      "name": "San Francisco Botanical Garden Official Rules",
-      "url": "https://www.sfbg.org/visit",
+      "name": "Gardens of Golden Gate Park - Official Admissions & Hours",
+      "url": "https://gggp.org/visit/admissions-hours/",
       "type": "Official Source",
       "category": "Museums & Arts",
       "trust_score": 100
     },
     {
       "id": "conservatory_flowers",
-      "name": "Conservatory of Flowers Free Admission Policy",
-      "url": "https://conservatoryofflowers.org/visit/",
+      "name": "Conservatory of Flowers Admissions (Gardens of Golden Gate Park)",
+      "url": "https://gggp.org/visit/admissions-hours/",
       "type": "Official Source",
       "category": "Museums & Arts",
       "trust_score": 100

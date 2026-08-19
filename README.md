@@ -123,7 +123,7 @@ All **29** official 100% free / no-purchase deals are stored in `data/deals.json
   "verification": {
     "status": "Verified Official Source",
     "source_name": "ICA SF Official Admission Policy",
-    "verified_date": "2026-08-12",
+    "verified_date": "2026-08-19",
     "notes": "Confirmed on icasf.org and SF Standard / Funcheap 2026 arts directory."
   },
   "promotion_url": "https://www.icasf.org/visit",

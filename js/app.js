@@ -577,6 +577,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const neighborhoods = [
       "SF - SoMa / Downtown",
       "SF - Golden Gate Park / Richmond",
+      "SF - Lincoln Park / Sea Cliff",
+      "SF - Marina / Fort Mason",
       "SF - Mission / Castro",
       "SF - Chinatown / North Beach",
       "SF - All Neighborhoods",
